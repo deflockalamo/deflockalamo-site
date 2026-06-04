@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-default="About">About</title>
+  <meta name="description" content="Who runs this site, our principles, and how to contact us.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23b3261e'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='system-ui' font-size='38' font-weight='700' fill='white'%3ED%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="site">
+    <header class="site-header" id="site-header"></header>
+
+    <main id="main">
+      <h1>About</h1>
+
+      <section aria-labelledby="who-h">
+        <h2 id="who-h">Who we are</h2>
+        <p>
+          This site is run by <span data-cfg="area">Alamogordo, NM</span> residents who think
+          residents deserve clear, sourced information about the Flock Safety ALPR deployment in
+          our community. We are not affiliated with any political party, candidate, or campaign.
+          We are not affiliated with the City of Alamogordo, the Alamogordo Police Department,
+          Holloman Air Force Base, or Flock Safety.
+        </p>
+        <p>
+          We chose the name <em>Deflock Alamogordo</em> because the action is the point: undoing
+          the deployment, or at least making sure it is debated openly before it expands.
+        </p>
+      </section>
+
+      <section aria-labelledby="principles-h">
+        <h2 id="principles-h">What this site is &mdash; and isn't</h2>
+        <h3>What we are</h3>
+        <ul>
+          <li><strong>An information hub.</strong> Primary documents, public records, journalism, and explainers &mdash; in one place.</li>
+          <li><strong>Both-sides.</strong> We link to the case for ALPRs and the case against them, and we try to be honest about what's actually known.</li>
+          <li><strong>Privacy-respecting.</strong> No analytics, no cookies, no tracking, no fingerprinting. See <a href="privacy.html">privacy</a>.</li>
+        </ul>
+        <h3>What we are not</h3>
+        <ul>
+          <li><strong>Not an attack on the police.</strong> We link to APD's public statements. We respect the difficulty of the job.</li>
+          <li><strong>Not a campaign against a person.</strong> No personal attacks on the Police Chief, the City Manager, or any Commissioner.</li>
+          <li><strong>Not a vendor of a competing product.</strong> We don't sell anything.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="how-h">
+        <h2 id="how-h">How the site is run</h2>
+        <p>
+          The site is a static site hosted on Cloudflare Pages. The source is plain HTML, CSS, and
+          JavaScript &mdash; no build step, no database, no server-side code. There is no comment
+          section, no login, and no user accounts.
+        </p>
+        <p>
+          Documents uploaded to the <a href="documents.html">Documents</a> page are public records
+          or publicly available journalism. We do not publish private information about individuals
+          (names of camera owners, personal addresses, etc.).
+        </p>
+      </section>
+
+      <section aria-labelledby="contact-h">
+        <h2 id="contact-h">Contact</h2>
+        <p>
+          The fastest way to reach the people behind this site is email. For privacy and security
+          reasons, we use a dedicated Proton Mail address rather than a personal account.
+        </p>
+        <p>
+          <a class="btn" href="mailto:deflockalamo@proton.me">deflockalamo@proton.me</a>
+        </p>
+        <p class="small">
+          We don't have a phone line, social media presence, or mailing address at this time.
+          If you want to send physical mail, email us first and we'll arrange a secure method.
+        </p>
+      </section>
+
+      <section aria-labelledby="disclaimer-h">
+        <h2 id="disclaimer-h">Disclaimer</h2>
+        <p>
+          Information on this site is provided in good faith from public sources. We've tried to
+          quote documents accurately and link to the originals wherever possible. If you spot an
+          error, please email us and we'll correct it.
+        </p>
+        <p>
+          Nothing on this site is legal advice. If you have a specific legal question &mdash; for
+          example, about a public records request or your rights in an encounter with law
+          enforcement &mdash; please consult a licensed attorney in New Mexico.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="site-footer"></footer>
+  </div>
+
+  <script src="_config.js"></script>
+  <script src="assets/layout.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var C = window.SITE_CONFIG || {};
+      document.querySelectorAll("[data-cfg]").forEach(function (el) {
+        var key = el.getAttribute("data-cfg");
+        if (C[key] != null) el.textContent = C[key];
+      });
+    });
+  </script>
+</body>
+</html>

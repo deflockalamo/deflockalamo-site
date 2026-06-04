@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-default="Documents">Documents</title>
+  <meta name="description" content="City of Alamogordo meeting minutes and other primary documents about the Flock ALPR deployment.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23b3261e'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='system-ui' font-size='38' font-weight='700' fill='white'%3ED%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="site">
+    <header class="site-header" id="site-header"></header>
+
+    <main id="main">
+      <h1>Documents</h1>
+      <p>
+        Primary-source documents about the Flock ALPR deployment in Alamogordo. All of these are
+        public records obtained from the City of Alamogordo or other public sources. Where
+        possible, we link to the original posting; we also host copies on this site so they
+        remain available even if the city website changes.
+      </p>
+
+      <section aria-labelledby="most-h">
+        <h2 id="most-h">Start with these</h2>
+
+        <article class="card">
+          <p class="meta">City of Alamogordo &middot; 4 May 2026</p>
+          <h3>Budget Hearing Workshop Minutes (DRAFT)</h3>
+          <p>
+            <strong>This is the most useful document on this page.</strong> It contains the only
+            substantive public discussion of the Flock contract to date, including the contract
+            value (~$250,000/yr), the camera count (50&ndash;60), the funding split ($100K from
+            opioid funds, ~$150K from the General Fund), and a direct exchange between
+            Commissioner Rardin and Police Chief Kunihiro about the cost and impact of the system.
+          </p>
+          <p><a href="documents/2026-05-04_Budget_Hearing_Workshop_Minutes_DRAFT.pdf">Download PDF</a></p>
+        </article>
+      </section>
+
+      <section aria-labelledby="all-h">
+        <h2 id="all-h">All documents</h2>
+
+        <h3>City Commission minutes (Flock-related)</h3>
+        <ul class="doc-list">
+          <li>
+            <span class="title">5 May 2026 &mdash; Budget Hearing Workshop (DRAFT)</span><br>
+            <span class="meta">Contains the Flock contract discussion. &middot;</span>
+            <a href="documents/2026-05-04_Budget_Hearing_Workshop_Minutes_DRAFT.pdf">PDF</a>
+          </li>
+          <li>
+            <span class="title">6 May 2025 &mdash; Budget Hearing Workshop (DRAFT)</span><br>
+            <span class="meta">First public mention of Flock implementation progress ("46% live"). &middot;</span>
+            <a href="documents/2025-05-06_Budget_Hearing_Workshop_Minutes_DRAFT.pdf">PDF</a>
+          </li>
+          <li>
+            <span class="title">3 December 2024 &mdash; Regular Meeting (DRAFT)</span><br>
+            <span class="meta">Pre-dates the Flock discussion. Useful for context on the Commission's procedures. &middot;</span>
+            <a href="documents/2024-12-03_Regular_Meeting_Minutes_DRAFT.pdf">PDF</a>
+          </li>
+        </ul>
+
+        <h3>External documents</h3>
+        <ul class="doc-list">
+          <li>
+            <span class="title">License Plate Reader Technology (Flock Safety) &mdash; NM Legislative Finance Committee handout</span><br>
+            <span class="meta">29 Jul 2025 &middot; State of New Mexico &middot;</span>
+            <a data-ext="forFlock" href="#">PDF on nmlegis.gov</a>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="missing-h">
+        <h2 id="missing-h">Documents we'd like to add</h2>
+        <p>
+          We don't have these yet. If you have them &mdash; or know how to request them &mdash;
+          please <a href="mailto:deflockalamo@proton.me">email us</a>.
+        </p>
+        <ul>
+          <li>The actual Flock Safety contract between Flock and the City of Alamogordo (public record under IPRA).</li>
+          <li>Any data-sharing agreements APD has signed with other agencies (federal, state, county, other municipalities).</li>
+          <li>APD's ALPR use policy, including retention period and access controls.</li>
+          <li>A list of camera locations (the police chief declined to share the count at the May 2026 budget workshop; a location list would require an IPRA request).</li>
+          <li>Any cancellation provisions and termination costs in the contract.</li>
+          <li>Earlier budget or contract documents from 2024 or 2025 that discuss the original procurement decision.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="how-h">
+        <h2 id="how-h">How we source documents</h2>
+        <p>
+          All documents on this page are either:
+        </p>
+        <ul>
+          <li>Public records obtained directly from the City of Alamogordo (e.g. via IPRA, public comment at meetings, or the city's own website).</li>
+          <li>Publicly available documents hosted by a government agency (e.g. nmlegis.gov).</li>
+        </ul>
+        <p>
+          We do not publish documents obtained through private channels, leaked information, or
+          anything that would identify a private individual.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="site-footer"></footer>
+  </div>
+
+  <script src="_config.js"></script>
+  <script src="assets/layout.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var C = window.SITE_CONFIG || {};
+      document.querySelectorAll("[data-ext]").forEach(function (el) {
+        var key = el.getAttribute("data-ext");
+        if (C.resources && C.resources[key] && C.resources[key].url) {
+          el.setAttribute("href", C.resources[key].url);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

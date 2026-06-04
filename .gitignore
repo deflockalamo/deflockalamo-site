@@ -1,0 +1,10 @@
+# Local/private config overrides — NEVER commit the real version of this file.
+# The real _config.private.js (with the actual contact email and any other
+# private values) should be created on the deployment target and is gitignored.
+
+_config.private.js
+
+# PDFs and other bulky reference materials live in documents/ on the Pi
+# but are not deployed to the public site. The site links to external
+# URLs or to the public-facing documents.
+documents/

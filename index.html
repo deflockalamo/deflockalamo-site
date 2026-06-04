@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Before you enter — Deflock Alamogordo</title>
+  <meta name="description" content="A transparent notice about this site's status: it is a work in progress, built with substantial AI assistance, and lightly proof-read.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23b3261e'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='system-ui' font-size='38' font-weight='700' fill='white'%3ED%3C/text%3E%3C/svg%3E">
+  <style>
+    /* Disclaimer page uses minimal chrome — no shared header/footer.
+       The styled block below replaces the full layout. */
+    body { display: block; }
+    .disclaimer-shell {
+      max-width: 38rem;
+      margin: 8vh auto;
+      padding: 0 1.2rem;
+    }
+    .disclaimer-shell h1 {
+      font-size: 1.6rem;
+      margin: 0 0 0.5rem;
+      line-height: 1.25;
+    }
+    .disclaimer-shell .lede {
+      color: var(--fg-muted);
+      margin: 0 0 1.6rem;
+    }
+    .caveat {
+      border: 1px solid var(--warn-border);
+      background: var(--warn-bg);
+      border-left: 4px solid var(--warn-border);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      margin: 0 0 1rem;
+    }
+    .caveat h2 {
+      font-size: 1.05rem;
+      margin: 0 0 0.4rem;
+    }
+    .caveat p { margin: 0 0 0.5rem; }
+    .caveat p:last-child { margin-bottom: 0; }
+    .caveat ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+    .caveat li { margin: 0.2rem 0; }
+    .enter {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .enter .btn { font-size: 1.05rem; padding: 0.7em 1.4em; }
+    .enter .btn:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+    .meta {
+      margin-top: 1.6rem;
+      font-size: 0.85rem;
+      color: var(--fg-faint);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main class="disclaimer-shell" id="main">
+
+    <h1>Before you enter</h1>
+    <p class="lede">
+      This site is a <strong>work in progress</strong>. We're publishing it now because the
+      issue is timely, but please read the four notes below before relying on anything
+      you read here.
+    </p>
+
+    <div class="caveat">
+      <h2>1. Still under construction</h2>
+      <p>
+        The site is missing a lot of information. Many pages are placeholders. Expect
+        broken links, sparse sections, and rough edges. We are publishing incrementally
+        as documents and reports come in, and as we have time to write them up.
+      </p>
+    </div>
+
+    <div class="caveat">
+      <h2>2. Built with substantial AI assistance</h2>
+      <p>
+        The site's structure, code, and large parts of the prose were drafted with the
+        help of an AI assistant (Slate, an OpenClaw instance running on a Raspberry Pi).
+        The human maintainer curated the source material, made the editorial decisions,
+        and is responsible for what is published — but the writing was not done by hand,
+        page by page.
+      </p>
+    </div>
+
+    <div class="caveat">
+      <h2>3. Lightly proof-read</h2>
+      <p>
+        The text has had at most a single pass of human review for fact-checking and
+        tone. It has not been edited line by line. Expect:
+      </p>
+      <ul>
+        <li>Awkward phrasing, repetition, or generic AI tells</li>
+        <li>Possible factual errors that a careful read would catch</li>
+        <li>Missing nuance on a complicated topic</li>
+      </ul>
+      <p>
+        If something here matters to you, please verify it against the linked source
+        documents. The links are the canonical record — the prose is a guided tour.
+      </p>
+    </div>
+
+    <div class="caveat">
+      <h2>4. Independent, not affiliated</h2>
+      <p>
+        This site is community-run. It is not affiliated with any local government,
+        police department, Flock Safety, or any advocacy organization. The contact
+        information on the <em>About</em> page reaches one person who lives in the
+        area and is not speaking for any institution.
+      </p>
+    </div>
+
+    <div class="enter">
+      <a class="btn" href="home.html" id="enter-btn">
+        I understand &mdash; enter the site
+      </a>
+      <p class="meta">
+        Your browser will load <code>home.html</code>. You can return to this notice at
+        any time by visiting <code>deflockalamo.org/</code> directly.
+      </p>
+    </div>
+
+  </main>
+</body>
+</html>
