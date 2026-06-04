@@ -4,7 +4,5 @@
 
 _config.private.js
 
-# PDFs and other bulky reference materials live in documents/ on the Pi
-# but are not deployed to the public site. The site links to external
-# URLs or to the public-facing documents.
-documents/
+# PDFs and other public reference materials live in documents/ and ARE
+# part of the deploy — they get served alongside the HTML. Don't ignore.

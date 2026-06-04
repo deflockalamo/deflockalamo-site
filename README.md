@@ -30,7 +30,7 @@ information about Flock ALPRs in Alamogordo, NM.
 ├── assets/
 │   ├── layout.js               shared header/footer
 │   └── style.css
-└── documents/                  PDFs (NOT deployed — kept on USB stick)
+└── documents/                  PDFs and public reference materials (DEPLOYED)
 ```
 
 ## Local development
@@ -38,7 +38,7 @@ information about Flock ALPRs in Alamogordo, NM.
 Open `home.html` in a browser, or:
 
 ```bash
-python3 -m http.server 8000 --directory /home/pi/.openclaw/workspace/projects/deflockalamo-site
+python3 -m http.server 8000 --directory /home/pi/.openclaw/workspace/deflock
 # → http://localhost:8000/home.html
 ```
 
