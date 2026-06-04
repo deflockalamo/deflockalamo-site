@@ -6,3 +6,10 @@ _config.private.js
 
 # PDFs and other public reference materials live in documents/ and ARE
 # part of the deploy — they get served alongside the HTML. Don't ignore.
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
