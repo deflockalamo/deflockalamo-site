@@ -1,4 +1,4 @@
-// Deflock Alamo — shared layout helper
+// De-Flock Alamo — shared layout helper
 // Reads window.SITE_CONFIG, renders the header/nav/footer into each page.
 // Also marks the current page as active in the nav.
 
@@ -6,7 +6,7 @@
   "use strict";
 
   const C = window.SITE_CONFIG || {};
-  const siteName = C.siteName || "Deflock Alamo";
+  const siteName = C.siteName || "De-Flock Alamo";
 
   // Determine current page filename for nav highlighting
   const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();

@@ -1,4 +1,4 @@
-// Deflock Alamo — public site config
+// De-Flock Alamo — public site config
 // Edit this file to change the site name, area, articles, etc.
 // It is loaded by every page via <script src="_config.js"></script>.
 // Keep this file as plain JS (not JSON) so it works without a build step.
@@ -9,8 +9,8 @@
 
 window.SITE_CONFIG = {
   // --- Identity ------------------------------------------------------------
-  siteName: "Deflock Alamogordo",
-  siteShortName: "Deflock Alamogordo",
+  siteName: "De-Flock Alamo",
+  siteShortName: "De-Flock Alamo",
   siteTagline: "Information about Flock ALPRs in Alamogordo, NM — and how to take action.",
   area: "Alamogordo, NM",
   region: "Otero County, New Mexico",
