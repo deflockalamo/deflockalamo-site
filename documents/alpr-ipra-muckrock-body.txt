@@ -1,3 +1,23 @@
+════════════════════════════════════════════════════════════════════════════════
+⚠️  DRAFT — WORK IN PROGRESS — NOT LEGAL ADVICE
+════════════════════════════════════════════════════════════════════════════════
+This template is adapted from the Business Reform Open Records template
+(Indiana, June 2025) and has been rewritten for New Mexico's Inspection of
+Public Records Act (NMSA 1978 §§ 14-2-1 et seq.). It has NOT been reviewed
+by an attorney and may contain errors, outdated citations, or language that
+does not fit your specific request.
+
+Before submitting to any agency:
+  1. Verify the agency's current address, phone, and email against its
+     official Public Records Request page.
+  2. Verify the IPRA citations against the current statute at nmag.gov.
+  3. Verify the case law and any agency-specific procedures.
+  4. Consider asking NMFOG (nmfog.org) to review your request — they
+     answer questions by email and have up-to-date sample language.
+
+Address block, statutes, and contact details are current as of June 2026.
+════════════════════════════════════════════════════════════════════════════════
+
 To Whom It May Concern:
 
 Pursuant to New Mexico's Inspection of Public Records Act (NMSA 1978 §§ 14-2-1 et seq.), I request the following records related to the City of Alamogordo and the Alamogordo Police Department's acquisition and use of automated license plate reader (ALPR) technology, including any system manufactured, sold, or operated by Flock Safety, Vigilant Solutions, Rekor Systems, Motorola Vigilant, or any other ALPR vendor, for the period of January 1, 2023, through the date this request is processed.
@@ -73,9 +93,8 @@ FEES AND TIMELINE
 I am willing to pay reasonable fees for copying, not to exceed $25.00 in total. Please notify me in advance if you anticipate fees in excess of this amount. I respectfully request a fee waiver or reduction under § 14-2-9, on the grounds that:
 
 (a) the records concern the operations of a public agency and the expenditure of public funds;
-(b) the request is made for non-commercial purposes;
-(c) the records will contribute to public understanding of the City's ALPR program; and
-(d) the subject matter is a matter of significant and ongoing public interest in the community, as evidenced by public discussion at City Commission meetings and by the coverage of the program at deflockalamo.org.
+(b) the request is made for non-commercial purposes; and
+(c) the records will contribute to public understanding of the City's ALPR program.
 
 New Mexico law requires a response to an IPRA request "as soon as practicable, but in no event later than fifteen days after receipt" for most records (§ 14-2-8(D)), and within three business days for records to which a law-enforcement-related exception may apply (§ 14-2-8(F)). All correspondence regarding this request should be conducted through MuckRock.
 
@@ -83,4 +102,4 @@ New Mexico law requires a response to an IPRA request "as soon as practicable, b
 ABOUT THIS REQUEST
 ────────────────────────────────────────────────────────────────────────
 
-This request was prepared by de-flock Alamo (deflockalamo.org), a community information project. The address block, statutes, and contact details are current as of June 2026. If you receive a substantive response and are willing to share it, please contact de-flock Alamo via the website so the response can be included in the public record.
+This request is prepared under the New Mexico Inspection of Public Records Act.
