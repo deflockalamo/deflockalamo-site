@@ -44,8 +44,11 @@
         <p style="margin: 0.75rem 0 0.25rem; display: flex; flex-wrap: wrap; gap: 0.5rem">
           <a class="btn" href="documents/alpr-ipra-template.pdf" download>Download NM template (PDF)</a>
           <a class="btn secondary" href="documents/alpr-ipra-template.docx" download>Download NM template (DOCX)</a>
-          <a class="btn secondary" href="https://www.muckrock.com/" rel="noopener">File via MuckRock &rarr;</a>
+          <button type="button" class="btn secondary" id="muckrock-oneclick" data-cfg-flavor="muckrock-oneclick">File via MuckRock (one click) &rarr;</button>
+          <a class="btn secondary" href="https://cityofalamogordonm.nextrequest.com/" rel="noopener">File via city's NextRequest &rarr;</a>
+          <a class="btn secondary" href="https://www.muckrock.com/" rel="noopener">MuckRock home &rarr;</a>
         </p>
+        <p id="muckrock-status" class="small" hidden style="margin: 0.25rem 0 0"></p>
       </div>
 
 
@@ -109,12 +112,16 @@
       <section aria-labelledby="meeting-h">
         <h2 id="meeting-h">Attend a City Commission meeting</h2>
         <p>
-          (This section is still unverified.) The City Commission meets at the Donald E. Carroll Commission Chambers, City Hall, 1376
-          E. 9th Street. Regular meetings are typically the first and third Tuesday of the month at
-          6:30 PM. Workshop / budget meetings are scheduled separately.
+          The City Commission meets at the Donald E. Carroll Commission Chambers, 1376 E. Ninth
+          Street (City Hall), Alamogordo, NM 88310. <strong>Regular meetings are at 6:30 p.m. on
+          the second and fourth Tuesday of every month</strong>; in November and December they
+          shift to the first and third Tuesday. The final agenda is typically posted by 5:00 p.m.
+          on the Friday before each meeting. The Commission Chambers are wheelchair accessible;
+          other accessibility accommodations require 48 hours' notice via the City Clerk at
+          <a href="tel:5754394100">575-439-4100</a>.
         </p>
         <ul>
-          <li>Check the <a href="https://www.ci.alamogordo.nm.us/">city website</a> for the posted agenda and any special meetings.</li>
+          <li>Check the <a href="https://alamogordonm.portal.civicclerk.com/">CivicClerk portal</a> for the posted agenda and any special meetings.</li>
           <li>Public comment is usually the first agenda item. Sign up at the door.</li>
           <li>You don't need to be an expert. A two-minute statement from a resident carries real weight.</li>
         </ul>
@@ -123,20 +130,28 @@
       <section aria-labelledby="contact-h">
         <h2 id="contact-h">Contact your Commissioners</h2>
         <p>
-          (This section is still unverified.) A short, polite email to your Commissioner(s) is one of the most effective things you can do.
+          A short, polite email to your Commissioner(s) is one of the most effective things you can do.
           The current Commission as of May 2026:
         </p>
         <ul>
-          <li>Mayor Sharon McDonald</li>
-          <li>Mayor Pro-Tem Joshua Rardin</li>
-          <li>Commissioner Baxter Pattillo</li>
-          <li>Commissioner Stephen Burnett</li>
-          <li>Commissioner Warren Robinson</li>
-          <li>Commissioner Al Hernandez</li>
-          <li>Commissioner Mark Tapley</li>
+          <li><strong>Mayor Sharon McDonald</strong> &middot; Mayor-at-large</li>
+          <li><strong>Mayor Pro-Tem Josh Rardin</strong> &middot; District 4</li>
+          <li><strong>Commissioner Baxter Pattillo</strong> &middot; District 1</li>
+          <li><strong>Commissioner Stephen Burnett</strong> &middot; District 2</li>
+          <li><strong>Commissioner Warren Robinson</strong> &middot; District 3</li>
+          <li><strong>Commissioner Al Hernandez</strong> &middot; District 5</li>
+          <li><strong>Commissioner Mark Tapley</strong> &middot; District 6</li>
         </ul>
         <p>
-          Email addresses and phone numbers are on the <a href="https://www.ci.alamogordo.nm.us/">city website</a>.
+          Phone numbers for each Commissioner are on the
+          <a href="https://www.ci.alamogordo.nm.us/Directory.aspx?did=60">city staff directory</a>.
+          Email addresses are not published individually &mdash; the
+          <a href="https://cityofalamogordonm.nextrequest.com/">city's NextRequest portal</a> is
+          the official channel for written correspondence to the City Clerk (who routes messages
+          to Commissioners), and the public comment period at each Commission meeting is the most
+          reliable way to be heard in person.
+        </p>
+        <p>
           A few tips for an effective message:
         </p>
         <ul>
@@ -194,5 +209,89 @@
 
   <script src="_config.js"></script>
   <script src="assets/layout.js"></script>
+
+  <script type="application/json" id="ipra-body-data">
+"[Your Name]\n[Your Mailing Address]\n[Your Email Address]\n[Your Phone Number (optional)]\n\nDate: [Insert Date]\n\nCity of Alamogordo \u2014 City Clerk\n[Address from city website \u2014 verify before sending]\nAlamogordo, NM [ZIP]\n\nVia email (recommended) AND certified mail, return receipt requested\n\nRe: Inspection of Public Records Act Request \u2014 Automated License Plate Reader (ALPR) Records, City of Alamogordo and Alamogordo Police Department\n\nDear Records Custodian:\n\nPursuant to New Mexico's Inspection of Public Records Act, NMSA 1978 \u00a7\u00a7 14-2-1 et seq. (IPRA), I respectfully request copies of the following records held by the City of Alamogordo, the Alamogordo Police Department (APD), or any contractor or agent acting on the City's behalf, related to the City's acquisition and use of automated license plate reader (ALPR) technology \u2014 including any system manufactured, sold, or operated by Flock Safety, Vigilant Solutions, Rekor Systems, Motorola Vigilant, or any other ALPR vendor \u2014 for the period of January 1, 2023, through the date of this request.\n\nThis request is submitted by a resident of New Mexico and concerns the conduct of public business in this state. The records I request are not exempt from disclosure under \u00a7 14-2-1(A) or any other provision of New Mexico law, and to the extent any portion of this request is denied or redacted, I ask that you provide a written explanation citing the specific statutory exemption relied upon, as required by \u00a7 14-2-11.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nRECORDS REQUESTED\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nPlease provide copies of the following records. Where records are maintained in an electronic database, I request an export in a machine-readable format (CSV, Excel, or PDF) pursuant to \u00a7 14-2-8(B).\n\n1. CONTRACTS AND AGREEMENTS\n\n   a. All contracts, agreements, memoranda of understanding (MOUs), data-sharing agreements, license agreements, statements of work, and other binding documents between the City of Alamogordo (or APD) and any ALPR vendor, including but not limited to Flock Safety, Inc.\n\n   b. All amendments, addenda, exhibits, side letters, or extensions of the contracts identified in (1)(a), executed or in effect at any time during the requested period.\n\n   c. All procurement documents, requests for proposals, requests for quotes, bid responses, evaluation documents, and award notices relating to the selection or acquisition of any ALPR system.\n\n2. POLICIES, PROCEDURES, AND TRAINING\n\n   All policies, procedure manuals, directives, standard operating procedures, training materials, and internal guidance documents, in effect or revised during the requested period, that describe:\n\n   a. Who within the City or APD is authorized to search, query, or otherwise access ALPR data \u2014 including any specific roles, ranks, units, or individuals granted access.\n\n   b. The process for granting, revoking, monitoring, or auditing such access, including any controls on third-party access.\n\n   c. The circumstances under which a license plate may be searched in ALPR data, including any required criteria, approvals, justifications, or supervisor sign-offs.\n\n   d. The circumstances under which an alert, hot-list entry, or notification may be created for a specific license plate, including the criteria, approvals, and retention period for any such list.\n\n3. DATA-SHARING AND PARTNER AGENCIES\n\n   a. The names of all law-enforcement agencies (local, state, federal, tribal, or international) and all non-law-enforcement entities (including homeowners associations, private businesses, and individuals) that have been granted access to ALPR data collected by or on behalf of the City of Alamogordo.\n\n   b. All agreements, MOUs, or other documents governing such data sharing, including any terms on data retention, allowed use, prohibited use, auditing, and termination.\n\n   c. The total number of ALPR data-sharing requests received from and fulfilled to other agencies, by agency, for each year of the requested period.\n\n4. DATA RETENTION, STORAGE, AND DELETION\n\n   a. The retention period for ALPR data, both for data not associated with an active investigation (\"non-hit\" data) and for data associated with an investigation or alert.\n\n   b. The location(s) where ALPR data is stored (on-premises, vendor cloud, third-party cloud), and the jurisdiction(s) in which that storage resides.\n\n   c. All policies, procedures, and audit logs relating to the deletion or purging of ALPR data at the end of its retention period.\n\n5. DEPLOYMENT, LOCATIONS, AND USE\n\n   a. The total number of ALPR cameras currently operated by, for, or on behalf of the City of Alamogordo, and the general location of each (intersection, address, or geographic area).\n\n   b. The number of license plate scans performed by ALPR cameras operated by or for the City, by month, for the requested period, including any breakdown by camera location.\n\n   c. The number of \"hits\" (matches against hot lists or alerts) generated by the ALPR system, by month, for the requested period.\n\n6. COSTS, FUNDING, AND BUDGET\n\n   a. The total amount paid by the City of Alamogordo to any ALPR vendor, by year, for the requested period, including any line items in the City's annual budget relating to ALPRs.\n\n   b. The source of funds used to pay for the ALPR system (general fund, opioid settlement funds, grant funds, or any other source), and any restrictions on the use of those funds.\n\n   c. All invoices, receipts, and payment records relating to the ALPR system.\n\n7. TERMINATION AND CANCELLATION\n\n   a. The full text of any termination, cancellation, or \"no-cause\" clause in the City's ALPR contract(s), including any required notice period, termination fee, data-destruction obligations, and post-termination access rights.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nFORMAT, FEES, AND TIMELINE\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nFORMAT. Please provide the requested records in PDF format where they exist in that form, or in the machine-readable format in which they are maintained (CSV, Excel, native PDF) for any data exports. Paper copies are acceptable if electronic records are not available.\n\nTIMELINE. New Mexico law requires a response to an IPRA request \"as soon as practicable, but in no event later than fifteen days after receipt\" for most public records, \u00a7 14-2-8(D), and within three business days for records to which a law-enforcement-related exception may apply, \u00a7 14-2-8(F). I understand that a portion of this request may implicate law-enforcement exceptions under \u00a7 14-2-1(A)(3) or \u00a7 14-2-1(A)(4); I nevertheless ask that you process the portions of this request that do not implicate those exceptions without delay, and that you identify with specificity any record withheld under an exception and the legal basis for that withholding.\n\nDENIALS. If any portion of this request is denied or redacted, please provide a written explanation citing the specific statutory provision and any applicable case law on which the denial relies, as required by \u00a7 14-2-11.\n\nFEES. I am willing to pay reasonable fees for copying, not to exceed $25.00 in total. Please notify me in advance if you anticipate fees in excess of this amount, so that I may narrow or prioritize the request. I respectfully request a fee waiver or reduction under \u00a7 14-2-9, on the grounds that:\n\n   (a) the records concern the operations of a public agency and the expenditure of public funds;\n   (b) the request is made for non-commercial purposes;\n   (c) the records will contribute to public understanding of the City's ALPR program; and\n   (d) the subject matter is a matter of significant and ongoing public interest in the community, as evidenced by public discussion at City Commission meetings and by the coverage of the program at deflockalamo.org.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nHOW TO REACH ME\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nThe fastest way to reach me is by email at the address above. If you have questions about the scope of this request, please contact me before denying the request in whole or in part; I am happy to clarify or narrow the request. If you need additional time beyond the statutory deadline, please provide written notice under \u00a7 14-2-8(E) specifying the additional time required and the reasons therefor.\n\nIf I do not receive a response within the time required by law, I understand that I may pursue the remedies set out in \u00a7 14-2-12, including an action in district court for injunctive relief, damages, and reasonable attorney fees.\n\nThank you for your attention to this request.\n\nSincerely,\n\n[Your Signature]\n[Your Printed Name]\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nABOUT THIS TEMPLATE\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nThis template was prepared by de-flock Alamo (deflockalamo.org), a\ncommunity information project, for use by New Mexico residents seeking\nrecords about automated license plate readers and related surveillance\ntechnology in their communities. It is provided free of charge and may\nbe used, modified, and redistributed without restriction.\n\nThe legal citations are current as of June 2026. Before sending, please\nverify against the most recent version of the IPRA at nmag.gov and\nconsult the New Mexico Foundation for Open Government (nmfog.org) for\nupdates and sample language.\n\nIf you receive a substantive response to a request sent using this\ntemplate and are willing to share it, please contact us at the address\non our website so we can include it in the public record.\n"
+  </script>
+
+  <script>
+    (function () {
+      "use strict";
+      var btn = document.getElementById("muckrock-oneclick");
+      var status = document.getElementById("muckrock-status");
+      var dataEl = document.getElementById("ipra-body-data");
+      if (!btn || !dataEl) return;
+
+      // The IPRA letter body, JSON-decoded from a non-executing <script type="application/json"> tag
+      var IPRA_BODY;
+      try {
+        IPRA_BODY = JSON.parse(dataEl.textContent);
+      } catch (e) {
+        console.error("[muckrock-oneclick] could not parse IPRA body data", e);
+        btn.disabled = true;
+        btn.textContent = "Template unavailable (see console)";
+        return;
+      }
+
+      var MR_BASE = "https://www.muckrock.com/foi/create/";
+      var DEFAULT_TITLE = "IPRA Request — ALPR Records — City of Alamogordo, NM";
+
+      function showStatus(msg, ok) {
+        status.hidden = false;
+        status.textContent = msg;
+        status.style.color = ok ? "#0a6b2a" : "#b3261e";
+      }
+
+      function fallbackCopy(text) {
+        // Last-resort copy for older browsers / non-secure contexts where navigator.clipboard fails
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "absolute";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+        document.body.removeChild(ta);
+        return ok;
+      }
+
+      function copyAndOpen() {
+        var body = IPRA_BODY;
+        var title = DEFAULT_TITLE;
+
+        // Try modern Clipboard API first; fall back to execCommand for older browsers
+        var done = function (err) {
+          if (err) {
+            // Even if copy failed, still open MuckRock with a title in the URL
+            var url = MR_BASE + "?title=" + encodeURIComponent(title);
+            window.open(url, "_blank", "noopener");
+            showStatus("Couldn't copy automatically — open the template on this page, copy the body, and paste it on MuckRock. Opened MuckRock in a new tab.", false);
+            return;
+          }
+          // Build a MuckRock URL with the title in the query string (pre-fill where supported)
+          var url = MR_BASE + "?title=" + encodeURIComponent(title);
+          window.open(url, "_blank", "noopener");
+          showStatus("Copied the IPRA letter to your clipboard. Opened MuckRock — paste it into the request body, pick the agency, and send.", true);
+        };
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(body).then(
+            function () { done(null); },
+            function (err) {
+              if (fallbackCopy(body)) { done(null); }
+              else { done(err || new Error("copy failed")); }
+            }
+          );
+        } else {
+          if (fallbackCopy(body)) { done(null); }
+          else { done(new Error("no clipboard API")); }
+        }
+      }
+
+      btn.addEventListener("click", copyAndOpen);
+    })();
+  </script>
 </body>
 </html>
