@@ -394,43 +394,50 @@
           <section aria-labelledby="patent-h">
             <h2 id="patent-h">Flock's own patent</h2>
             <p>
-              The single most useful primary source is the patent Flock Group Inc. was
-              granted in August 2022. The patent's own title, abstract, and diagrams describe
-              the system as a surveillance network. Quoted directly from
-              <a href="https://patents.google.com/patent/US11416545B1/en" rel="noopener">US
-              Patent 11,416,545 B1</a> (inventors: Garrett Langley and Matt Feury; assignee:
-              Flock Group Inc., Atlanta, GA; published 16 Aug 2022):
+              The strongest single primary source is the patent Flock Group Inc. was
+              granted for the license plate reader (LPR) itself. The patent's own title,
+              abstract, and background section describe the device as a
+              <em>surveillance</em> system used to <em>identify and track automobiles</em>
+              &mdash; not "safety." Quoted directly from
+              <a href="https://patents.google.com/patent/US11030892B1/en" rel="noopener">US
+              Patent 11,030,892 B1</a> (inventors: Garrett Langley and Matt Feury; assignee:
+              Flock Group Inc., Atlanta, GA; published 8 Jun 2021):
             </p>
             <blockquote>
-              <p><strong>Title:</strong> "System and method for object based query of video
-                content captured by a <em>dynamic surveillance network</em>."</p>
-              <p><strong>Abstract:</strong> "A solution for a <em>video surveillance system</em>
-                and method that leverages a dynamic geographic footprint and supports an
-                object-based query of archived video content."</p>
-              <p><strong>Drawings (Fig. 1 legend):</strong> "NSD = portable
-                <em>neighborhood surveillance device</em>" — the same kind of device Flock
-                sells to police departments, HOAs, and businesses as a "license plate
-                reader."</p>
+              <p><strong>Title:</strong> "Method and system for capturing and storing
+                <em>significant surveillance images</em>."</p>
+              <p><strong>Abstract:</strong> "A method and system for capturing and filtering
+                <em>surveillance images</em> are described. A processor detects motion of
+                an object in a field of view and then generates a plurality of images in
+                response to detecting motion of the object in the field of view.
+                <em>The object may comprise a vehicle having a license plate.</em>"</p>
+              <p><strong>Background section (the company's own description of what an LPR
+                is for):</strong> "LPR cameras are often used by law enforcement
+                personnel in order to <em>identify and track automobiles who may be
+                associated with operators who commit traffic violations</em>. LPR cameras
+                are also used by law enforcement personnel to <em>identify and track
+                automobiles of operators who may be wanted criminals or operators who
+                may be conspiring to commit future crime(s)</em>."</p>
             </blockquote>
             <p>
-              The patent also describes ingesting video from sources far beyond license
-              plates — "surveillance cameras in a neighborhood watch system, store cameras
-              at local convenience store, traffic site monitoring cameras at a nearby
-              street intersection, a smart phone associated with a pedestrian" — and
-              building <em>object fingerprints</em> ("Hough lines, object height, object
-              width, black/white pixel ratio, white balance, hash value") for every object
-              detected. The system can also identify "people (male, female, race, etc.)".
+              The patent also shows the LPR isn't a dumb camera &mdash; it has on-device
+              AI. The device uses a passive-infrared (PIR) motion detector to wake a
+              low-power processor from sleep mode, then runs a neural network locally to
+              score and filter images before transmitting them over the cellular network
+              (Fig. 5). What the city of Alamogordo bought is a smart, networked
+              surveillance device, not a passive reader.
             </p>
             <p>
               The "safety" in the company name is a marketing choice. The patent itself
-              uses the word <em>surveillance</em> for what the system is. That's the
-              misnomer.
+              uses the word <em>surveillance</em> for what the system is, and the
+              patent's own background section describes the device as one used to
+              <em>identify and track automobiles</em>. That's the misnomer.
             </p>
             <p class="small">
               <strong>Sources:</strong>
-              <a href="documents/patents/US11416545.pdf">Download the full patent PDF (2.9MB, 29 pages)</a>
-              &middot; <a href="https://patents.google.com/patent/US11416545B1/en" rel="noopener">Google Patents</a>
-              &middot; <a href="https://patentcenter.uspto.gov/applications/17062601" rel="noopener">USPTO PatentCenter</a>
+              <a href="documents/patents/US11030892.pdf">Download the full patent PDF (1.9MB, 18 pages)</a>
+              &middot; <a href="https://patents.google.com/patent/US11030892B1/en" rel="noopener">Google Patents</a>
+              &middot; <a href="https://patentcenter.uspto.gov/applications/16786871" rel="noopener">USPTO PatentCenter</a>
               (canonical).
             </p>
           </section>
