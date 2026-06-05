@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-default="File via MuckRock">File via MuckRock</title>
+  <meta name="description" content="Step-by-step guide to filing an IPRA request through MuckRock, using the de-flock Alamo template.">
+  <meta name="color-scheme" content light dark">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23b3261e'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='system-ui' font-size='38' font-weight='700' fill='white'%3ED%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="site">
+    <header class="site-header" id="site-header"></header>
+
+    <main id="main">
+      <h1>File via MuckRock &mdash; step by step</h1>
+      <p>
+        MuckRock is a nonprofit news platform that hosts public records requests for free. Filing
+        through MuckRock has a few advantages: a permanent public archive that anyone can verify,
+        a public tracker, and MuckRock handles all correspondence with the agency on your behalf
+        (including any fee disputes). The downside is that the form on MuckRock's site uses an
+        older generic template &mdash; follow the steps below to file correctly.
+      </p>
+
+      <div class="callout" style="border-left: 4px solid var(--accent); background: var(--accent-bg); margin-top: 1.5rem">
+        <strong style="font-size: 1.05rem">Before you start</strong>
+        <p style="margin: 0.5rem 0 0.25rem">
+          You'll be filing a public records request under New Mexico's Inspection of Public
+          Records Act (NMSA 1978 &sect;&sect; 14-2-1 <em>et seq.</em>) to the City of Alamogordo.
+          The <a href="take-action.html#foia">FOIA callout on the Take action page</a> has the
+          full disclaimer &mdash; the template is a work in progress, not legal advice, and
+          should be verified against the current IPRA and the city's records-request page.
+        </p>
+      </div>
+
+      <section aria-labelledby="step-1-h">
+        <h2 id="step-1-h">Step 1. Create an account (or sign in)</h2>
+        <p>
+          MuckRock requires a free account before you can file. Use a real email address &mdash;
+          MuckRock will forward agency responses to it, and the agency may also email you
+          directly through the platform.
+        </p>
+        <p>
+          <a class="btn" href="https://www.muckrock.com/accounts/signup/" rel="noopener">Create a MuckRock account &rarr;</a>
+          &nbsp;
+          <a class="btn secondary" href="https://www.muckrock.com/accounts/login/" rel="noopener">Sign in &rarr;</a>
+        </p>
+      </section>
+
+      <section aria-labelledby="step-2-h">
+        <h2 id="step-2-h">Step 2. Get the request body</h2>
+        <p>
+          We've drafted a MuckRock-friendly version of the IPRA request. It omits the letter
+          framing, signature, and contact info that the paper-letter version has, because
+          MuckRock handles all of that for you. Pick whichever format is easiest:
+        </p>
+        <p style="display: flex; flex-wrap: wrap; gap: 0.5rem">
+          <button type="button" class="btn" id="copy-body-btn">Copy to clipboard &rarr;</button>
+          <a class="btn secondary" href="documents/alpr-ipra-muckrock-body.txt" download>Download .txt</a>
+          <a class="btn secondary" href="documents/alpr-ipra-muckrock-body.docx" download>Download .docx</a>
+          <a class="btn secondary" href="documents/alpr-ipra-muckrock-body.pdf" download>Download .pdf</a>
+        </p>
+        <p id="copy-status" class="small" hidden style="margin: 0.5rem 0 0"></p>
+        <p class="small" style="margin-top: 0.75rem">
+          <strong>Why a MuckRock-friendly version?</strong> MuckRock is the requester of record
+          and handles all correspondence. A paper letter's "Dear Records Custodian", "Sincerely",
+          and your mailing address would just be noise inside a MuckRock filing.
+        </p>
+      </section>
+
+      <section aria-labelledby="step-3-h">
+        <h2 id="step-3-h">Step 3. Start a new request</h2>
+        <p>
+          Once you're signed in, open MuckRock's request creation form. The link below opens a
+          new tab:
+        </p>
+        <p>
+          <a class="btn" href="https://www.muckrock.com/foi/create/" target="_blank" rel="noopener">Open MuckRock's new-request form &rarr;</a>
+        </p>
+        <p>
+          You'll see a form with several fields. MuckRock may pre-populate some placeholder
+          text in the "Request body" field &mdash; that's an old generic template MuckRock
+          uses as a starting point, not anything specific to your request. You'll replace
+          it entirely with the body you copied in Step 2.
+        </p>
+      </section>
+
+      <section aria-labelledby="step-4-h">
+        <h2 id="step-4-h">Step 4. Fill the form</h2>
+        <p>Here's exactly what to put in each field:</p>
+        <ol>
+          <li>
+            <strong>Title</strong> &mdash; paste this:
+            <blockquote style="margin: 0.5rem 0; padding: 0.4rem 0.6rem; background: var(--accent-bg); border-left: 3px solid var(--accent); font-family: monospace; font-size: 0.95rem">
+              IPRA Request &mdash; ALPR Records &mdash; City of Alamogordo, NM
+            </blockquote>
+          </li>
+          <li>
+            <strong>Agency</strong> &mdash; search for and select
+            <em>Alamogordo Police Department, Alamogordo, NM</em>. If MuckRock doesn't have
+            it in their database, you can add a new agency &mdash; use the City of Alamogordo
+            City Clerk as the mailing address (1376 East Ninth Street, Alamogordo, NM 88310)
+            since that's the official records custodian.
+          </li>
+          <li>
+            <strong>Request body</strong> &mdash; delete all the placeholder text MuckRock
+            pre-filled (it includes things like "[waiver]" and outdated language about
+            CD-ROMs and "[name]") and paste the body you copied in Step 2. The pasted text
+            should start with "To Whom It May Concern:" and end with "This request is
+            prepared under the New Mexico Inspection of Public Records Act."
+          </li>
+          <li>
+            <strong>Other fields</strong> (jurisdiction, tags, etc.) &mdash; fill in if you
+            want; MuckRock uses them to organize requests. The defaults are fine if you
+            don't want to think about it.
+          </li>
+        </ol>
+        <p class="small">
+          <strong>Common gotcha:</strong> if MuckRock's pre-filled placeholder text is still
+          visible after you paste, you have leftover text mixed in. Highlight the entire
+          body field, delete it, and paste again.
+        </p>
+      </section>
+
+      <section aria-labelledby="step-5-h">
+        <h2 id="step-5-h">Step 5. Submit and follow up</h2>
+        <p>
+          Hit submit. MuckRock will send the request to the agency and email you a copy.
+          After that, MuckRock handles the rest &mdash; if the agency asks follow-up
+          questions, requests clarification, or sends records, you'll get an email. MuckRock
+          will also help you appeal denials or pay fees (their basic account is free; paid
+          accounts handle fees for you).
+        </p>
+        <h3>Track the deadline</h3>
+        <p>
+          New Mexico law gives the agency <strong>15 days to respond</strong> for most
+          records (&sect; 14-2-8(D)) and <strong>3 business days</strong> for records to
+          which a law-enforcement-related exception may apply (&sect; 14-2-8(F)). Mark your
+          calendar from the date you submitted, not the date the agency acknowledges
+          receipt.
+        </p>
+        <h3>If they don't respond in time</h3>
+        <p>
+          You have remedies under &sect; 14-2-12: the New Mexico Attorney General's office
+          enforces IPRA, and you can sue in district court for injunctive relief, damages,
+          and reasonable attorney fees. MuckRock can help you draft the appeal letter, and
+          the New Mexico Foundation for Open Government
+          (<a href="https://www.nmfog.org/" rel="noopener">NMFOG</a>) will answer questions
+          by email.
+        </p>
+      </section>
+
+      <section aria-labelledby="related-h">
+        <h2 id="related-h">Related</h2>
+        <ul>
+          <li><a href="paper-letter.html">File via paper letter (mail or hand-deliver) &rarr;</a></li>
+          <li><a href="documents.html">All templates and documents &rarr;</a></li>
+          <li><a href="take-action.html">Back to Take action &rarr;</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="site-footer"></footer>
+  </div>
+
+  <script src="_config.js"></script>
+  <script src="assets/layout.js"></script>
+
+  <script type="application/json" id="ipra-body-data-muckrock">  "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\u26a0\ufe0f  DRAFT \u2014 WORK IN PROGRESS \u2014 NOT LEGAL ADVICE\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nThis template is based on the Business Reform Open Records template\nand has been rewritten for New Mexico's Inspection of\nPublic Records Act (NMSA 1978 \u00a7\u00a7 14-2-1 et seq.). It has NOT been reviewed\nby an attorney and may contain errors, outdated citations, or language that\ndoes not fit your specific request.\n\nBefore submitting to any agency:\n  1. Verify the agency's current address, phone, and email against its\n     official Public Records Request page.\n  2. Verify the IPRA citations against the current statute at nmag.gov.\n  3. Verify the case law and any agency-specific procedures.\n  4. Consider asking NMFOG (nmfog.org) to review your request \u2014 they\n     answer questions by email and have up-to-date sample language.\n\nAddress block, statutes, and contact details are current as of June 2026.\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nTo Whom It May Concern:\n\nPursuant to New Mexico's Inspection of Public Records Act (NMSA 1978 \u00a7\u00a7 14-2-1 et seq.), I request the following records related to the City of Alamogordo and the Alamogordo Police Department's acquisition and use of automated license plate reader (ALPR) technology, including any system manufactured, sold, or operated by Flock Safety, Vigilant Solutions, Rekor Systems, Motorola Vigilant, or any other ALPR vendor, for the period of January 1, 2023, through the date this request is processed.\n\nThis request is submitted by a New Mexico resident and concerns the conduct of public business in this state. The records I request are not exempt from disclosure under \u00a7 14-2-1(A) or any other provision of New Mexico law. To the extent any portion of this request is denied or redacted, please provide a written explanation citing the specific statutory exemption relied upon, as required by \u00a7 14-2-11.\n\nPlease provide copies of the following records. Where records are maintained in an electronic database, I request an export in a machine-readable format (CSV, Excel, or PDF) pursuant to \u00a7 14-2-8(B).\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nRECORDS REQUESTED\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n1. CONTRACTS AND AGREEMENTS\n\n   a. All contracts, agreements, memoranda of understanding (MOUs), data-sharing agreements, license agreements, statements of work, and other binding documents between the City of Alamogordo (or APD) and any ALPR vendor, including but not limited to Flock Safety, Inc.\n\n   b. All amendments, addenda, exhibits, side letters, or extensions of the contracts identified in (1)(a), executed or in effect at any time during the requested period.\n\n   c. All procurement documents, requests for proposals, requests for quotes, bid responses, evaluation documents, and award notices relating to the selection or acquisition of any ALPR system.\n\n2. POLICIES, PROCEDURES, AND TRAINING\n\n   All policies, procedure manuals, directives, standard operating procedures, training materials, and internal guidance documents, in effect or revised during the requested period, that describe:\n\n   a. Who within the City or APD is authorized to search, query, or otherwise access ALPR data \u2014 including any specific roles, ranks, units, or individuals granted access.\n\n   b. The process for granting, revoking, monitoring, or auditing such access, including any controls on third-party access.\n\n   c. The circumstances under which a license plate may be searched in ALPR data, including any required criteria, approvals, justifications, or supervisor sign-offs.\n\n   d. The circumstances under which an alert, hot-list entry, or notification may be created for a specific license plate, including the criteria, approvals, and retention period for any such list.\n\n3. DATA-SHARING AND PARTNER AGENCIES\n\n   a. The names of all law-enforcement agencies (local, state, federal, tribal, or international) and all non-law-enforcement entities (including homeowners associations, private businesses, and individuals) that have been granted access to ALPR data collected by or on behalf of the City of Alamogordo.\n\n   b. All agreements, MOUs, or other documents governing such data sharing, including any terms on data retention, allowed use, prohibited use, auditing, and termination.\n\n   c. The total number of ALPR data-sharing requests received from and fulfilled to other agencies, by agency, for each year of the requested period.\n\n4. DATA RETENTION, STORAGE, AND DELETION\n\n   a. The retention period for ALPR data, both for data not associated with an active investigation (\"non-hit\" data) and for data associated with an investigation or alert.\n\n   b. The location(s) where ALPR data is stored (on-premises, vendor cloud, third-party cloud), and the jurisdiction(s) in which that storage resides.\n\n   c. All policies, procedures, and audit logs relating to the deletion or purging of ALPR data at the end of its retention period.\n\n5. DEPLOYMENT, LOCATIONS, AND USE\n\n   a. The total number of ALPR cameras currently operated by, for, or on behalf of the City of Alamogordo, and the general location of each (intersection, address, or geographic area).\n\n   b. The number of license plate scans performed by ALPR cameras operated by or for the City, by month, for the requested period, including any breakdown by camera location.\n\n   c. The number of \"hits\" (matches against hot lists or alerts) generated by the ALPR system, by month, for the requested period.\n\n6. COSTS, FUNDING, AND BUDGET\n\n   a. The total amount paid by the City of Alamogordo to any ALPR vendor, by year, for the requested period, including any line items in the City's annual budget relating to ALPRs.\n\n   b. The source of funds used to pay for the ALPR system (general fund, opioid settlement funds, grant funds, or any other source), and any restrictions on the use of those funds.\n\n   c. All invoices, receipts, and payment records relating to the ALPR system.\n\n7. TERMINATION AND CANCELLATION\n\n   a. The full text of any termination, cancellation, or \"no-cause\" clause in the City's ALPR contract(s), including any required notice period, termination fee, data-destruction obligations, and post-termination access rights.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nTIMELINE\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nNew Mexico law requires a response to an IPRA request \"as soon as practicable, but in no event later than fifteen days after receipt\" for most records (\u00a7 14-2-8(D)), and within three business days for records to which a law-enforcement-related exception may apply (\u00a7 14-2-8(F)). All correspondence regarding this request should be conducted through MuckRock.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nABOUT THIS REQUEST\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nThis request is prepared under the New Mexico Inspection of Public Records Act.\n"</script>
+
+  <script>
+    (function () {
+      "use strict";
+      var btn = document.getElementById("copy-body-btn");
+      var status = document.getElementById("copy-status");
+      var dataEl = document.getElementById("ipra-body-data-muckrock");
+      if (!btn || !dataEl) return;
+
+      var BODY = null;
+      try { BODY = JSON.parse(dataEl.textContent); } catch (e) {
+        console.error("[muckrock-page] body parse failed", e);
+        return;
+      }
+
+      function showStatus(msg, ok) {
+        status.hidden = false;
+        status.textContent = msg;
+        status.style.color = ok ? "#0a6b2a" : "#b3261e";
+      }
+
+      function fallbackCopy(text) {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "absolute";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+        document.body.removeChild(ta);
+        return ok;
+      }
+
+      btn.addEventListener("click", function () {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(BODY).then(
+            function () { showStatus("Copied. Now go to Step 3 to open MuckRock's form, then paste it over the placeholder text.", true); },
+            function () { if (fallbackCopy(BODY)) showStatus("Copied (fallback). Now go to Step 3 to open MuckRock's form, then paste it over the placeholder text.", true); else showStatus("Couldn't copy automatically. Use the .txt download link instead.", false); }
+          );
+        } else {
+          if (fallbackCopy(BODY)) showStatus("Copied (fallback). Now go to Step 3 to open MuckRock's form, then paste it over the placeholder text.", true);
+          else showStatus("Couldn't copy automatically. Use the .txt download link instead.", false);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
