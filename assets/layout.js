@@ -15,6 +15,7 @@
   const navItems = [
     { href: "home.html",        label: "Home",         match: ["home.html"] },
     { href: "learning.html",    label: "Learning",       match: ["learning.html"] },
+    { href: "resources.html",   label: "Resources",     match: ["resources.html"] },
     { href: "documents.html",   label: "Documents",     match: ["documents.html"] },
     { href: "take-action.html", label: "Take action",   match: ["take-action.html"] },
     { href: "survey.html",      label: "Have your say", match: ["survey.html"] },
