@@ -3,9 +3,10 @@
 // It is loaded by every page via <script src="_config.js"></script>.
 // Keep this file as plain JS (not JSON) so it works without a build step.
 //
-// Private values (contact email, etc.) live in `_config.private.js`
-// which is gitignored and loaded after this file. Public callers can fall
-// back to the public "contact" placeholder shown below.
+// Private values (contact email, etc.) live in `_config.private.js`.
+// A safe placeholder is committed (contains no real data) so the browser
+// never sees a 404. To set a real contact email, edit _config.private.js
+// in your local clone and redeploy.
 
 window.SITE_CONFIG = {
   // --- Identity ------------------------------------------------------------
@@ -17,9 +18,10 @@ window.SITE_CONFIG = {
   state: "New Mexico",
   domain: "deflockalamo.org",          // registered
   started: "2026-06-03",               // site launch date (YYYY-MM-DD)
-  // Public-facing contact placeholder. The real inbox is loaded from
-  // _config.private.js (gitignored). Pages should treat SITE_CONFIG.contactEmail
-  // as a string (could be the placeholder, could be the real address).
+  // Real inbox is loaded from _config.private.js (committed as a no-op
+  // placeholder; uncomment + edit locally to set a real address).
+  // Pages should treat SITE_CONFIG.contactEmail as a string (could be the
+  // placeholder, could be the real address).
   contactEmail: "contact (see privacy page)",
   // --- Hero ----------------------------------------------------------------
   heroEyebrow: "Community information hub",
@@ -119,14 +121,8 @@ window.SITE_CONFIG = {
   },
 };
 
-// Private overrides (gitignored) — loaded after the public config above.
-// If _config.private.js exists, its `window.SITE_CONFIG` assignments will
-// override the public defaults. To override contactEmail, the file should
-// look like:
-//
-//   window.SITE_CONFIG = window.SITE_CONFIG || {};
-//   window.SITE_CONFIG.contactEmail = "deflockalamo@proton.me";
-//
+// Private overrides (committed as a no-op placeholder; edit + redeploy
+// to set a real contact email). Loaded after the public config above.
 if (typeof window !== "undefined") {
   var s = document.createElement("script");
   s.src = "_config.private.js";

@@ -1,8 +1,10 @@
-# Local/private config overrides — NEVER commit the real version of this file.
-# The real _config.private.js (with the actual contact email and any other
-# private values) should be created on the deployment target and is gitignored.
-
-_config.private.js
+# Local/private config overrides — never commit the real version of this file.
+# A safe placeholder is committed (see _config.private.js in the repo) so the
+# browser never sees a 404. To set a real contact email, edit the file in your
+# local clone and redeploy.
+#
+# This .gitignore entry is kept for FUTURE local overrides only — do not uncomment.
+# _config.private.js
 
 # Cloudflare wrangler local dev secrets (API token, etc.)
 .dev.vars

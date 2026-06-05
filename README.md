@@ -17,8 +17,7 @@ information about Flock ALPRs in Alamogordo, NM.
 ```
 .
 ├── _config.js                  public site config (committed)
-├── _config.private.js.example  template for private config (committed)
-├── _config.private.js          private config (gitignored, deployed per-env)
+├── _config.private.js          no-op placeholder (committed) — edit locally to set contact email
 ├── index.html                  landing / disclaimer
 ├── home.html                   real home page
 ├── about.html
@@ -43,8 +42,10 @@ python3 -m http.server 8000 --directory /home/pi/.openclaw/workspace/deflock
 ```
 
 The private config file (`_config.private.js`) is loaded via a
-`<script>` tag injected at the bottom of `_config.js`. If the file
-isn't present, the public placeholder is used.
+`<script>` tag injected at the bottom of `_config.js`. A no-op placeholder
+is committed (contains no real data) so the browser never sees a 404. To
+set a real contact email, uncomment the `contactEmail` line in your local
+clone and redeploy.
 
 ## Editing workflow
 
