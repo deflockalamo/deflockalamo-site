@@ -154,7 +154,7 @@
         });
 
         // Initial tally load (don't wait for a click)
-        fetch("/api/community/counts")
+        fetch("/api/community/counts?_=" + Date.now())
           .then(function (r) { return r.ok ? r.json() : null; })
           .then(function (c) {
             if (!c) { tally.textContent = "Results unavailable."; return; }
@@ -163,8 +163,9 @@
               c.survey_yes + " yes, " + c.survey_some + " some concerns, " + c.survey_no + " no. " +
               "<a href=\"news.html\">Want to learn more? Read the background &rarr;</a> " +
               "· <a href=\"survey.html#standing\">Add your name to the Community Standing (" + c.standing_total + ")</a>.";
+            console.log("[home tally loaded]", c);
           })
-          .catch(function () { tally.textContent = "Results unavailable."; });
+          .catch(function (e) { console.warn("[home tally load failed]", e); tally.textContent = "Results unavailable."; });
       }
     });
   </script>

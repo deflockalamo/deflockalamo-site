@@ -351,16 +351,19 @@
 
     async function refreshTally() {
       try {
-        const res = await fetch("/api/community/counts");
-        if (!res.ok) throw new Error();
+        const res = await fetch("/api/community/counts?_=" + Date.now());
+        if (!res.ok) throw new Error("HTTP " + res.status);
         const c = await res.json();
         const t = document.getElementById("poll-tally");
-        t.innerHTML =
+        const newHtml =
           `<strong>${c.survey_total}</strong> people have weighed in so far — ` +
           `${c.survey_yes} yes, ${c.survey_some} some concerns, ${c.survey_no} no. ` +
           `<a href="news.html">Want to learn more before answering? Read the background &rarr;</a> ` +
           `· <a href="#standing">Add your name to the Community Standing (${c.standing_total})</a>.`;
-      } catch {
+        t.innerHTML = newHtml;
+        console.log("[tally refreshed]", c);
+      } catch (e) {
+        console.warn("[tally refresh failed]", e);
         document.getElementById("poll-tally").textContent = "Results unavailable.";
       }
     }
