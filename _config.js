@@ -111,7 +111,7 @@ window.SITE_CONFIG = {
       blurb: "EFF's practical guide to ALPRs: what they do, what the law says, and what you can do."
     },
   },
-  // --- Social / external (legacy aliases, still used by news.html) -------
+  // --- Social / external (legacy aliases, still used by learning.html) ---
   links: {
     nprOverview:  "https://www.npr.org/2026/02/17/nx-s1-5612825/flock-contracts-canceled-immigration-survillance-concerns",
     effOverview:  "https://www.eff.org/deeplinks/2025/12/effs-investigations-expose-flock-safetys-surveillance-abuses-2025-review",

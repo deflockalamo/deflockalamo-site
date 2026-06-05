@@ -26,7 +26,7 @@
         <p data-cfg="heroBody"></p>
         <p style="margin-top:1rem">
           <a class="btn" href="take-action.html">Get involved</a>
-          <a class="btn secondary" href="news.html" style="margin-left:0.4rem">Read the background</a>
+          <a class="btn secondary" href="learning.html" style="margin-left:0.4rem">Read the background</a>
           <a class="btn secondary" href="survey.html" style="margin-left:0.4rem">Have your say</a>
         </p>
       </section>
@@ -38,7 +38,7 @@
           <button type="button" data-answer="yes"   style="padding:0.7rem 0.8rem;font-weight:600;border:2px solid currentColor;background:transparent;color:inherit;border-radius:6px;cursor:pointer">Yes</button>
           <button type="button" data-answer="some"  style="padding:0.7rem 0.8rem;font-weight:600;border:2px solid currentColor;background:transparent;color:inherit;border-radius:6px;cursor:pointer">Some concerns</button>
           <button type="button" data-answer="no"    style="padding:0.7rem 0.8rem;font-weight:600;border:2px solid currentColor;background:transparent;color:inherit;border-radius:6px;cursor:pointer">No</button>
-          <a href="news.html" style="padding:0.7rem 0.8rem;font-weight:600;border:2px solid currentColor;background:transparent;color:inherit;border-radius:6px;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center">Want to learn more &rarr;</a>
+          <a href="learning.html" style="padding:0.7rem 0.8rem;font-weight:600;border:2px solid currentColor;background:transparent;color:inherit;border-radius:6px;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center">Want to learn more &rarr;</a>
         </div>
         <p id="home-poll-confirm" hidden style="padding:0.5rem 0.8rem;border-radius:6px;background:rgba(127,255,127,0.08);border:1px solid rgba(127,255,127,0.3);margin:0.6rem 0">
           Thanks — counted. <a href="survey.html#standing">Add your name to the Community Standing</a>.
@@ -75,14 +75,14 @@
           <li><strong>Cancellation is hard.</strong> Reports describe cities stuck in "contractual trap" arrangements where cameras keep running long after a vote to end the program.</li>
         </ul>
         <p class="small">
-          See <a href="news.html">News &amp; reading</a> for the source articles behind these points.
+          See <a href="learning.html">Learning</a> for the source articles behind these points.
         </p>
       </section>
 
       <section aria-labelledby="start-h">
         <h2 id="start-h">Start here</h2>
         <div class="card">
-          <h3><a href="news.html">1. Read the background</a></h3>
+          <h3><a href="learning.html">1. Read the background</a></h3>
           <p>Curated journalism, advocacy group explainers, and the case for why ALPRs are different from other surveillance tools.</p>
         </div>
         <div class="card">
@@ -143,7 +143,7 @@
               tally.innerHTML =
                 "<strong>" + c.survey_total + "</strong> people have weighed in so far — " +
                 c.survey_yes + " yes, " + c.survey_some + " some concerns, " + c.survey_no + " no. " +
-                "<a href=\"news.html\">Want to learn more? Read the background &rarr;</a> " +
+                "<a href="learning.html">Want to learn more? Read the background &rarr;</a> " +
                 "· <a href=\"survey.html#standing\">Add your name to the Community Standing (" + c.standing_total + ")</a>.";
             })
             .catch(function () {
@@ -161,7 +161,7 @@
             tally.innerHTML =
               "<strong>" + c.survey_total + "</strong> people have weighed in so far — " +
               c.survey_yes + " yes, " + c.survey_some + " some concerns, " + c.survey_no + " no. " +
-              "<a href=\"news.html\">Want to learn more? Read the background &rarr;</a> " +
+              "<a href="learning.html">Want to learn more? Read the background &rarr;</a> " +
               "· <a href=\"survey.html#standing\">Add your name to the Community Standing (" + c.standing_total + ")</a>.";
             console.log("[home tally loaded]", c);
           })

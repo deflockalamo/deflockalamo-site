@@ -176,7 +176,7 @@
           <button type="button" data-answer="yes">Yes</button>
           <button type="button" data-answer="some">Some concerns</button>
           <button type="button" data-answer="no">No</button>
-          <a href="news.html" class="secondary-btn" style="text-align:center;display:flex;align-items:center;justify-content:center">Want to learn more &rarr;</a>
+          <a href="learning.html" class="secondary-btn" style="text-align:center;display:flex;align-items:center;justify-content:center">Want to learn more &rarr;</a>
         </div>
         <p class="poll-confirmation" id="poll-confirmation" hidden>
           Thanks — counted.
@@ -358,7 +358,7 @@
         const newHtml =
           `<strong>${c.survey_total}</strong> people have weighed in so far — ` +
           `${c.survey_yes} yes, ${c.survey_some} some concerns, ${c.survey_no} no. ` +
-          `<a href="news.html">Want to learn more before answering? Read the background &rarr;</a> ` +
+          `<a href="learning.html">Want to learn more before answering? Read the background &rarr;</a> ` +
           `· <a href="#standing">Add your name to the Community Standing (${c.standing_total})</a>.`;
         t.innerHTML = newHtml;
         console.log("[tally refreshed]", c);

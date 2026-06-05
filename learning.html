@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-default="Learning">Learning</title>
+  <meta name="description" content="Videos, articles, and journalism about Flock Safety and ALPR privacy — curated for residents of Alamogordo, NM.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23b3261e'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='system-ui' font-size='38' font-weight='700' fill='white'%3ED%3C/text%3E%3C/svg%3E">
+  <style>
+    /* --- Page layout: sticky in-page TOC on the left ------------------- */
+    .learning-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 60rem) {
+      .learning-wrap {
+        grid-template-columns: 12rem minmax(0, 1fr);
+        align-items: start;
+      }
+    }
+    .toc {
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem 1rem;
+    }
+    @media (min-width: 60rem) {
+      .toc {
+        position: sticky;
+        top: 1rem;
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+      }
+    }
+    .toc h2 {
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+      border-bottom: none;
+      margin: 0 0 0.4rem;
+      padding: 0;
+    }
+    .toc ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: toccount;
+    }
+    .toc li {
+      counter-increment: toccount;
+      margin: 0.1rem 0;
+    }
+    .toc a {
+      display: block;
+      padding: 0.25rem 0.4rem 0.25rem 1.5rem;
+      position: relative;
+      color: var(--fg-muted);
+      text-decoration: none;
+      border-left: 2px solid transparent;
+      font-size: 0.95rem;
+      line-height: 1.35;
+      border-radius: 0 3px 3px 0;
+    }
+    .toc a::before {
+      content: counter(toccount);
+      position: absolute;
+      left: 0.3rem;
+      top: 0.25rem;
+      font-size: 0.75rem;
+      color: var(--fg-faint);
+      font-variant-numeric: tabular-nums;
+    }
+    .toc a:hover { color: var(--fg); }
+    .toc a.active {
+      color: var(--fg);
+      border-left-color: var(--accent);
+      background: var(--accent-bg);
+      font-weight: 600;
+    }
+    /* On narrow screens the TOC collapses into a <details> at the top */
+    .toc-mobile summary {
+      cursor: pointer;
+      font-weight: 600;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .toc-mobile summary::-webkit-details-marker { display: none; }
+    .toc-mobile summary::after {
+      content: "▾";
+      font-size: 0.85rem;
+      color: var(--fg-muted);
+      transition: transform 0.15s;
+    }
+    .toc-mobile[open] summary::after { transform: rotate(180deg); }
+    @media (min-width: 60rem) {
+      .toc-mobile summary { display: none; }
+      .toc-mobile[open] .toc-list { display: block !important; }
+    }
+
+    /* --- Video embeds ---------------------------------------------------- */
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    @media (min-width: 48rem) {
+      .video-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .video-card {
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.9rem;
+    }
+    .video-card.featured {
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-bg);
+    }
+    .video-card h3 {
+      margin: 0.4rem 0 0.3rem;
+      font-size: 1.05rem;
+      line-height: 1.3;
+    }
+    .video-card .meta {
+      font-size: 0.8rem;
+      color: var(--fg-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .video-card p { margin: 0.5rem 0 0; font-size: 0.95rem; }
+    .embed {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+      background: #000;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .embed iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="site">
+    <header class="site-header" id="site-header"></header>
+
+    <main id="main">
+      <h1>Learning</h1>
+      <p>
+        A growing collection of videos, articles, and journalism about Flock Safety
+        and ALPR surveillance. We start with the most useful pieces and add more as
+        we find them. Watch a video, read a few articles, then come back when you
+        have time — there's a lot here and you don't have to absorb it all at once.
+      </p>
+
+      <div class="learning-wrap">
+
+        <!-- In-page table of contents (sticky on wide screens, collapsible on mobile) -->
+        <aside class="toc toc-mobile" aria-label="On this page">
+          <summary>On this page</summary>
+          <nav class="toc-list" style="display:none">
+            <h2>On this page</h2>
+            <ol>
+              <li><a href="#video-h">Video education</a></li>
+              <li><a href="#local-h">Local coverage</a></li>
+              <li><a href="#national-h">National &amp; explainers</a></li>
+              <li><a href="#orgs-h">Organizations</a></li>
+            </ol>
+          </nav>
+        </aside>
+
+        <div>
+
+          <section aria-labelledby="video-h">
+            <h2 id="video-h">Video education</h2>
+            <p>
+              <strong>Business Reform</strong> is a YouTube channel that covers Flock
+              and other private surveillance companies in depth. We feature their
+              videos here because they explain the business model, the contracts, and
+              the data-sharing issues better than almost anything else out there.
+              Start with the one below — it's the one that flipped how a lot of
+              people think about "their" cameras.
+            </p>
+
+            <div class="video-grid">
+
+              <article class="video-card featured">
+                <p class="meta">Featured &middot; Business Reform</p>
+                <h3>Public Officials Fear This: How YOU Can Use Surveillance Data Against Them</h3>
+                <div class="embed">
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/ZMWRFjB-3UE"
+                    title="Public Officials Fear This: How YOU Can Use Surveillance Data Against Them"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <p>
+                  The punchy one. Turns the script on the "if you have nothing to hide,
+                  you have nothing to fear" argument: the same camera data can be used
+                  as evidence against the officials who deploy it. Great share video.
+                </p>
+              </article>
+
+              <article class="video-card">
+                <p class="meta">Business Reform</p>
+                <h3>Sanibel Police Refuse Open Records Request on Flock Safety Cameras</h3>
+                <div class="embed">
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/mKr3Acrovio"
+                    title="Sanibel Police Dept Refuse Open Records Request on Flock Safety Cameras"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <p>
+                  A real case study in what happens when a community asks its police
+                  department, in writing, what it signed with Flock. Sanibel said no.
+                  Useful precedent if you ever file a public-records request here.
+                </p>
+              </article>
+
+            </div>
+
+            <p class="small" style="margin-top:1rem">
+              <a href="https://www.youtube.com/@BusinessReform" rel="noopener">
+                More videos from Business Reform on YouTube &rarr;
+              </a>
+            </p>
+          </section>
+
+          <section aria-labelledby="local-h">
+            <h2 id="local-h">Local coverage</h2>
+            <p class="small">
+              Add links to local news stories as they appear. Format: <span class="kbd">title</span> —
+              publication, date — one-sentence "why it matters" note.
+            </p>
+            <ul>
+              <li><em>Placeholder:</em> First local story about the Flock installation in <span data-cfg="area">our area</span>. <a href="#">Add link</a></li>
+            </ul>
+          </section>
+
+          <section aria-labelledby="national-h">
+            <h2 id="national-h">National coverage &amp; explainers</h2>
+
+            <article class="card">
+              <p class="meta">NPR &middot; 17 Feb 2026</p>
+              <h3><a data-ext="nprOverview" href="#">Why some cities are canceling Flock license plate reader contracts</a></h3>
+              <p class="source">npr.org</p>
+              <p>
+                Good overview of why municipal leaders — including Hillsborough, NC and Flagstaff, AZ —
+                have ended their Flock contracts, with focus on data-sharing language and "good faith
+                belief" disclosure clauses.
+              </p>
+            </article>
+
+            <article class="card">
+              <p class="meta">EFF &middot; 2 Jan 2026</p>
+              <h3><a data-ext="effOverview" href="#">EFF's Investigations Expose Flock Safety's Surveillance Abuses: 2025 in Review</a></h3>
+              <p class="source">eff.org</p>
+              <p>
+                EFF's annual review of their Flock investigations. Covers why the company's "privacy
+                enhancements" (geofencing, retention limits) don't make ALPRs safe.
+              </p>
+            </article>
+
+            <article class="card">
+              <p class="meta">ACLU &middot; 17 Oct 2025</p>
+              <h3><a data-ext="acluOverview" href="#">Flock's Aggressive Expansions Go Far Beyond Simple Driver Surveillance</a></h3>
+              <p class="source">aclu.org</p>
+              <p>
+                ACLU's "Flock roundup" — collection of cases and commentary, including the
+                <em>Nguyen v. State</em> case examining whether ALPRs violate Fourth Amendment
+                expectations of privacy.
+              </p>
+            </article>
+
+            <article class="card">
+              <p class="meta">Berkeleyside &middot; 24 Nov 2025</p>
+              <h3><a href="https://www.berkeleyside.org/2025/11/24/flock-safety-cameras-berkeley-license-plate-readers">What are Flock cameras, and why are they controversial in Berkeley?</a></h3>
+              <p class="source">berkeleyside.org</p>
+              <p>
+                Accessible explainer for a general audience, with quotes from ACLU and EFF and a clear
+                breakdown of the constitutional concerns.
+              </p>
+            </article>
+
+            <article class="card">
+              <p class="meta">Fortune &middot; 3 Jun 2026</p>
+              <h3><a href="https://fortune.com/2026/06/03/why-are-ohio-city-workers-covering-flock-cameras-immigration-enforcement-data-sharing-policy-violations/">Dayton is covering Flock cameras with trash bags after officials found data use violated policy</a></h3>
+              <p class="source">fortune.com</p>
+              <p>
+                Concrete example of a city discovering after the fact that data was being shared in
+                ways the contract didn't allow — and the "contractual trap" problem with cancellation.
+              </p>
+            </article>
+
+            <article class="card">
+              <p class="meta">EFF &middot; 12 Nov 2025</p>
+              <h3><a href="https://www.eff.org/deeplinks/2025/11/washington-court-rules-data-captured-flock-safety-cameras-are-public-records">Washington Court Rules That Data Captured on Flock Safety Cameras Are Public Records</a></h3>
+              <p class="source">eff.org</p>
+              <p>
+                Important precedent: a Washington court ruled that Flock-captured data are public
+                records, reinforcing transparency obligations. Useful for FOIA arguments locally.
+              </p>
+            </article>
+
+            <article class="card">
+              <p class="meta">Wikipedia</p>
+              <h3><a href="https://en.wikipedia.org/wiki/Flock_Safety">Flock Safety</a></h3>
+              <p class="source">en.wikipedia.org</p>
+              <p>
+                Background on the company, its products, and the public debate. Good for a quick
+                factual overview; the privacy-criticism section links to ACLU, EFF, and major coverage.
+              </p>
+            </article>
+          </section>
+
+          <section aria-labelledby="orgs-h">
+            <h2 id="orgs-h">Organizations tracking ALPRs</h2>
+            <ul>
+              <li><a href="https://www.eff.org/issues/surveillance-technologies">EFF — Surveillance</a> — investigative reporting and policy work on ALPRs.</li>
+              <li><a href="https://www.aclu.org/news/privacy-technology">ACLU — Privacy &amp; Technology</a> — litigation, including <em>Nguyen v. State</em>.</li>
+              <li><a href="https://flockvwatch.org/">Flock Watch</a> (if relevant) — community-run map of known Flock cameras.</li>
+            </ul>
+          </section>
+
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="site-footer" id="site-footer"></footer>
+  </div>
+
+  <script src="_config.js"></script>
+  <script src="assets/layout.js"></script>
+  <script>
+    // In-page TOC: scroll-spy + mobile open/close
+    (function () {
+      var aside = document.querySelector(".toc-mobile");
+      if (!aside) return;
+      var navList = aside.querySelector(".toc-list");
+      var links = Array.from(aside.querySelectorAll("a[href^='#']"));
+      var ids = links.map(function (a) { return a.getAttribute("href").slice(1); });
+
+      // Show nav list on wide screens (CSS only handles the default; on wide we keep it open)
+      function syncMobileDefault() {
+        if (window.matchMedia("(min-width: 60rem)").matches) {
+          navList.style.display = "";
+        } else {
+          // start closed on mobile
+          if (!aside.hasAttribute("data-touched")) {
+            aside.open = false;
+            navList.style.display = "none";
+          }
+        }
+      }
+      syncMobileDefault();
+      window.addEventListener("resize", syncMobileDefault);
+      aside.addEventListener("toggle", function () {
+        aside.setAttribute("data-touched", "1");
+        if (aside.open) {
+          navList.style.display = "";
+        } else if (!window.matchMedia("(min-width: 60rem)").matches) {
+          navList.style.display = "none";
+        }
+      });
+
+      // Scroll-spy: highlight the link whose target is closest above the viewport top
+      var targets = ids
+        .map(function (id) { return document.getElementById(id); })
+        .filter(Boolean);
+
+      function setActive(idx) {
+        links.forEach(function (a, i) { a.classList.toggle("active", i === idx); });
+      }
+
+      function update() {
+        if (!targets.length) return;
+        var fromTop = window.scrollY + 120; // offset for sticky header
+        var current = 0;
+        for (var i = 0; i < targets.length; i++) {
+          if (targets[i].offsetTop <= fromTop) current = i;
+        }
+        setActive(current);
+      }
+      update();
+      window.addEventListener("scroll", update, { passive: true });
+      window.addEventListener("hashchange", update);
+    })();
+
+    // Existing data-cfg / data-ext wiring
+    document.addEventListener("DOMContentLoaded", function () {
+      var C = window.SITE_CONFIG || {};
+      document.querySelectorAll("[data-cfg]").forEach(function (el) {
+        var key = el.getAttribute("data-cfg");
+        if (C[key] != null) el.textContent = C[key];
+      });
+      document.querySelectorAll("[data-ext]").forEach(function (el) {
+        var key = el.getAttribute("data-ext");
+        if (C.links && C.links[key]) el.setAttribute("href", C.links[key]);
+      });
+    });
+  </script>
+</body>
+</html>

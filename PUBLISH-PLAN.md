@@ -28,7 +28,7 @@ A new git repo, just for the site:
 ├── home.html                        ← real home
 ├── about.html
 ├── documents.html
-├── news.html
+├── learning.html
 ├── privacy.html
 ├── resources.html
 ├── take-action.html

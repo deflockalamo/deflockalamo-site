@@ -23,7 +23,7 @@ information about Flock ALPRs in Alamogordo, NM.
 ├── home.html                   real home page
 ├── about.html
 ├── documents.html
-├── news.html
+├── learning.html
 ├── privacy.html
 ├── resources.html
 ├── take-action.html
