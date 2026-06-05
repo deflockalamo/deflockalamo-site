@@ -4,5 +4,14 @@
 
 _config.private.js
 
+# Cloudflare wrangler local dev secrets (API token, etc.)
+.dev.vars
+
+# D1 database ID / connection notes (operator-only)
+D1-NOTES.txt
+
 # PDFs and other public reference materials live in documents/ and ARE
 # part of the deploy — they get served alongside the HTML. Don't ignore.
+
+# Cloudflare wrangler build cache (created by `wrangler` commands)
+.wrangler/

@@ -17,6 +17,7 @@
     { href: "news.html",        label: "News & reading", match: ["news.html"] },
     { href: "documents.html",   label: "Documents",     match: ["documents.html"] },
     { href: "take-action.html", label: "Take action",   match: ["take-action.html"] },
+    { href: "survey.html",      label: "Have your say", match: ["survey.html"] },
     { href: "about.html",       label: "About",         match: ["about.html"] },
   ];
 

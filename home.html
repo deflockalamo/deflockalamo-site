@@ -27,7 +27,23 @@
         <p style="margin-top:1rem">
           <a class="btn" href="take-action.html">Get involved</a>
           <a class="btn secondary" href="news.html" style="margin-left:0.4rem">Read the background</a>
+          <a class="btn secondary" href="survey.html" style="margin-left:0.4rem">Have your say</a>
         </p>
+      </section>
+
+      <section class="quick-poll" aria-labelledby="poll-h" style="padding:1.2rem 1.2rem;margin:1.5rem 0;border:1px solid rgba(127,127,127,0.3);border-radius:10px;background:rgba(127,127,127,0.04)">
+        <h2 id="poll-h" style="margin-top:0">Quick check</h2>
+        <p style="margin:0.4rem 0 0.8rem"><strong>Do you have concerns about the Flock cameras in your community?</strong></p>
+        <div id="home-poll" style="display:grid;gap:0.5rem;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));margin:0.6rem 0">
+          <button type="button" data-answer="yes"   style="padding:0.7rem 0.8rem;font-weight:600;border:2px solid currentColor;background:transparent;color:inherit;border-radius:6px;cursor:pointer">Yes</button>
+          <button type="button" data-answer="some"  style="padding:0.7rem 0.8rem;font-weight:600;border:2px solid currentColor;background:transparent;color:inherit;border-radius:6px;cursor:pointer">Some concerns</button>
+          <button type="button" data-answer="no"    style="padding:0.7rem 0.8rem;font-weight:600;border:2px solid currentColor;background:transparent;color:inherit;border-radius:6px;cursor:pointer">No</button>
+          <button type="button" data-answer="learn" style="padding:0.7rem 0.8rem;font-weight:600;border:2px solid currentColor;background:transparent;color:inherit;border-radius:6px;cursor:pointer">Want to learn more</button>
+        </div>
+        <p id="home-poll-confirm" hidden style="padding:0.5rem 0.8rem;border-radius:6px;background:rgba(127,255,127,0.08);border:1px solid rgba(127,255,127,0.3);margin:0.6rem 0">
+          Thanks — counted. <a href="survey.html#standing">Add your name to the Community Standing</a>.
+        </p>
+        <p id="home-poll-tally" style="font-size:0.95rem;opacity:0.8;margin:0.4rem 0 0">Loading results…</p>
       </section>
 
       <section aria-labelledby="what-h">
@@ -98,6 +114,54 @@
         var key = el.getAttribute("data-cfg");
         if (C[key] != null) el.textContent = C[key];
       });
+
+      // Inline quick-poll wiring (mirrors survey.html)
+      var grid = document.getElementById("home-poll");
+      var conf = document.getElementById("home-poll-confirm");
+      var tally = document.getElementById("home-poll-tally");
+      if (grid) {
+        grid.addEventListener("click", function (ev) {
+          var btn = ev.target.closest("button[data-answer]");
+          if (!btn) return;
+          var answer = btn.getAttribute("data-answer");
+          var btns = grid.querySelectorAll("button");
+          for (var i = 0; i < btns.length; i++) {
+            btns[i].disabled = true;
+            if (btns[i] === btn) btns[i].style.fontWeight = "800";
+          }
+          fetch("/api/community/survey", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ answer: answer, source: "home-poll" }),
+          }).then(function (res) {
+            if (!res.ok) throw new Error("HTTP " + res.status);
+            conf.hidden = false;
+            return fetch("/api/community/counts");
+          }).then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (c) {
+              if (!c) { tally.textContent = "Results unavailable."; return; }
+              tally.innerHTML =
+                "<strong>" + c.survey_total + "</strong> people have weighed in so far. " +
+                "<a href=\"survey.html#standing\">Add your name to the Community Standing (" + c.standing_total + ")</a>.";
+            })
+            .catch(function () {
+              conf.hidden = false;
+              conf.innerHTML = "Could not record your answer. Please refresh and try again, or <a href=\"survey.html\">go to the full survey page</a>.";
+              conf.style.background = "rgba(255, 80, 80, 0.1)";
+            });
+        });
+
+        // Initial tally load (don't wait for a click)
+        fetch("/api/community/counts")
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (c) {
+            if (!c) { tally.textContent = "Results unavailable."; return; }
+            tally.innerHTML =
+              "<strong>" + c.survey_total + "</strong> people have weighed in so far. " +
+              "<a href=\"survey.html#standing\">Add your name to the Community Standing (" + c.standing_total + ")</a>.";
+          })
+          .catch(function () { tally.textContent = "Results unavailable."; });
+      }
     });
   </script>
 </body>

@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-default="Have your say">Have your say</title>
+  <meta name="description" content="Take a 1-question survey about Flock ALPRs in Alamogordo, add your name to the Community Standing list, or subscribe for updates.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23b3261e'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='system-ui' font-size='38' font-weight='700' fill='white'%3ED%3C/text%3E%3C/svg%3E">
+  <style>
+    /* Survey page — self-contained styles, no clash with site style.css */
+    .poll-grid {
+      display: grid;
+      gap: 0.6rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      margin: 1rem 0;
+    }
+    .poll-grid button {
+      padding: 0.9rem 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: 2px solid currentColor;
+      background: transparent;
+      color: inherit;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .poll-grid button:hover { background: rgba(255,255,255,0.06); }
+    .poll-grid button:disabled { opacity: 0.4; cursor: default; }
+    .poll-tally {
+      font-size: 0.95rem;
+      opacity: 0.8;
+      margin: 0.5rem 0 0;
+    }
+    .poll-confirmation {
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
+      background: rgba(127, 255, 127, 0.08);
+      border: 1px solid rgba(127, 255, 127, 0.3);
+      margin: 0.8rem 0;
+    }
+    .form-block {
+      padding: 1.2rem;
+      border: 1px solid rgba(127,127,127,0.25);
+      border-radius: 10px;
+      margin: 1.5rem 0;
+    }
+    .form-block h2 { margin-top: 0; }
+    .form-row { margin: 0.8rem 0; }
+    .form-row label { display: block; font-weight: 600; margin-bottom: 0.3rem; }
+    .form-row input[type="text"],
+    .form-row input[type="email"],
+    .form-row textarea {
+      width: 100%;
+      padding: 0.5rem 0.6rem;
+      font-size: 1rem;
+      font-family: inherit;
+      background: rgba(0,0,0,0.05);
+      color: inherit;
+      border: 1px solid rgba(127,127,127,0.4);
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    .form-row textarea { min-height: 5rem; resize: vertical; }
+    .radio-group { display: flex; flex-direction: column; gap: 0.5rem; margin: 0.4rem 0; }
+    .radio-group label { font-weight: 400; cursor: pointer; display: flex; gap: 0.5rem; align-items: flex-start; }
+    .radio-group input { margin-top: 0.3rem; }
+    .checkbox-row { display: flex; gap: 0.5rem; align-items: flex-start; font-size: 0.95rem; margin: 0.8rem 0; }
+    .checkbox-row input { margin-top: 0.3rem; }
+    .submit-btn {
+      padding: 0.7rem 1.4rem;
+      font-size: 1rem;
+      font-weight: 600;
+      background: #b3261e;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .submit-btn:disabled { opacity: 0.5; cursor: default; }
+    .form-status { margin-top: 0.6rem; font-size: 0.95rem; min-height: 1.2rem; }
+    .form-status.error { color: #b3261e; }
+    .form-status.ok { color: #1f7a1f; }
+
+    .standing-list { margin-top: 1rem; }
+    .standing-tabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid rgba(127,127,127,0.3);
+      padding-bottom: 0.5rem;
+    }
+    .standing-tabs button {
+      padding: 0.4rem 0.8rem;
+      background: transparent;
+      border: 1px solid rgba(127,127,127,0.4);
+      color: inherit;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+    .standing-tabs button.active {
+      background: #b3261e;
+      color: white;
+      border-color: #b3261e;
+    }
+    .standing-entry {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(127,127,127,0.2);
+    }
+    .standing-entry:last-child { border-bottom: none; }
+    .standing-name { font-weight: 600; }
+    .standing-tag {
+      display: inline-block;
+      padding: 0.1rem 0.5rem;
+      font-size: 0.75rem;
+      border-radius: 4px;
+      margin-left: 0.4rem;
+      background: rgba(127,127,127,0.2);
+      vertical-align: middle;
+    }
+    .standing-tag.alamogordo { background: rgba(179, 38, 30, 0.15); }
+    .standing-tag.regional { background: rgba(30, 90, 179, 0.15); }
+    .standing-comment { font-size: 0.95rem; margin: 0.3rem 0 0; opacity: 0.9; }
+    .standing-date { font-size: 0.8rem; opacity: 0.6; }
+    .standing-empty { font-style: italic; opacity: 0.7; padding: 1rem 0; }
+
+    .public-disclosure {
+      font-size: 0.85rem;
+      padding: 0.6rem 0.8rem;
+      border-left: 3px solid #b3261e;
+      background: rgba(179, 38, 30, 0.06);
+      margin: 0.8rem 0;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="site">
+    <header class="site-header" id="site-header"></header>
+
+    <main id="main">
+
+      <h1>Have your say</h1>
+      <p>
+        Three ways to weigh in on the Flock ALPR deployment in and around
+        Alamogordo. All are quick. None require an account.
+      </p>
+
+      <!-- ============== 1. ONE-QUESTION SURVEY ============== -->
+      <section aria-labelledby="survey-h">
+        <h2 id="survey-h">1. Take the 1-question survey</h2>
+        <p><strong>Do you have concerns about the Flock cameras being deployed in Alamogordo?</strong></p>
+        <div class="poll-grid" id="poll-grid">
+          <button type="button" data-answer="yes">Yes</button>
+          <button type="button" data-answer="some">Some concerns</button>
+          <button type="button" data-answer="no">No</button>
+          <button type="button" data-answer="learn">I'd like to learn more</button>
+        </div>
+        <p class="poll-confirmation" id="poll-confirmation" hidden>
+          Thanks — counted.
+          <a href="#standing">Add your name to the Community Standing</a> or
+          <a href="#subscribe">subscribe for updates</a>.
+        </p>
+        <p class="poll-tally" id="poll-tally">Loading results…</p>
+      </section>
+
+      <!-- ============== 2. COMMUNITY STANDING ============== -->
+      <section id="standing" aria-labelledby="standing-h">
+        <h2 id="standing-h">2. Add your name to the Community Standing</h2>
+        <p>
+          A public list of Alamogordo residents and affected neighbors who
+          want their names visible alongside the concern.
+          <strong>This list is public. Your name and any comment you include
+          will appear on this page for anyone to see.</strong>
+        </p>
+
+        <div class="public-disclosure">
+          <strong>What this means:</strong> We do not promise confidentiality.
+          Your name, your residency category, and your comment (if you add one)
+          will be visible to every visitor. Email is optional and is
+          <em>not</em> shown publicly — we keep it to contact you if there's
+          a real next step.
+        </div>
+
+        <form id="standing-form" class="form-block">
+          <div class="form-row">
+            <label>First name *</label>
+            <input type="text" name="first_name" required maxlength="80">
+          </div>
+          <div class="form-row">
+            <label>Last name *</label>
+            <input type="text" name="last_name" required maxlength="80">
+          </div>
+          <div class="form-row">
+            <label>Email <span style="font-weight:400;opacity:0.7">(optional, never shown publicly)</span></label>
+            <input type="email" name="email" maxlength="254">
+          </div>
+          <div class="form-row">
+            <label>Why are you concerned? <span style="font-weight:400;opacity:0.7">(optional, 500 chars)</span></label>
+            <textarea name="comment" maxlength="500" placeholder="A short sentence about what concerns you, in your own words."></textarea>
+          </div>
+          <div class="form-row">
+            <label>Which best describes you? *</label>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="residency" value="alamogordo" required>
+                <span><strong>I live in Alamogordo.</strong> I can vote on city commissioners.</span>
+              </label>
+              <label>
+                <input type="radio" name="residency" value="regional" required>
+                <span><strong>I live in the surrounding area</strong> (Tularosa, Cloudcroft, La Luz, Boles Acres, etc.). I work, shop, or travel through Alamogordo, but I can't vote on city commissioners.</span>
+              </label>
+            </div>
+          </div>
+          <div class="checkbox-row">
+            <input type="checkbox" name="self_attest" id="self-attest" required>
+            <label for="self-attest">I'm 18 or older, and the information I'm submitting is accurate.</label>
+          </div>
+          <button type="submit" class="submit-btn">Add my name</button>
+          <p class="form-status" id="standing-status"></p>
+        </form>
+      </section>
+
+      <!-- ============== 3. EMAIL SUBSCRIBE ============== -->
+      <section id="subscribe" aria-labelledby="subscribe-h">
+        <h2 id="subscribe-h">3. Subscribe for updates</h2>
+        <p>
+          A separate, private list. If you only want to be notified when
+          there's a meeting, a public records release, or a chance to weigh in
+          &mdash; this is for that. We won't publish or share your email.
+        </p>
+        <form id="subscribe-form" class="form-block">
+          <div class="form-row">
+            <label>Email *</label>
+            <input type="email" name="email" required maxlength="254">
+          </div>
+          <div class="form-row">
+            <label>First name <span style="font-weight:400;opacity:0.7">(optional, so updates can say "Hi Anna")</span></label>
+            <input type="text" name="first_name" maxlength="80">
+          </div>
+          <div class="checkbox-row">
+            <input type="checkbox" name="consent" id="subscribe-consent" required>
+            <label for="subscribe-consent">I agree to receive email updates from de-flock Alamo. I can unsubscribe at any time.</label>
+          </div>
+          <button type="submit" class="submit-btn">Subscribe</button>
+          <p class="form-status" id="subscribe-status"></p>
+        </form>
+      </section>
+
+      <!-- ============== 4. PUBLIC STANDING LIST ============== -->
+      <section aria-labelledby="list-h">
+        <h2 id="list-h">Community Standing</h2>
+        <p>Everyone who has added their name. Most recent first.</p>
+        <div class="standing-tabs" id="standing-tabs">
+          <button type="button" data-filter="all" class="active">All</button>
+          <button type="button" data-filter="alamogordo">Alamogordo</button>
+          <button type="button" data-filter="regional">Regional</button>
+        </div>
+        <div id="standing-list" class="standing-list">
+          <p class="standing-empty">Loading the list…</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer" id="site-footer"></footer>
+  </div>
+
+  <script src="_config.js"></script>
+  <script src="assets/layout.js"></script>
+  <script>
+    // ============== Helpers ==============
+    function fmtDate(iso) {
+      try {
+        const d = new Date(iso);
+        return d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+      } catch { return ""; }
+    }
+    function el(tag, attrs, ...children) {
+      const e = document.createElement(tag);
+      if (attrs) for (const k in attrs) {
+        if (k === "class") e.className = attrs[k];
+        else if (k === "html") e.innerHTML = attrs[k];
+        else e.setAttribute(k, attrs[k]);
+      }
+      for (const c of children) {
+        if (c == null) continue;
+        e.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
+      }
+      return e;
+    }
+    function escapeHtml(s) {
+      if (s == null) return "";
+      return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+    }
+
+    // ============== 1. Survey buttons ==============
+    const pollGrid = document.getElementById("poll-grid");
+    const pollConf = document.getElementById("poll-confirmation");
+    pollGrid.addEventListener("click", async (ev) => {
+      const btn = ev.target.closest("button[data-answer]");
+      if (!btn) return;
+      const answer = btn.dataset.answer;
+      // Disable all buttons, mark chosen
+      [...pollGrid.querySelectorAll("button")].forEach(b => {
+        b.disabled = true;
+        if (b === btn) b.style.fontWeight = "800";
+      });
+      try {
+        const res = await fetch("/api/community/survey", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ answer, source: "survey-page" }),
+        });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        pollConf.hidden = false;
+        // Refresh tally
+        refreshTally();
+      } catch (e) {
+        pollConf.hidden = false;
+        pollConf.textContent = "Could not record your answer (network error). Please refresh and try again.";
+        pollConf.style.background = "rgba(255, 80, 80, 0.1)";
+      }
+    });
+
+    async function refreshTally() {
+      try {
+        const res = await fetch("/api/community/counts");
+        if (!res.ok) throw new Error();
+        const c = await res.json();
+        const t = document.getElementById("poll-tally");
+        t.innerHTML =
+          `<strong>${c.survey_total}</strong> people have weighed in so far — ` +
+          `${c.survey_yes} yes, ${c.survey_some} some concerns, ${c.survey_no} no, ${c.survey_learn} want to learn more. ` +
+          `<a href="#standing">Add your name to the Community Standing (${c.standing_total})</a>.`;
+      } catch {
+        document.getElementById("poll-tally").textContent = "Results unavailable.";
+      }
+    }
+    refreshTally();
+
+    // ============== 2. Standing form ==============
+    const standingForm = document.getElementById("standing-form");
+    const standingStatus = document.getElementById("standing-status");
+    standingForm.addEventListener("submit", async (ev) => {
+      ev.preventDefault();
+      standingStatus.className = "form-status";
+      standingStatus.textContent = "Submitting…";
+      const fd = new FormData(standingForm);
+      const payload = {
+        first_name: fd.get("first_name"),
+        last_name: fd.get("last_name"),
+        email: fd.get("email") || null,
+        comment: fd.get("comment") || null,
+        residency: fd.get("residency"),
+      };
+      if (!fd.get("self_attest")) {
+        standingStatus.className = "form-status error";
+        standingStatus.textContent = "Please confirm the self-attestation.";
+        return;
+      }
+      const btn = standingForm.querySelector("button[type=submit]");
+      btn.disabled = true;
+      try {
+        const res = await fetch("/api/community/standing", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) {
+          const txt = await res.text();
+          throw new Error(txt || "HTTP " + res.status);
+        }
+        standingStatus.className = "form-status ok";
+        standingStatus.textContent = "You're on the list. Thanks for standing with us.";
+        standingForm.reset();
+        // Refresh public list and tally
+        refreshStanding("all");
+        refreshTally();
+      } catch (e) {
+        standingStatus.className = "form-status error";
+        standingStatus.textContent = "Could not submit: " + e.message;
+        btn.disabled = false;
+      }
+    });
+
+    // ============== 3. Subscribe form ==============
+    const subscribeForm = document.getElementById("subscribe-form");
+    const subscribeStatus = document.getElementById("subscribe-status");
+    subscribeForm.addEventListener("submit", async (ev) => {
+      ev.preventDefault();
+      subscribeStatus.className = "form-status";
+      subscribeStatus.textContent = "Submitting…";
+      const fd = new FormData(subscribeForm);
+      const payload = {
+        email: fd.get("email"),
+        first_name: fd.get("first_name") || null,
+      };
+      if (!fd.get("consent")) {
+        subscribeStatus.className = "form-status error";
+        subscribeStatus.textContent = "Please confirm consent to receive emails.";
+        return;
+      }
+      const btn = subscribeForm.querySelector("button[type=submit]");
+      btn.disabled = true;
+      try {
+        const res = await fetch("/api/community/subscribe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) {
+          const txt = await res.text();
+          throw new Error(txt || "HTTP " + res.status);
+        }
+        const data = await res.json();
+        subscribeStatus.className = "form-status ok";
+        subscribeStatus.textContent = data.already
+          ? "You're already on the list — thanks for sticking with us."
+          : "Subscribed. Thanks for keeping tabs.";
+        subscribeForm.reset();
+      } catch (e) {
+        subscribeStatus.className = "form-status error";
+        subscribeStatus.textContent = "Could not subscribe: " + e.message;
+        btn.disabled = false;
+      }
+    });
+
+    // ============== 4. Public standing list ==============
+    const standingListEl = document.getElementById("standing-list");
+    const standingTabsEl = document.getElementById("standing-tabs");
+    let currentFilter = "all";
+
+    async function refreshStanding(filter) {
+      currentFilter = filter;
+      const url = filter === "all" ? "/api/community/standing" : `/api/community/standing?residency=${filter}`;
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error();
+        const data = await res.json();
+        renderStanding(data.entries || []);
+        // Update tab styles
+        [...standingTabsEl.querySelectorAll("button")].forEach(b => {
+          b.classList.toggle("active", b.dataset.filter === filter);
+        });
+      } catch {
+        standingListEl.innerHTML = '<p class="standing-empty">Could not load the list. Please refresh.</p>';
+      }
+    }
+
+    function renderStanding(entries) {
+      standingListEl.innerHTML = "";
+      if (!entries.length) {
+        standingListEl.appendChild(el("p", { class: "standing-empty" },
+          currentFilter === "all" ? "Be the first to add your name." : "No entries in this category yet."
+        ));
+        return;
+      }
+      for (const e of entries) {
+        const entry = el("div", { class: "standing-entry" });
+        const head = el("div");
+        head.appendChild(el("span", { class: "standing-name" }, e.first_name + " " + e.last_name));
+        const tag = e.residency === "alamogordo" ? "Alamogordo resident" : "Regional resident";
+        head.appendChild(el("span", { class: "standing-tag " + e.residency }, tag));
+        entry.appendChild(head);
+        if (e.comment) {
+          entry.appendChild(el("p", { class: "standing-comment" }, e.comment));
+        }
+        entry.appendChild(el("p", { class: "standing-date" }, fmtDate(e.created_at)));
+        standingListEl.appendChild(entry);
+      }
+    }
+
+    standingTabsEl.addEventListener("click", (ev) => {
+      const btn = ev.target.closest("button[data-filter]");
+      if (!btn) return;
+      refreshStanding(btn.dataset.filter);
+    });
+
+    refreshStanding("all");
+  </script>
+</body>
+</html>
