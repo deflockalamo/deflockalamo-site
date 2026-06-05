@@ -80,6 +80,24 @@
       cursor: pointer;
     }
     .submit-btn:disabled { opacity: 0.5; cursor: default; }
+    .secondary-btn {
+      display: inline-block;
+      padding: 0.7rem 1.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      background: transparent;
+      color: inherit;
+      border: 1px solid currentColor;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-left: 0.5rem;
+    }
+    .button-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
     .form-status { margin-top: 0.6rem; font-size: 0.95rem; min-height: 1.2rem; }
     .form-status.error { color: #b3261e; }
     .form-status.ok { color: #1f7a1f; }
@@ -158,7 +176,7 @@
           <button type="button" data-answer="yes">Yes</button>
           <button type="button" data-answer="some">Some concerns</button>
           <button type="button" data-answer="no">No</button>
-          <button type="button" data-answer="learn">I'd like to learn more</button>
+          <a href="news.html" class="secondary-btn" style="text-align:center;display:flex;align-items:center;justify-content:center">Want to learn more &rarr;</a>
         </div>
         <p class="poll-confirmation" id="poll-confirmation" hidden>
           Thanks — counted.
@@ -220,7 +238,10 @@
             <input type="checkbox" name="self_attest" id="self-attest" required>
             <label for="self-attest">I'm 18 or older, and the information I'm submitting is accurate.</label>
           </div>
-          <button type="submit" class="submit-btn">Add my name</button>
+          <div class="button-row">
+            <button type="submit" class="submit-btn">Add my name</button>
+            <a href="home.html" class="secondary-btn">&larr; Back to Home</a>
+          </div>
           <p class="form-status" id="standing-status"></p>
         </form>
       </section>
@@ -229,9 +250,10 @@
       <section id="subscribe" aria-labelledby="subscribe-h">
         <h2 id="subscribe-h">3. Subscribe for updates</h2>
         <p>
-          A separate, private list. If you only want to be notified when
-          there's a meeting, a public records release, or a chance to weigh in
-          &mdash; this is for that. We won't publish or share your email.
+          Want to be notified when there's a meeting, a public-records release,
+          or a chance to weigh in? Subscribe to email updates below &mdash; this
+          is a <strong>separate, private list</strong>. Your email is never
+          displayed publicly and never shared.
         </p>
         <form id="subscribe-form" class="form-block">
           <div class="form-row">
@@ -335,8 +357,9 @@
         const t = document.getElementById("poll-tally");
         t.innerHTML =
           `<strong>${c.survey_total}</strong> people have weighed in so far — ` +
-          `${c.survey_yes} yes, ${c.survey_some} some concerns, ${c.survey_no} no, ${c.survey_learn} want to learn more. ` +
-          `<a href="#standing">Add your name to the Community Standing (${c.standing_total})</a>.`;
+          `${c.survey_yes} yes, ${c.survey_some} some concerns, ${c.survey_no} no. ` +
+          `<a href="news.html">Want to learn more before answering? Read the background &rarr;</a> ` +
+          `· <a href="#standing">Add your name to the Community Standing (${c.standing_total})</a>.`;
       } catch {
         document.getElementById("poll-tally").textContent = "Results unavailable.";
       }
