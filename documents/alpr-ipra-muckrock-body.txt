@@ -1,9 +1,4 @@
-
-To Whom It May Concern:
-
 Pursuant to New Mexico's Inspection of Public Records Act (NMSA 1978 §§ 14-2-1 et seq.), I request the following records related to the City of Alamogordo and the Alamogordo Police Department's acquisition and use of automated license plate reader (ALPR) technology, including any system manufactured, sold, or operated by Flock Safety, Vigilant Solutions, Rekor Systems, Motorola Vigilant, or any other ALPR vendor, for the period of January 1, 2023, through the date this request is processed.
-
-This request is submitted by a New Mexico resident and concerns the conduct of public business in this state. The records I request are not exempt from disclosure under § 14-2-1(A) or any other provision of New Mexico law. To the extent any portion of this request is denied or redacted, please provide a written explanation citing the specific statutory exemption relied upon, as required by § 14-2-11.
 
 Please provide copies of the following records. Where records are maintained in an electronic database, I request an export in a machine-readable format (CSV, Excel, or PDF) pursuant to § 14-2-8(B).
 
@@ -66,15 +61,3 @@ RECORDS REQUESTED
 7. TERMINATION AND CANCELLATION
 
    a. The full text of any termination, cancellation, or "no-cause" clause in the City's ALPR contract(s), including any required notice period, termination fee, data-destruction obligations, and post-termination access rights.
-
-────────────────────────────────────────────────────────────────────────
-TIMELINE
-────────────────────────────────────────────────────────────────────────
-
-New Mexico law requires a response to an IPRA request "as soon as practicable, but in no event later than fifteen days after receipt" for most records (§ 14-2-8(D)), and within three business days for records to which a law-enforcement-related exception may apply (§ 14-2-8(F)). All correspondence regarding this request should be conducted through MuckRock.
-
-────────────────────────────────────────────────────────────────────────
-ABOUT THIS REQUEST
-────────────────────────────────────────────────────────────────────────
-
-This request is prepared under the New Mexico Inspection of Public Records Act.
