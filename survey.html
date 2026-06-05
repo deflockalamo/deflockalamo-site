@@ -350,11 +350,19 @@
     });
 
     async function refreshTally() {
+      console.log("[tally refresh started]");
+      const t = document.getElementById("poll-tally");
+      // Hard timeout — if the fetch hangs longer than 5s, give up gracefully
+      const timeout = new Promise((_, reject) =>
+        setTimeout(() => reject(new Error("timeout after 5s")), 5000)
+      );
       try {
-        const res = await fetch("/api/community/counts?_=" + Date.now());
+        const res = await Promise.race([
+          fetch("/api/community/counts?_=" + Date.now()),
+          timeout,
+        ]);
         if (!res.ok) throw new Error("HTTP " + res.status);
         const c = await res.json();
-        const t = document.getElementById("poll-tally");
         const newHtml =
           `<strong>${c.survey_total}</strong> people have weighed in so far — ` +
           `${c.survey_yes} yes, ${c.survey_some} some concerns, ${c.survey_no} no. ` +
@@ -364,10 +372,17 @@
         console.log("[tally refreshed]", c);
       } catch (e) {
         console.warn("[tally refresh failed]", e);
-        document.getElementById("poll-tally").textContent = "Results unavailable.";
+        if (t) t.textContent = "Results unavailable. (See browser console for details.)";
       }
     }
-    refreshTally();
+    // Wrap initial call so any earlier script error becomes visible too
+    try {
+      refreshTally();
+    } catch (e) {
+      console.error("[refreshTally threw on call]", e);
+      const t = document.getElementById("poll-tally");
+      if (t) t.textContent = "Results unavailable. (See browser console for details.)";
+    }
 
     // ============== 2. Standing form ==============
     const standingForm = document.getElementById("standing-form");
