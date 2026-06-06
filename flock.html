@@ -288,6 +288,377 @@
         </p>
       </section>
 
+      <section aria-labelledby="told-h">
+        <h2 id="told-h">What Flock has told cities</h2>
+        <p>
+          The ACLU's documented expansion vectors are about what the
+          <em>system</em> does. The stories in this section are about
+          what Flock <em>the company</em> has been caught saying &mdash;
+          and what the audit log shows it actually does. In several
+          recent cases, the public record and the company's own
+          statements have come apart.
+        </p>
+
+        <h3>Oshkosh, Wisconsin: a "heat map" claim that turned out to be false</h3>
+        <p>
+          On the night of 21 April 2026, the Oshkosh Common Council
+          voted 5&ndash;2 to renew its Flock contract. By the next
+          morning, Police Chief Dean Smith had reversed his support. The
+          reason: officers in his agency had brought him information
+          that "conflicted with what Flock Safety representatives shared
+          with the council" the previous night. Specifically, Flock's
+          representatives had told the council that the LPR system "did
+          not create heat maps to track vehicles." The department
+          determined that to be false. Less than 24 hours after the
+          renewal vote, the council voted unanimously to rescind the
+          contract.
+        </p>
+        <p>
+          Chief Smith, on the record, addressed the council at the
+          rescission meeting:
+        </p>
+        <blockquote>
+          <p>"I know that you trust me to give you my best
+            recommendations, that are in the best interest of the
+            city, with the information I have available to me. I will
+            not betray that trust."</p>
+        </blockquote>
+        <p>
+          Two council members, on the record at the rescission meeting:
+        </p>
+        <blockquote>
+          <p>"I don't know how I can make a decision or discern what's
+            right and what's wrong, or even the capabilities of the
+            system if you lie to me." &mdash; Joe Stephenson, Oshkosh
+            City Council member.</p>
+          <p>"I mentioned yesterday how it's not just jellybeans on
+            each side of a balance that helps me make my decision, and
+            clearly I didn't have enough jellybeans on the right
+            side." &mdash; Karl Buelow, Oshkosh Deputy Mayor.</p>
+        </blockquote>
+        <p>
+          Flock's public response to the rescission called the dispute
+          "one small misconception" and "a minor nuance," and pointed
+          to a map view in its system that does show where plate
+          captures happened. Chief Smith said he expected all Flock
+          cameras to be removed from the city before the start of
+          summer. (Source:
+          <a href="https://www.wbay.com/2026/04/23/oshkosh-council-rescinds-flock-camera-contract-after-false-statements/" rel="noopener">WBAY</a>,
+          23 Apr 2026.)
+        </p>
+
+        <h3>Dunwoody, Georgia: a sales VP's live access to a customer's network</h3>
+        <p>
+          A March 2026 investigation by the investigative outlet
+          <a href="https://footnote4a.org/news/the-platform" rel="noopener">Footnote4a</a>
+          analyzed audit logs from Dunwoody, Georgia's Flock deployment
+          and found that multiple Flock employees &mdash; not police
+          officers &mdash; had been given search accounts on the city's
+          live network. Among the named employees:
+        </p>
+        <ul>
+          <li><strong>Bob Carter</strong>, Flock's VP of Strategic Relations &amp; Business Development, ran 401+ searches in 2025, including queries for "rocket car," "potatoe chip van" (his spelling, verbatim), and "unicycle" &mdash; and conducted at least one 6,350-network simultaneous lookup.</li>
+          <li><strong>Peter Barty</strong>, Staff Engineer (ML), conducted 27 searches, including one for a "Black Mercedes GL450 4MATIC" across 45 networks.</li>
+          <li><strong>Amanda Bruner</strong>, NOVA Onboarding Specialist, ran five searches of the same Georgia license plate over ten weeks, each sweeping between 887 and 891 agencies.</li>
+          <li><strong>Kathleen Graham</strong>, NOVA Specialist, ran 11 searches of the same plate over three days, across 888 networks each &mdash; one at 11:40 PM.</li>
+          <li>Six Flock employees in total held "Owner"-level access &mdash; the equivalent of a department administrator &mdash; to Dunwoody's account.</li>
+        </ul>
+        <p>
+          On 9 December 2025, the day after Carter's busiest search
+          period, Flock SVP Chris Colwell emailed customers announcing
+          that officer names, license plates searched, and open-text
+          search reasons would be removed from the audit logs going
+          forward. The change took effect immediately. (Source:
+          <a href="https://footnote4a.org/news/the-platform" rel="noopener">Footnote4a, "The Platform"</a>,
+          26 Mar 2026.)
+        </p>
+        <p>
+          Footnote4a also documents a Flock customer training video
+          recorded by Regional Customer Success Manager Gaby Mahoney.
+          Rather than using a demo environment, she recorded the video
+          while logged into a real customer's account. Her second
+          sentence in the video, verbatim: <em>"So when I log into your
+          account and go under the sharing tab&hellip;"</em> The
+          selected organization shown in the recording is the Olympia
+          (WA) Police Department.
+        </p>
+        <p>
+          Flock's public FAQ states: <em>"Nobody from Flock Safety is
+          accessing or monitoring your footage."</em> The Footnote4a
+          audit-log analysis says the claim "is shown to be false
+          hundreds of times and on multiple levels."
+        </p>
+
+        <h3>Dunwoody, Georgia: children's gymnastics rooms, schools, and a Jewish community center used for sales demos</h3>
+        <p>
+          The same Flock deployment in Dunwoody, GA &mdash; the same
+          audit logs the Footnote4a investigation examined &mdash;
+          revealed a second pattern. Flock sales employees were
+          accessing live camera feeds from a children's gymnastics
+          room, a playground, a local school, a pool, and a Jewish
+          community center, to demonstrate the technology to
+          prospective law-enforcement clients. The discovery was made
+          by Dunwoody resident Jason Hunyar through a public records
+          request for access logs.
+        </p>
+        <p>
+          Flock's response: the city is part of Flock's "demo partner
+          program," which the company says explicitly authorizes
+          employee access to city cameras for product demonstrations
+          and debugging. Flock's framing: "we maintain and provide
+          access logs &mdash; that's the transparency." Critics'
+          response: transparency about who is accessing the data is not
+          the same as the data not being accessed. (Source:
+          <a href="https://aitoolly.com/ai-news/article/2026-05-02-flock-safety-faces-backlash-after-using-sensitive-camera-feeds-of-children-for-sales-demonstrations" rel="noopener">AIToolly</a>,
+          2 May 2026.)
+        </p>
+      </section>
+
+      <section aria-labelledby="ceo-h">
+        <h2 id="ceo-h">How the CEO talks about critics</h2>
+        <p>
+          The CEO's public posture toward critics of his product has
+          escalated over a series of statements since September 2025.
+          The earliest came in a long on-camera interview with
+          <em>Forbes</em>; the most explicit came in a December 2025
+          email to law-enforcement customers. The most-quoted single
+          line &mdash; that critics are "closer to Antifa than
+          anything else" &mdash; is from the same interview footage
+          the article was drawn from.
+        </p>
+
+        <h3>The <em>Forbes</em> interview (September 2025)</h3>
+        <p>
+          On 3 September 2025, <em>Forbes</em> published
+          <a href="https://www.forbes.com/sites/thomasbrewster/2025/09/03/ai-startup-flock-thinks-it-can-eliminate-all-crime-in-america/" rel="noopener">a long-form interview</a>
+          with CEO Garrett Langley by reporter Thomas Brewster, the
+          result of a 28-minute on-camera interview at Flock's
+          Atlanta offices. The article text quotes Langley as
+          having "described those threatening the company as
+          'terrorists'" and notes that Flock's offices,
+          manufacturing facilities, and camera installation vans are
+          "purposefully logoless" because the CEO is "worried enough
+          about being targeted" by activists.
+        </p>
+        <p>
+          The video portion of the same interview contains a more
+          specific line about the privacy-advocacy project DeFlock,
+          which has crowdsourced a public map of Flock camera
+          locations. The line, captured and replayed in subsequent
+          YouTube coverage of Flock's security flaws (notably by
+          <a href="https://gregreese.substack.com/p/rise-of-the-safety-state" rel="noopener">Greg Reese</a>
+          and
+          <a href="https://truthout.org/articles/a-vast-camera-system-now-feeds-information-to-police-on-drivers-across-the-us/" rel="noopener">Truthout</a>):
+        </p>
+        <blockquote>
+          <p>"Unfortunately, there's terroristic organizations like
+            DeFlock, whose primary motivation is chaos. They are
+            closer to Antifa than they are anything else, and that I
+            think is unfortunate because we don't want chaos."</p>
+        </blockquote>
+        <p>
+          The
+          <a href="https://ipvm.com/news?item=e5e78bbc-5b90-4ee5-81fe-d0014ae94142&type=brief" rel="noopener">IPVM report</a>
+          on Flock's posture toward critics notes that the CEO has
+          spent "years" framing advocacy groups this way, and that
+          the public posture is consistent with the company's
+          litigation and public-relations strategy &mdash; in
+          January 2025, Flock's lawyers sent DeFlock's creator Will
+          Freeman a cease-and-desist letter. The ACLU's
+          characterization of the CEO's posture, in the same
+          January 2026 article, was
+          <em>"simplistic, juvenile, and ultimately authoritarian."</em>
+        </p>
+
+        <h3>The December 2025 email to law-enforcement customers</h3>
+        <p>
+          In December 2025, Flock CEO Garrett Langley sent an email to
+          the company's law-enforcement customers. The email, which
+          was released by the Staunton, Virginia Police Department in
+          response to a public records request, framed the wave of
+          cities reconsidering their Flock contracts as a "coordinated
+          attack" on law enforcement. Langley's words, as quoted by
+          the
+          <a href="https://www.aclu.org/news/privacy-technology/flock-ceo-goes-ballistic" rel="noopener">ACLU</a>:
+        </p>
+        <blockquote>
+          <p>"Let's call this what it is. Flock, and the law enforcement
+            agencies we partner with, are under coordinated attack."</p>
+          <p>"The attacks aren't new. You've been dealing with this for
+            forever, and we've been dealing with this since our
+            founding, from the same activist groups who want to defund
+            the police, weaken public safety, and normalize
+            lawlessness. Now, they're producing YouTube videos with
+            misleading headlines."</p>
+          <p>"[Activist groups] are also trying to turn a public
+            records process into a weapon against you and against
+            us."</p>
+        </blockquote>
+        <p>
+          When 404 Media reported the release of data on millions of
+          police surveillance targets, Flock responded by saying
+          "activists trying to let murderers go free" were behind the
+          criticism. (Source: same ACLU article, 16 Jan 2026.)
+        </p>
+        <p>
+          At least two of the police chiefs who received the email
+          pushed back on the record. Staunton (VA) Police Chief Jim
+          Williams released the email and wrote back to Langley:
+        </p>
+        <blockquote>
+          <p>"As far as your assertion that we are currently under
+            attack, I do not believe that this is so.&hellip; What we
+            are seeing here is a group of local citizens who are
+            raising concerns that we could be potentially surveilling
+            private citizens, residents and visitors and using the data
+            for nefarious purposes. These citizens have been exercising
+            their rights to receive answers from me, my staff, and city
+            officials, to include our elected leaders. <em>In short, it
+            is democracy in action.</em>"</p>
+        </blockquote>
+        <p>
+          The Charlottesville (VA) police chief responded similarly to
+          a local news outlet: <em>"People have a right to disagree and
+          have issues with things&hellip; at the end of the day
+          communities get to have a say on how they want to be
+          policed."</em> (Source:
+          <a href="https://cvillerightnow.com/news/208802-flock-ceo-includes-charlottesville-staunton-in-email-blaming-activists-for-cities-dropping-the-companys-services/" rel="noopener">CVille Right Now</a>;
+          the original email itself is
+          <a href="https://www.ci.staunton.va.us/home/showpublisheddocument/13448/639017375545785368" rel="noopener">available as a PDF</a>
+          from the City of Staunton.)
+        </p>
+        <p>
+          The pattern is worth noting. The CEO's framing of the
+          contract debate is that it is existential &mdash; a
+          "coordinated attack" on law enforcement by activists who
+          "want to defund the police." The police chiefs who actually
+          received the email, on the other hand, describe the same
+          activity as "citizens raising concerns" and "communities
+          having a say on how they want to be policed." Both
+          descriptions are of the same thing: residents exercising
+          their right to question a contract their city is signing.
+        </p>
+      </section>
+
+      <section aria-labelledby="misuse-h">
+        <h2 id="misuse-h">How the system has been misused</h2>
+        <p>
+          This section is different from the ones above. The ACLU
+          section is about what the <em>system</em> does. The "What Flock
+          has told cities" section is about what the
+          <em>company</em> has been caught saying. This section is
+          about what <em>officers</em> have been caught doing with the
+          system, and what the system's design has to do with it.
+        </p>
+        <p>
+          In the first quarter of 2026, multiple Wisconsin law
+          enforcement officers were charged or resigned after being
+          found to have used Flock for personal surveillance. The
+          pattern is consistent enough to be a category, not a series
+          of isolated cases.
+        </p>
+
+        <h3>The Wisconsin cases</h3>
+        <ul>
+          <li>
+            <strong>Josue Ayala</strong>, an eight-year veteran of the
+            Milwaukee Police Department, was charged in February 2026
+            with attempted misconduct in public office for using
+            Milwaukee's Flock network 179 times to track a person he
+            was dating and that person's ex-partner. The complaint
+            alleged he searched one victim's plate 55 times and the
+            other's 124 times, while on duty. Each search was logged
+            with the reason "investigation." One of the victims
+            discovered the surveillance by typing their own plate into
+            a public watchdog website that monitors Flock activity.
+            Ayala resigned; MPD initially suspended him, then cut off
+            officer access to the LPR database entirely, restricting
+            use to a "sensitive portion" of the Criminal Investigations
+            Bureau. (Source:
+            <a href="https://www.fox6now.com/news/milwaukee-police-officer-resigns-misconduct-flock" rel="noopener">FOX6 News</a>,
+            4 Mar 2026.)
+          </li>
+          <li>
+            <strong>Jay Johnson</strong>, chief of the Greenfield
+            (WI) Police Department, is facing felony misconduct in
+            public office charges for installing a department-owned
+            pole camera on his property during a messy divorce. He is
+            separately accused of destroying data by deleting text
+            messages after a meeting at which he was offered the
+            chance to retire. (Source:
+            <a href="https://urbanmilwaukee.com/2026/03/15/police-misuse-of-flock-surveillance-becoming-statewide-issue/" rel="noopener">Urban Milwaukee</a>,
+            15 Mar 2026.)
+          </li>
+          <li>
+            <strong>Frank McGrath</strong>, a former Kenosha County
+            Sheriff's deputy, was found by an internal investigation
+            to have "knowingly and repeatedly" misused Flock and
+            Polaris, and to have been "not truthful when confronted by
+            a supervisor about his actions." He received a severance
+            agreement on resignation. (Same source.)
+          </li>
+          <li>
+            A Waukesha Police Department officer was found to have
+            used "." (a single period) as the search reason on
+            hundreds of Flock searches. A spokesperson said the
+            officer had been "counseled and retrained."
+          </li>
+          <li>
+            The West Allis Police Department was the most frequent
+            user of the "." search term in Wisconsin during the first
+            half of 2025. The department told reporters its officers
+            are "properly trained" and that it investigates misuse
+            cases "when warranted."
+          </li>
+          <li>
+            A Menasha officer ("Morales") was found to have misused
+            Flock after a complaint was made to <em>another</em>
+            police department &mdash; not through internal Menasha
+            oversight.
+          </li>
+        </ul>
+
+        <h3>The audit-log pattern</h3>
+        <p>
+          An audit-log analysis by the
+          <a href="https://wisconsinexaminer.com/2026/03/13/wisconsin-communities-grapple-with-police-misuse-of-flock-surveillance/" rel="noopener">Wisconsin Examiner</a>
+          found that "investigation" was the single most common
+          search-reason term used by Wisconsin law-enforcement
+          agencies in the first half of 2025. Other common terms:
+          "suspicious," "cooch," and ".". The ACLU of Wisconsin, in
+          a separate letter to Milwaukee's Public Safety and Health
+          Committee, characterized the pattern as "a disturbing trend
+          in Wisconsin and across the country regarding law
+          enforcement abuse of Flock [ALPR] technology to stalk and
+          harass people, in most cases women."
+        </p>
+
+        <h3>What the system was designed to do &mdash; and not do</h3>
+        <p>
+          The system's design has two things to do with this. First,
+          the audit log only catches abusers <em>after the fact</em>:
+          the cases above were discovered when a victim discovered the
+          surveillance and complained &mdash; often to a different
+          police department. The agency's own internal oversight
+          didn't catch them. Second, the search-reason field is a
+          free-text input, not a structured categorization. Officers
+          can type "investigation" for a routine lookup and "investigation"
+          for personal stalking, and the system has no way to tell
+          the two apart. The same design that lets a thousand officers
+          run a million legitimate searches also lets a few officers
+          stalk people in plain sight.
+        </p>
+        <p>
+          None of this is to say that the officers involved are
+          representative of law enforcement generally. They are
+          emphatically not. The point is that the system was rolled
+          out at scale, across thousands of agencies, without the
+          internal oversight and structured audit categories that
+          would have caught these cases before a victim had to file
+          a complaint. The predictable result is what we have.
+        </p>
+      </section>
+
       <section aria-labelledby="misnomer-h">
         <h2 id="misnomer-h">"Safety" vs. "surveillance"</h2>
         <p>
@@ -353,6 +724,69 @@
             Jay Stanley, "<a data-ext="acluOverview" href="#">Flock's Aggressive Expansions Go Far Beyond Simple Driver Surveillance</a>"
             &mdash; <em>American Civil Liberties Union</em>, 17 Oct 2025
             (the ACLU's documented expansion vectors).
+          </li>
+          <li>
+            Jay Stanley, "<a href="https://www.aclu.org/news/privacy-technology/flock-ceo-goes-ballistic" rel="noopener">Flock CEO Goes Ballistic on Critics as More Americans Question Mass Driver Surveillance</a>"
+            &mdash; <em>American Civil Liberties Union</em>, 16 Jan 2026
+            (the December 2025 CEO email and the police-chief rebuttals).
+          </li>
+          <li>
+            Thomas Brewster, "<a href="https://www.forbes.com/sites/thomasbrewster/2025/09/03/ai-startup-flock-thinks-it-can-eliminate-all-crime-in-america/" rel="noopener">AI Startup Flock Thinks It Can Eliminate All Crime In America</a>"
+            &mdash; <em>Forbes</em>, 3 Sept 2025
+            (the long-form CEO interview that produced the
+            "terrorists" / "closer to Antifa" lines).
+          </li>
+          <li>
+            "<a href="https://ipvm.com/reports/flock-allegations-critics" rel="noopener">Flock Condemns False Child Predator Allegations, Yet Calls Its Own Critics Terrorists</a>"
+            &mdash; <em>IPVM</em>, 17 Apr 2026
+            (the IPVM "consistency problem" analysis &mdash; same
+            standard Flock objects to being falsely accused under, the
+            company has not applied to its own language about critics).
+          </li>
+          <li>
+            Greg Reese, "<a href="https://gregreese.substack.com/p/rise-of-the-safety-state" rel="noopener">Rise of the Safety State</a>"
+            &mdash; <em>The Reese Report</em>, 3 Dec 2025
+            (the source for the verbatim "closer to Antifa than
+            anything else" quote and the Benn Jordan security
+            research that prompted the original coverage).
+          </li>
+          <li>
+            "<a href="https://www.wbay.com/2026/04/23/oshkosh-council-rescinds-flock-camera-contract-after-false-statements/" rel="noopener">Oshkosh council rescinds Flock camera contract after 'false statements'</a>"
+            &mdash; <em>WBAY</em>, 23 Apr 2026
+            (the "heat map" rescission).
+          </li>
+          <li>
+            "<a href="https://footnote4a.org/news/the-platform" rel="noopener">The Platform: Flock Safety Is Running on Promises, Not Policy</a>"
+            &mdash; <em>Footnote4a</em>, 26 Mar 2026
+            (the Dunwoody audit-log investigation, named employees, the
+            Colwell email of 9 Dec 2025, the Mahoney training video, the
+            FAQ contradiction).
+          </li>
+          <li>
+            "<a href="https://aitoolly.com/ai-news/article/2026-05-02-flock-safety-faces-backlash-after-using-sensitive-camera-feeds-of-children-for-sales-demonstrations" rel="noopener">Flock Safety Faces Backlash After Using Sensitive Camera Feeds of Children for Sales Demonstrations</a>"
+            &mdash; <em>AIToolly</em>, 2 May 2026
+            (the Dunwoody "demo partner program" controversy).
+          </li>
+          <li>
+            "<a href="https://urbanmilwaukee.com/2026/03/15/police-misuse-of-flock-surveillance-becoming-statewide-issue/" rel="noopener">Police Misuse of Flock Surveillance Becoming Statewide Issue</a>"
+            &mdash; <em>Urban Milwaukee</em>, 15 Mar 2026
+            (the Wisconsin audit-log analysis, the Ayala, Johnson, and
+            McGrath cases, the Waukesha and West Allis "." search-term
+            pattern, the Milwaukee aldermen's letter to the FPC, and the
+            ACLU of Wisconsin's letter to the Public Safety and Health
+            Committee).
+          </li>
+          <li>
+            "<a href="https://www.fox6now.com/news/milwaukee-police-officer-resigns-misconduct-flock" rel="noopener">Milwaukee police officer resigns, Flock search misconduct case</a>"
+            &mdash; <em>FOX6 News</em>, 4 Mar 2026
+            (the Ayala case in detail, including the 179 personal
+            searches, the 55 / 124 breakdown, and the "investigation"
+            search-reason field).
+          </li>
+          <li>
+            "<a href="https://www.ci.staunton.va.us/home/showpublisheddocument/13448/639017375545785368" rel="noopener">Flock email to law-enforcement customers, December 2025</a>"
+            &mdash; <em>City of Staunton, Virginia</em> (public-records
+            release). The original document.
           </li>
           <li>
             Flock Safety, "<a href="https://www.flocksafety.com/products" rel="noopener">Product Hub</a>"
