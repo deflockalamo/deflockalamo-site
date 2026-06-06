@@ -4,14 +4,109 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-default="About Flock Safety">About Flock Safety</title>
-  <meta name="description" content="Who is Flock Safety? What do they make, what are they building, what does it cost, and what has the ACLU documented about them? A primary-source overview.">
+  <meta name="description" content="Who is Flock Safety? What do they make, what does it cost, and what the company's own patents say about it. A primary-source overview, with PDFs of the patents themselves.">
   <meta name="color-scheme" content="light dark">
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="About Flock Safety — de-flock Alamo">
-  <meta property="og:description" content="Who is Flock Safety? What do they make, what are they building, and what has the ACLU documented about the company?">
+  <meta property="og:description" content="Who is Flock Safety? What do they make, what does it cost, and what the company's own patents say about the system. A primary-source overview.">
   <meta property="og:type" content="article">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23b3261e'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='system-ui' font-size='38' font-weight='700' fill='white'%3ED%3C/text%3E%3C/svg%3E">
+  <style>
+    /* --- Page layout: sticky in-page TOC on the left ------------------- */
+    .flock-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 60rem) {
+      .flock-wrap {
+        grid-template-columns: 12rem minmax(0, 1fr);
+        align-items: start;
+      }
+    }
+    .toc {
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem 1rem;
+    }
+    @media (min-width: 60rem) {
+      .toc {
+        position: sticky;
+        top: 1rem;
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+      }
+    }
+    .toc h2 {
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+      border-bottom: none;
+      margin: 0 0 0.4rem;
+      padding: 0;
+    }
+    .toc ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: toccount;
+    }
+    .toc li {
+      counter-increment: toccount;
+      margin: 0.1rem 0;
+    }
+    .toc a {
+      display: block;
+      padding: 0.25rem 0.4rem 0.25rem 1.5rem;
+      position: relative;
+      color: var(--fg-muted);
+      text-decoration: none;
+      border-left: 2px solid transparent;
+      font-size: 0.95rem;
+      line-height: 1.35;
+      border-radius: 0 3px 3px 0;
+    }
+    .toc a::before {
+      content: counter(toccount);
+      position: absolute;
+      left: 0.3rem;
+      top: 0.25rem;
+      font-size: 0.75rem;
+      color: var(--fg-faint);
+      font-variant-numeric: tabular-nums;
+    }
+    .toc a:hover { color: var(--fg); }
+    .toc a.active {
+      color: var(--fg);
+      border-left-color: var(--accent);
+      background: var(--accent-bg);
+      font-weight: 600;
+    }
+    /* On narrow screens the TOC collapses into a <details> at the top */
+    .toc-mobile summary {
+      cursor: pointer;
+      font-weight: 600;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .toc-mobile summary::-webkit-details-marker { display: none; }
+    .toc-mobile summary::after {
+      content: "\25BE";
+      font-size: 0.85rem;
+      color: var(--fg-muted);
+      transition: transform 0.15s;
+    }
+    .toc-mobile[open] summary::after { transform: rotate(180deg); }
+    @media (min-width: 60rem) {
+      .toc-mobile summary { display: none; }
+      .toc-mobile[open] .toc-list { display: block !important; }
+    }
+  </style>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
@@ -25,10 +120,35 @@
         Flock Safety is the company that makes the automatic license plate
         readers (ALPRs) deployed in our community. This page is a
         primary-source overview of who they are, what they sell, what they're
-        building, what it costs, and what civil-liberties organizations have
-        documented about the company. Every claim on this page links to the
-        source it's drawn from.
+        building, what it costs, and what the company itself has
+        written about the system in its own patents. The full text of
+        both patents is quoted further down this page. Every claim
+        links to the source it's drawn from.
       </p>
+
+      <div class="flock-wrap">
+
+        <!-- In-page table of contents (sticky on wide screens, collapsible on mobile) -->
+        <aside class="toc toc-mobile" aria-label="On this page">
+          <summary>On this page</summary>
+          <nav class="toc-list" style="display:none">
+            <h2>On this page</h2>
+            <ol>
+              <li><a href="#company-h">The company</a></li>
+              <li><a href="#products-h">What they make</a></li>
+              <li><a href="#patents-h">Flock's own patents</a></li>
+              <li><a href="#building-h">What they're building</a></li>
+              <li><a href="#cost-h">What it costs</a></li>
+              <li><a href="#told-h">What Flock has told cities</a></li>
+              <li><a href="#ceo-h">How the CEO talks</a></li>
+              <li><a href="#misuse-h">How the system has been misused</a></li>
+              <li><a href="#misnomer-h">"Safety" vs. "surveillance"</a></li>
+              <li><a href="#sources-h">Sources</a></li>
+            </ol>
+          </nav>
+        </aside>
+
+        <div>
 
       <section aria-labelledby="company-h">
         <h2 id="company-h">The company</h2>
@@ -39,7 +159,7 @@
           <a href="https://www.linkedin.com/in/glangley/" rel="noopener">Garrett Langley</a>
           and Matt Feury, both Georgia Tech alumni. The two are also the
           named co-inventors on both of Flock's most-cited patents
-          (see <a href="learning.html#patent-h">Flock's own patents</a>).
+          (see <a href="#patents-h">Flock's own patents</a>).
         </p>
         <div class="card">
           <h3>By the numbers</h3>
@@ -111,6 +231,153 @@
           product. The LPR is the input.
         </p>
       </section>
+
+      <section aria-labelledby="patents-h">
+        <h2 id="patents-h">Flock's own patents</h2>
+        <p>
+          Flock's product is a two-layer stack. The
+          <strong>Falcon</strong> camera is the data-collection edge
+          device. What it captures feeds <strong>Flock Nova</strong>,
+          the law-enforcement user portal, which markets itself as a
+          single search across LPR data, RMS, CAD, jail data, and
+          public records. Flock holds patents on both layers. Quoted
+          directly from the patents themselves:
+        </p>
+
+        <h3>1. The LPR camera (US 11,030,892 B1)</h3>
+        <p>
+          The patent for the camera itself. Inventors: Garrett Langley and Matt
+          Feury. Assignee: Flock Group Inc., Atlanta, GA. Published 8 Jun 2021.
+          The CPC codes (G08G 1/0175, G08G 1/0116) are the official
+          ALPR / vehicle-detection classifications, confirming this is the LPR
+          patent.
+        </p>
+        <blockquote>
+          <p><strong>Title:</strong> "Method and system for capturing and storing
+            <em>significant surveillance images</em>."</p>
+          <p><strong>Abstract:</strong> "A method and system for capturing and
+            filtering <em>surveillance images</em> are described. A processor
+            detects motion of an object in a field of view and then generates a
+            plurality of images in response to detecting motion of the object in
+            the field of view. <em>The object may comprise a vehicle having a
+            license plate.</em>"</p>
+          <p><strong>Background section (the company's own description of what
+            an LPR is for):</strong> "LPR cameras are often used by law
+            enforcement personnel in order to <em>identify and track automobiles
+            who may be associated with operators who commit traffic
+            violations</em>. LPR cameras are also used by law enforcement
+            personnel to <em>identify and track automobiles of operators who may
+            be wanted criminals or operators who may be conspiring to commit
+            future crime(s)</em>."</p>
+        </blockquote>
+        <p>
+          The patent also shows the LPR isn't a dumb camera &mdash; it has
+          on-device AI. A passive-infrared (PIR) motion detector wakes a
+          low-power processor from sleep mode, then a neural network scores and
+          filters images locally before transmitting them over the cellular
+          network (Fig. 5). What cities buy from Flock is a smart,
+          networked surveillance device, not a passive reader.
+        </p>
+        <p class="small">
+          <strong>Source:</strong>
+          <a href="documents/patents/US11030892.pdf">Download PDF (1.9MB, 18 pages)</a>
+          &middot; <a href="https://patents.google.com/patent/US11030892B1/en" rel="noopener">Google Patents</a>
+          &middot; <a href="https://patentcenter.uspto.gov/applications/16786871" rel="noopener">USPTO PatentCenter</a>
+        </p>
+
+        <h3>2. The aggregation network the LPR feeds into (US 11,416,545 B1)</h3>
+        <p>
+          The patent for the <em>backend</em> the LPR data gets tied into. Same
+          inventors (Langley, Feury), same assignee, published 16 Aug 2022.
+          Where the first patent is about capturing one plate at a time, this
+          one is about querying across a "dynamic surveillance network" of
+          cameras.
+        </p>
+        <blockquote>
+          <p><strong>Title:</strong> "System and method for object based query of
+            video content captured by a <em>dynamic surveillance network</em>."</p>
+          <p><strong>Abstract:</strong> "A solution for a <em>video surveillance
+            system</em> and method that leverages a dynamic geographic footprint
+            and supports an object-based query of archived video content."</p>
+          <p><strong>Drawings (Fig. 1 legend):</strong> "NSD = portable
+            <em>neighborhood surveillance device</em>" &mdash; the same kind of
+            device Flock sells alongside its LPRs.</p>
+          <p><strong>Background section:</strong> the system ingests video from
+            "surveillance cameras in a neighborhood watch system, store cameras
+            at local convenience store, traffic site monitoring cameras at a
+            nearby street intersection, <em>a smart phone associated with a
+            pedestrian</em>" &mdash; so the "dynamic geographic footprint" isn't
+            limited to fixed cameras. The system also builds <em>object
+            fingerprints</em> for every detected object (Hough lines, object
+            height, object width, black/white pixel ratio, white balance, hash
+            value) and can identify "people (male, female, race, etc.)."</p>
+        </blockquote>
+        <p class="small">
+          <strong>Source:</strong>
+          <a href="documents/patents/US11416545.pdf">Download PDF (2.9MB, 29 pages)</a>
+          &middot; <a href="https://patents.google.com/patent/US11416545B1/en" rel="noopener">Google Patents</a>
+          &middot; <a href="https://patentcenter.uspto.gov/applications/17062601" rel="noopener">USPTO PatentCenter</a>
+        </p>
+
+        <h3>How the company markets it</h3>
+        <p>
+          The "aggregation" layer in patent #2 is sold as
+          <a href="https://www.flocksafety.com/blog/one-platform-one-picture-one-clear-mission" rel="noopener">Flock Nova</a>,
+          with the tagline <strong>"search once, see everything."</strong>
+          From Flock's own blog (16 Jun 2025):
+        </p>
+        <blockquote>
+          <p>"Search the way you think. Just type a name, phone number, or plate.
+            Flock Nova surfaces what is connected. <em>See everything in one
+            place.</em> RMS, CAD, LPR, jail data, public records, and more."</p>
+        </blockquote>
+        <p>
+          So a single LPR plate read doesn't sit in isolation.
+          It can be joined in the Flock Nova portal to records management
+          system (RMS) data, computer-aided dispatch (CAD) data, jail
+          booking data, and public records &mdash; searchable by a name, a
+          phone number, or a plate. That's the backend patent #2 is
+          describing.
+        </p>
+
+        <h3>That's the misnomer</h3>
+        <p>
+          The "safety" in the company name is a marketing choice. Both patents
+          use the word <em>surveillance</em> to describe what the system is.
+          The LPR patent's own background section describes the device as one
+          used to "identify and track automobiles." And the company's own
+          tagline for the aggregation layer is "see everything."
+        </p>
+
+        <h3>Why the misnomer works as a sales tactic</h3>
+        <p>
+          The LPR camera is a genuinely useful tool for a local police
+          department &mdash; it helps find stolen cars, AMBER alerts, BOLOs.
+          Cops aren't being lied to about what <em>their camera</em> does.
+          What's missing is the next question: what else does the data feed
+          into?
+        </p>
+        <p>
+          Nothing about the network is hidden. The patent for the aggregation
+          system is public. The Flock Nova product is publicly described. The
+          "search once, see everything" tagline is on the company's own blog.
+          None of that is concealed. What's missing is the conversation in
+          council chambers and police procurement meetings about whether
+          signing a contract for "a license plate reader" is also signing up
+          to be a node in a nationwide surveillance network &mdash; and whether
+          that's a decision a city should be making deliberately.
+        </p>
+        <p>
+          Each new city adds a node to a network whose value compounds with
+          every new node. Local tax dollars pay for the cameras; the vendor
+          owns the aggregation. The "Safety" name sells the local use case;
+          the "see everything" tagline describes the network. That's the
+          asymmetry: a useful tool at the local level, a nationwide network
+          at the company level, and the gap between them is what the city
+          never got to vote on.
+        </p>
+      </section>
+
 
       <section aria-labelledby="building-h">
         <h2 id="building-h">What they're building</h2>
@@ -187,116 +454,14 @@
         </p>
       </section>
 
-      <section aria-labelledby="aclu-h">
-        <h2 id="aclu-h">What the ACLU has documented</h2>
-        <p>
-          The American Civil Liberties Union maintains an ongoing file on
-          Flock. The most comprehensive recent piece is
-          <a data-ext="acluOverview" href="#">"Flock's Aggressive Expansions Go Far Beyond Simple Driver Surveillance"</a>
-          (October 17, 2025), written by senior policy analyst Jay Stanley.
-          ACLU's central claim:
-        </p>
-        <blockquote>
-          <p>
-            "The cloud Automatic License Plate Reader (ALPR or LPR) company
-            Flock is building a dangerous nationwide mass-surveillance
-            infrastructure."
-          </p>
-        </blockquote>
-        <p>
-          The ACLU article documents several expansion vectors that go
-          beyond the local use case that police departments typically cite
-          when signing the original contract. They are not speculative
-          &mdash; each is sourced to a public record, a news investigation,
-          or a company announcement.
-        </p>
-
-        <h3>1. Use by ICE for immigration enforcement</h3>
-        <p>
-          The 404 Media investigative outlet
-          <a href="https://www.404media.co/ice-taps-into-nationwide-ai-enabled-camera-network-data-shows/" rel="noopener">obtained records</a>
-          showing that local officers have been using Flock's nationwide
-          search capability to run searches on behalf of U.S. Immigration
-          and Customs Enforcement (ICE), including its Enforcement and
-          Removal Operations division. Internal records include a
-          "purpose" field that officers fill out when running a search.
-        </p>
-
-        <h3>2. A nationwide search for a recipient of an abortion</h3>
-        <p>
-          The same 404 Media investigation found that a Texas police
-          officer used Flock's nationwide search to look for a woman who
-          had self-administered an abortion, which is illegal in that
-          state. ACLU's framing: "It is safe to say that even many who
-          support the use of ALPR programs by their local police to catch
-          local criminals do not support funneling the data that is
-          collected to the Trump Administration and those carrying out
-          its abusive and often unlawful immigration program."
-        </p>
-
-        <h3>3. Integration with commercial data brokers</h3>
-        <p>
-          Flock has announced plans to plug its systems into commercial
-          data brokers that offer "people lookup" services. ACLU writes:
-          "Flock has long claimed that their LPRs don't collect
-          personally identifiable information, as if license plates can't
-          easily be connected to specific people. That claim was always
-          bogus, but with their new product they make that falsity
-          explicit, boasting that the new product will let police
-          <em>jump from LPR to person</em>." The proposed
-          <a href="https://action.aclu.org/send-message/stop-governments-massive-privacy-invasion" rel="noopener">Fourth Amendment Is Not For Sale Act</a>,
-          which would ban this practice, passed the U.S. House in 2024
-          but was blocked in the Senate.
-        </p>
-
-        <h3>4. From still images to video, with AI search</h3>
-        <p>
-          Flock has announced that police departments will soon be able to
-          obtain not just still photos from ALPR cameras but also video,
-          including the ability to request live feeds or 15-second clips
-          of cars passing by. Flock FreeForm adds a natural-language
-          search layer to this data &mdash; an officer can search for
-          "landscaping trailer with a ladder" and the system will pull
-          matching footage. ACLU: "Imagine that a police officer stood
-          on your street writing detailed notes about you every time you
-          drove or walked by them. ... Now imagine that there is an army
-          of police officers doing this on every block. This is the
-          surveillance world that Flock is building."
-        </p>
-
-        <h3>5. The Flock Business Network</h3>
-        <p>
-          In June 2025, Flock launched a "Flock Business Network" for
-          private-sector customers. The product page describes it as a
-          "collaborative hub designed to help private sector organizations
-          work together to solve and prevent crime." It allows companies
-          to add vehicles to "Flock Hotlists" so that any other
-          subscriber is alerted the next time that vehicle is detected by
-          a Flock LPR. ACLU's concern: this creates an infrastructure for
-          corporate blacklisting and surveillance that operates outside
-          the normal checks and balances of government.
-        </p>
-
-        <h3>6. AI that "generates suspicion"</h3>
-        <p>
-          Flock has introduced AI analytics that, in ACLU's words, "shift
-          the company from providing tools for officials to use in
-          investigating suspicion to generating suspicion." The system
-          scans the movement patterns of all vehicles in the nationwide
-          database and alerts law enforcement to those that the algorithm
-          flags as "suspect."
-        </p>
-      </section>
-
       <section aria-labelledby="told-h">
         <h2 id="told-h">What Flock has told cities</h2>
         <p>
-          The ACLU's documented expansion vectors are about what the
-          <em>system</em> does. The stories in this section are about
-          what Flock <em>the company</em> has been caught saying &mdash;
-          and what the audit log shows it actually does. In several
-          recent cases, the public record and the company's own
-          statements have come apart.
+          The patents above show what the system <em>is</em>. The
+          stories in this section are about what Flock the company
+          has been caught saying &mdash; and what the audit log shows
+          it actually does. In several recent cases, the public record
+          and the company's own statements have come apart.
         </p>
 
         <h3>Oshkosh, Wisconsin: a "heat map" claim that turned out to be false</h3>
@@ -543,9 +708,8 @@
       <section aria-labelledby="misuse-h">
         <h2 id="misuse-h">How the system has been misused</h2>
         <p>
-          This section is different from the ones above. The ACLU
-          section is about what the <em>system</em> does. The "What Flock
-          has told cities" section is about what the
+          This section is different from the ones above. The
+          "What Flock has told cities" section is about what the
           <em>company</em> has been caught saying. This section is
           about what <em>officers</em> have been caught doing with the
           system, and what the system's design has to do with it.
@@ -678,22 +842,22 @@
             the LPR camera as a device used to "identify and track
             automobiles." A copy of the full patent is
             <a href="documents/patents/US11030892.pdf">available as a PDF</a>
-            and the full discussion is on the
-            <a href="learning.html#patent-h">Learning page</a>.
+            and the full discussion is
+            <a href="#patents-h">above on this page</a>.
           </li>
           <li>
             <strong>US 11,416,545 B1</strong> &mdash; "System and method
             for object based query of video content captured by a
             <em>dynamic surveillance network</em>." A copy is
             <a href="documents/patents/US11416545.pdf">available as a PDF</a>,
-            with discussion on the
-            <a href="learning.html#patent-h">Learning page</a>.
+            with discussion
+            <a href="#patents-h">above on this page</a>.
           </li>
         </ul>
         <p>
           The full discussion of both patents, including the relevant
-          quotes, is on the
-          <a href="learning.html#patent-h">Learning page &mdash; Flock's own patents</a>.
+          quotes, is
+          <a href="#patents-h">above on this page</a>.
           The patents and the company's own marketing language make the
           same case: the system is a <em>surveillance</em> network whose
           explicit purpose is to let the operator <em>see everything</em>.
@@ -719,11 +883,6 @@
             Mirtha Donastorg, "<a href="https://www.ajc.com/news/business/flock-safety-raises-275-million-plans-major-expansion-in-metro-atlanta/J5LOIZO5DFCAVLVPXUA3DP3XJE/" rel="noopener">Flock Safety raises $275 million, plans major expansion in metro Atlanta</a>"
             &mdash; <em>Atlanta Journal-Constitution</em>, 13 Mar 2025
             (founders, funding, employees, agency count, plans for federal / international work).
-          </li>
-          <li>
-            Jay Stanley, "<a data-ext="acluOverview" href="#">Flock's Aggressive Expansions Go Far Beyond Simple Driver Surveillance</a>"
-            &mdash; <em>American Civil Liberties Union</em>, 17 Oct 2025
-            (the ACLU's documented expansion vectors).
           </li>
           <li>
             Jay Stanley, "<a href="https://www.aclu.org/news/privacy-technology/flock-ceo-goes-ballistic" rel="noopener">Flock CEO Goes Ballistic on Critics as More Americans Question Mass Driver Surveillance</a>"
@@ -807,19 +966,16 @@
             &mdash; $658M total funding figure.
           </li>
           <li>
-            "<a href="https://www.404media.co/ice-taps-into-nationwide-ai-enabled-camera-network-data-shows/" rel="noopener">ICE Taps Into Nationwide AI-Enabled Camera Network Data, Shows Internal Documents</a>"
-            &mdash; <em>404 Media</em>, 2025
-            (the ICE-use investigation).
-          </li>
-          <li>
-            <a href="learning.html#patent-h">Flock's own patents</a>
-            &mdash; the full discussion on the Learning page, with PDFs
+            <a href="#patents-h">Flock's own patents</a>
+            &mdash; the full discussion on this page, with PDFs
             (<a href="documents/patents/US11030892.pdf">LPR camera patent</a>,
             <a href="documents/patents/US11416545.pdf">aggregation network patent</a>).
           </li>
         </ul>
       </section>
 
+        </div>
+      </div>
     </main>
 
     <footer class="site-footer" id="site-footer"></footer>
