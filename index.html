@@ -2,130 +2,349 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Before you enter — de-flock Alamo</title>
-  <meta name="description" content="A transparent notice about this site's status: it is a work in progress, built with substantial AI assistance, and lightly proof-read.">
+  <title data-default="Home">Home</title>
+  <meta name="description" content="More than 30 Flock Safety license plate reader cameras are operating in and around Alamogordo, NM. Here's what that means — and what you can do about it.">
   <meta name="color-scheme" content="light dark">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Flock ALPRs in Alamogordo — what you should know">
+  <meta property="og:description" content="More than 30 Flock Safety license plate reader cameras are operating in and around Alamogordo. Here's what that means, what the city hasn't told us, and what residents can do.">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23b3261e'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='system-ui' font-size='38' font-weight='700' fill='white'%3ED%3C/text%3E%3C/svg%3E">
   <style>
-    /* Disclaimer page uses minimal chrome — no shared header/footer.
-       The styled block below replaces the full layout. */
-    body { display: block; }
-    .disclaimer-shell {
+    /* --- Home page primer styles ---------------------------------------- */
+    .lede {
+      font-size: 1.15rem;
+      line-height: 1.5;
       max-width: 38rem;
-      margin: 8vh auto;
-      padding: 0 1.2rem;
+      color: var(--fg);
     }
-    .disclaimer-shell h1 {
-      font-size: 1.6rem;
-      margin: 0 0 0.5rem;
-      line-height: 1.25;
-    }
-    .disclaimer-shell .lede {
-      color: var(--fg-muted);
-      margin: 0 0 1.6rem;
-    }
-    .caveat {
-      border: 1px solid var(--warn-border);
-      background: var(--warn-bg);
-      border-left: 4px solid var(--warn-border);
-      border-radius: var(--radius);
-      padding: 1rem 1.2rem;
-      margin: 0 0 1rem;
-    }
-    .caveat h2 {
-      font-size: 1.05rem;
-      margin: 0 0 0.4rem;
-    }
-    .caveat p { margin: 0 0 0.5rem; }
-    .caveat p:last-child { margin-bottom: 0; }
-    .caveat ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
-    .caveat li { margin: 0.2rem 0; }
-    .enter {
-      margin-top: 2rem;
-      text-align: center;
-    }
-    .enter .btn { font-size: 1.05rem; padding: 0.7em 1.4em; }
-    .enter .btn:focus-visible {
-      outline: 3px solid var(--accent);
-      outline-offset: 3px;
-    }
-    .meta {
-      margin-top: 1.6rem;
+    .lede strong { color: var(--accent); }
+    .src-note {
       font-size: 0.85rem;
       color: var(--fg-faint);
-      text-align: center;
+      margin-top: 0.3rem;
+    }
+    .src-note a { color: var(--fg-muted); }
+
+    /* Tradeoff block — the two-sentence point of view */
+    .tradeoff {
+      border-left: 4px solid var(--accent);
+      background: var(--accent-bg);
+      padding: 1rem 1.2rem;
+      margin: 1.6rem 0;
+      max-width: 42rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    .tradeoff p { margin: 0 0 0.6rem; }
+    .tradeoff p:last-child { margin-bottom: 0; }
+
+    /* Facts strip — 3 small cards with one number/fact each */
+    .facts {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+      margin: 1.5rem 0 2rem;
+    }
+    @media (min-width: 48rem) {
+      .facts { grid-template-columns: repeat(3, 1fr); }
+    }
+    .fact {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.9rem 1rem;
+      background: var(--bg-elev);
+    }
+    .fact .num {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin: 0 0 0.3rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .fact .label {
+      font-size: 0.95rem;
+      line-height: 1.35;
+    }
+    .fact .src {
+      font-size: 0.8rem;
+      color: var(--fg-faint);
+      margin-top: 0.3rem;
+    }
+
+    /* Featured video */
+    .featured-video {
+      background: var(--bg-elev);
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 1rem;
+      box-shadow: 0 0 0 4px var(--accent-bg);
+      margin: 1.5rem 0;
+      max-width: 50rem;
+    }
+    .featured-video .meta {
+      font-size: 0.8rem;
+      color: var(--fg-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin: 0 0 0.3rem;
+    }
+    .featured-video h3 {
+      margin: 0 0 0.6rem;
+      font-size: 1.05rem;
+      line-height: 1.3;
+    }
+    .embed {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+      background: #000;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .embed iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* "If you want to go further" 4-link strip */
+    .next-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+    @media (min-width: 48rem) {
+      .next-steps { grid-template-columns: repeat(2, 1fr); }
+      @media (min-width: 64rem) {
+        .next-steps { grid-template-columns: repeat(4, 1fr); }
+      }
+    }
+    .next-step {
+      display: block;
+      padding: 0.9rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-elev);
+      text-decoration: none;
+      color: var(--fg);
+    }
+    .next-step:hover {
+      border-color: var(--accent);
+      background: var(--accent-bg);
+    }
+    .next-step .step-num {
+      font-size: 0.75rem;
+      color: var(--fg-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+    }
+    .next-step .step-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0.2rem 0 0.2rem;
+      line-height: 1.3;
+    }
+    .next-step .step-desc {
+      font-size: 0.85rem;
+      color: var(--fg-muted);
+      line-height: 1.35;
     }
   </style>
 </head>
 <body>
-  <main class="disclaimer-shell" id="main">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="site">
+    <header class="site-header" id="site-header"></header>
 
-    <h1>Before you enter</h1>
-    <p class="lede">
-      This site is a <strong>work in progress</strong>. We're publishing it now because the
-      issue is timely, but please read the four notes below before relying on anything
-      you read here.
-    </p>
+    <main id="main">
 
-    <div class="caveat">
-      <h2>1. Still under construction</h2>
-      <p>
-        The site is missing a lot of information. Many pages are placeholders. Expect
-        broken links, sparse sections, and rough edges. We are publishing incrementally
-        as documents and reports come in, and as we have time to write them up.
-      </p>
-    </div>
+      <section class="hero" aria-labelledby="hero-h">
+        <p class="eyebrow" data-cfg="heroEyebrow">Community information hub</p>
+        <h1 id="hero-h">More than 30 Flock Safety cameras are operating in and around Alamogordo.</h1>
+        <p class="lede">
+          Flock Safety markets these as license plate readers for stolen cars and AMBER alerts.
+          They're also nodes in a nationwide law-enforcement network that any participating agency
+          can search. <strong>Our city paid for the cameras. The vendor owns the network.</strong>
+        </p>
+        <p class="src-note">
+          Camera count: <a href="https://deflock.org/" rel="noopener">deflock.org</a>,
+          the community-run ALPR map.
+          The City of Alamogordo has not publicly released a count.
+        </p>
+      </section>
 
-    <div class="caveat">
-      <h2>2. Built with substantial AI assistance</h2>
-      <p>
-        The site's structure, code, and large parts of the prose were drafted with the
-        help of an AI assistant.We curated the source material, made the editorial decisions,
-        and are responsible for what is published — but the writing was not done by hand,
-        page by page.
-      </p>
-    </div>
+      <section aria-labelledby="facts-h" style="margin-top:1.5rem">
+        <h2 id="facts-h" style="font-size:1rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--fg-muted); border:none; padding:0">What we know</h2>
+        <div class="facts">
+          <div class="fact">
+            <p class="num">30+</p>
+            <p class="label">Flock Safety cameras confirmed operating in and around Alamogordo.</p>
+            <p class="src">Source: <a href="https://deflock.org/" rel="noopener">deflock.org</a></p>
+          </div>
+          <div class="fact">
+            <p class="num">0</p>
+            <p class="label">Cameras the City of Alamogordo has publicly disclosed in a contract, council meeting, or press release.</p>
+            <p class="src">Source: public record</p>
+          </div>
+          <div class="fact">
+            <p class="num">4,800+</p>
+            <p class="label">U.S. law enforcement agencies on the Flock network — including ICE, per <a href="https://www.404media.co/" rel="noopener">404 Media</a>'s 2025 investigation.</p>
+            <p class="src">Source: 404 Media, AJC, company filings</p>
+          </div>
+        </div>
+      </section>
 
-    <div class="caveat">
-      <h2>3. Lightly proof-read</h2>
-      <p>
-        The text has had at most a single pass of human review for fact-checking and
-        tone. It has not been edited line by line. Expect:
-      </p>
-      <ul>
-        <li>Awkward phrasing, repetition, or generic AI tells</li>
-        <li>Possible factual errors that a careful read would catch</li>
-        <li>Missing nuance on a complicated topic</li>
-      </ul>
-      <p>
-        If something here matters to you, please verify it against the linked source
-        documents. The links are the canonical record — the prose is a guided tour.
-      </p>
-    </div>
+      <section aria-labelledby="video-h">
+        <h2 id="video-h" style="font-size:1rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--fg-muted); border:none; padding:0">The clearest short explanation we've found</h2>
+        <div class="featured-video">
+          <p class="meta">Featured &middot; Business Reform &middot; 18 min</p>
+          <h3>Public Officials Fear This: How YOU Can Use Surveillance Data Against Them</h3>
+          <div class="embed">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/ZMWRFjB-3UE"
+              title="Public Officials Fear This: How YOU Can Use Surveillance Data Against Them"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <p class="small" style="margin-top:0.6rem">
+          <a href="learning.html">More videos and longer reading on the Learning page &rarr;</a>
+        </p>
+      </section>
 
-    <div class="caveat">
-      <h2>4. Independent, not affiliated</h2>
-      <p>
-        This site is community-run. It is not affiliated with any local government,
-        police department, Flock Safety, deflock.org or any advocacy organization. The contact
-        information on the <em>About</em> page reaches one person who lives in the
-        area and is not speaking for any institution.
-      </p>
-    </div>
+      <section aria-labelledby="next-h" style="margin-top:2rem">
+        <h2 id="next-h">If you want to go further</h2>
+        <div class="next-steps">
 
-    <div class="enter">
-      <a class="btn" href="home.html" id="enter-btn">
-        I understand &mdash; enter the site
-      </a>
-      <p class="meta">
-        Your browser will load <code>home.html</code>. You can return to this notice at
-        any time by visiting <code>deflockalamo.org/</code> directly.
-      </p>
-    </div>
+          <a class="next-step" href="flock.html">
+            <p class="step-num">1. The company</p>
+            <p class="step-title">About Flock Safety</p>
+            <p class="step-desc">Who they are, what they make, what they tell cities, and what the audits have found.</p>
+          </a>
 
-  </main>
+          <a class="next-step" href="documents.html">
+            <p class="step-num">2. The paperwork</p>
+            <p class="step-title">Documents</p>
+            <p class="step-desc">Council minutes, contracts, FOIA responses, and policy memos &mdash; sourced.</p>
+          </a>
+
+          <a class="next-step" href="learning.html">
+            <p class="step-num">3. The reading</p>
+            <p class="step-title">Learning</p>
+            <p class="step-desc">A patient primer plus videos, articles, and journalism to go deeper.</p>
+          </a>
+
+          <a class="next-step" href="take-action.html">
+            <p class="step-num">4. The next move</p>
+            <p class="step-title">Take action</p>
+            <p class="step-desc">IPRA templates, council meeting prep, and how to file your own records request.</p>
+          </a>
+
+        </div>
+      </section>
+
+      <section class="quick-poll" aria-labelledby="poll-h" style="padding:1.2rem 1.2rem;margin:2rem 0 1.5rem;border:1px solid rgba(127,127,127,0.3);border-radius:10px;background:rgba(127,127,127,0.04)">
+        <h2 id="poll-h" style="margin-top:0; font-size:1.1rem">Have your say</h2>
+        <p style="margin:0.4rem 0 0.8rem"><strong>Do you have concerns about the Flock cameras in your community?</strong></p>
+        <div id="home-poll" style="display:grid;gap:0.5rem;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));margin:0.6rem 0">
+          <button type="button" data-answer="yes"   style="padding:0.7rem 0.8rem;font-weight:600;border:2px solid currentColor;background:transparent;color:inherit;border-radius:6px;cursor:pointer">Yes</button>
+          <button type="button" data-answer="some"  style="padding:0.7rem 0.8rem;font-weight:600;border:2px solid currentColor;background:transparent;color:inherit;border-radius:6px;cursor:pointer">Some concerns</button>
+          <button type="button" data-answer="no"    style="padding:0.7rem 0.8rem;font-weight:600;border:2px solid currentColor;background:transparent;color:inherit;border-radius:6px;cursor:pointer">No</button>
+          <a href="learning.html" style="padding:0.7rem 0.8rem;font-weight:600;border:2px solid currentColor;background:transparent;color:inherit;border-radius:6px;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center">Want to learn more &rarr;</a>
+        </div>
+        <p id="home-poll-confirm" hidden style="padding:0.5rem 0.8rem;border-radius:6px;background:rgba(127,255,127,0.08);border:1px solid rgba(127,255,127,0.3);margin:0.6rem 0">
+          Thanks &mdash; counted. <a href="survey.html#standing">Add your name to the Community Standing</a>.
+        </p>
+        <p id="home-poll-tally" style="font-size:0.95rem;opacity:0.8;margin:0.4rem 0 0">Loading results&hellip;</p>
+      </section>
+
+      <section aria-labelledby="about-h" style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border)">
+        <h2 id="about-h" style="font-size:1rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--fg-muted); border:none; padding:0">About this project</h2>
+        <p style="max-width:42rem; color:var(--fg-muted)">
+          This site is community-run, independent, and not affiliated with any local government,
+          police department, or vendor. It exists to give Alamogordo residents clear, sourced
+          information about the Flock Safety ALPR deployment &mdash; and to help you make your
+          voice heard. <a href="about.html">More about who we are and how the site is run &rarr;</a>
+        </p>
+      </section>
+
+    </main>
+
+    <footer class="site-footer" id="site-footer"></footer>
+  </div>
+
+  <script src="_config.js"></script>
+  <script src="assets/layout.js"></script>
+  <script>
+    // Fill in [data-cfg] placeholders from SITE_CONFIG
+    document.addEventListener("DOMContentLoaded", function () {
+      var C = window.SITE_CONFIG || {};
+      document.querySelectorAll("[data-cfg]").forEach(function (el) {
+        var key = el.getAttribute("data-cfg");
+        if (C[key] != null) el.textContent = C[key];
+      });
+
+      // Inline quick-poll wiring (mirrors survey.html)
+      var grid = document.getElementById("home-poll");
+      var conf = document.getElementById("home-poll-confirm");
+      var tally = document.getElementById("home-poll-tally");
+      if (grid) {
+        grid.addEventListener("click", function (ev) {
+          var btn = ev.target.closest("button[data-answer]");
+          if (!btn) return;
+          var answer = btn.getAttribute("data-answer");
+          var btns = grid.querySelectorAll("button");
+          for (var i = 0; i < btns.length; i++) {
+            btns[i].disabled = true;
+            if (btns[i] === btn) btns[i].style.fontWeight = "800";
+          }
+          fetch("/api/community/survey", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ answer: answer, source: "home-poll" }),
+          }).then(function (res) {
+            if (!res.ok) throw new Error("HTTP " + res.status);
+            conf.hidden = false;
+            return fetch("/api/community/counts");
+          }).then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (c) {
+              if (!c) { tally.textContent = "Results unavailable."; return; }
+              tally.innerHTML =
+                "<strong>" + c.survey_total + "</strong> people have weighed in so far &mdash; " +
+                c.survey_yes + " yes, " + c.survey_some + " some concerns, " + c.survey_no + " no. " +
+                "<a href=\"learning.html\">Want to learn more? Read the background &rarr;</a> " +
+                "&middot; <a href=\"survey.html#standing\">Add your name to the Community Standing (" + c.standing_total + ")</a>.";
+            })
+            .catch(function () {
+              conf.hidden = false;
+              conf.innerHTML = "Could not record your answer. Please refresh and try again, or <a href=\"survey.html\">go to the full survey page</a>.";
+              conf.style.background = "rgba(255, 80, 80, 0.1)";
+            });
+        });
+
+        // Initial tally load
+        fetch("/api/community/counts?_=" + Date.now())
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (c) {
+            if (!c) { tally.textContent = "Results unavailable."; return; }
+            tally.innerHTML =
+              "<strong>" + c.survey_total + "</strong> people have weighed in so far &mdash; " +
+              c.survey_yes + " yes, " + c.survey_some + " some concerns, " + c.survey_no + " no. " +
+              "<a href=\"learning.html\">Want to learn more? Read the background &rarr;</a> " +
+              "&middot; <a href=\"survey.html#standing\">Add your name to the Community Standing (" + c.standing_total + ")</a>.";
+            console.log("[home tally loaded]", c);
+          })
+          .catch(function (e) { console.warn("[home tally load failed]", e); tally.textContent = "Results unavailable."; });
+      }
+    });
+  </script>
 </body>
 </html>

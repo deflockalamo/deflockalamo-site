@@ -13,7 +13,7 @@
 
   // Build primary nav
   const navItems = [
-    { href: "home.html",        label: "Home",         match: ["home.html"] },
+    { href: "home.html",        label: "Home",         match: ["home.html", "index.html", ""] },
     { href: "learning.html",    label: "Learning",       match: ["learning.html"] },
     { href: "resources.html",   label: "Resources",     match: ["resources.html"] },
     { href: "documents.html",   label: "Documents",     match: ["documents.html"] },
