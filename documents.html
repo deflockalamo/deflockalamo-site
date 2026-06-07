@@ -190,11 +190,15 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       var C = window.SITE_CONFIG || {};
+      function resolveUrl(key) {
+        if (C.resources && C.resources[key] && C.resources[key].url) return C.resources[key].url;
+        if (C.articles  && C.articles[key]  && C.articles[key].url)  return C.articles[key].url;
+        if (C.links     && C.links[key])                              return C.links[key];
+        return null;
+      }
       document.querySelectorAll("[data-ext]").forEach(function (el) {
-        var key = el.getAttribute("data-ext");
-        if (C.resources && C.resources[key] && C.resources[key].url) {
-          el.setAttribute("href", C.resources[key].url);
-        }
+        var url = resolveUrl(el.getAttribute("data-ext"));
+        if (url) el.setAttribute("href", url);
       });
     });
   </script>

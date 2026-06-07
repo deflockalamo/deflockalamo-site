@@ -149,6 +149,19 @@
       height: 100%;
       border: 0;
     }
+
+    /* --- "Read more on Resources" card --------------------------------- */
+    .read-more {
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      background: var(--bg-elev);
+      border-radius: var(--radius);
+      padding: 0.9rem 1rem;
+      margin: 0.5rem 0 1.5rem;
+      max-width: 42rem;
+    }
+    .read-more p { margin: 0 0 0.4rem; }
+    .read-more p:last-child { margin-bottom: 0; }
   </style>
 </head>
 <body>
@@ -159,10 +172,12 @@
     <main id="main">
       <h1>Learning</h1>
       <p>
-        A growing collection of videos, articles, and journalism about Flock Safety
-        and ALPR surveillance. We start with the most useful pieces and add more as
-        we find them. Watch a video, read a few articles, then come back when you
-        have time — there's a lot here and you don't have to absorb it all at once.
+        A curated tour through the videos, articles, and journalism that
+        explain Flock Safety and ALPR surveillance. This page is the
+        <em>curated reading list</em> &mdash; what to watch, what to read,
+        and in what order. For the full index of every source we cite
+        anywhere on the site, see the
+        <a href="resources.html">Resources</a> page.
       </p>
 
       <div class="learning-wrap">
@@ -173,24 +188,51 @@
           <nav class="toc-list" style="display:none">
             <h2>On this page</h2>
             <ol>
+              <li><a href="#start-h">Where to start</a></li>
               <li><a href="#video-h">Video education</a></li>
               <li><a href="#local-h">Local &amp; statewide</a></li>
-              <li><a href="#national-h">National &amp; explainers</a></li>
-              <li><a href="#orgs-h">Organizations &amp; resources</a></li>
+              <li><a href="#orgs-h">Organizations</a></li>
+              <li><a href="#more-h">More reading</a></li>
             </ol>
           </nav>
         </aside>
 
         <div>
+
+          <section aria-labelledby="start-h">
+            <h2 id="start-h">Where to start</h2>
+            <p>
+              If you have <strong>15 minutes</strong>: watch the featured
+              video below. It explains how a private surveillance network
+              actually works &mdash; not the marketing, the reality.
+            </p>
+            <p>
+              If you have <strong>30 minutes more</strong>: read the
+              <a href="https://progressnownm.org/privacy-first-heres-how-nm-can-set-guardrails-on-flock-cameras-and-surveillance-tech/">ProgressNow NM statewide piece</a>
+              for the New Mexico policy picture, then skim the
+              <a href="#local-h">local coverage</a> for context on what's
+              happening in our area.
+            </p>
+            <p>
+              If you want <strong>the full picture</strong>: the
+              <a href="resources.html">Resources page</a> has every source
+              we cite, grouped by type of source (local, national,
+              civil-liberties, company materials, government documents,
+              tools). Use it as a reference &mdash; you don't need to read
+              it top to bottom.
+            </p>
+          </section>
+
           <section aria-labelledby="video-h">
             <h2 id="video-h">Video education</h2>
             <p>
-              <strong>Business Reform</strong> is a YouTube channel that covers Flock
-              and other private surveillance companies in depth. We feature their
-              videos here because they explain the business model, the contracts, and
-              the data-sharing issues better than almost anything else out there.
-              Start with the one below — it's the one that flipped how a lot of
-              people think about "their" cameras.
+              <strong>Business Reform</strong> is a YouTube channel that
+              covers Flock and other private surveillance companies in
+              depth. We feature their videos here because they explain the
+              business model, the contracts, and the data-sharing issues
+              better than almost anything else out there. Start with the
+              one below &mdash; it's the one that flipped how a lot of
+              people think about &ldquo;their&rdquo; cameras.
             </p>
 
             <div class="video-grid">
@@ -235,161 +277,135 @@
           <section aria-labelledby="local-h">
             <h2 id="local-h">Local &amp; statewide coverage</h2>
             <p class="small">
-              Curated links to news and analysis relevant to Flock and ALPR surveillance in
-              <span data-cfg="area">our area</span> and New Mexico.
+              Curated links to news and analysis relevant to Flock and ALPR
+              surveillance in
+              <span data-cfg="area">our area</span> and New Mexico. The
+              full index of every source we cite lives on the
+              <a href="resources.html#local">Resources</a> page.
             </p>
 
             <h3 style="margin-top:1.2rem; border:none; padding:0; font-size:1rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--fg-muted)">Local</h3>
             <article class="card">
               <p class="meta">2nd Life Media Alamogordo</p>
-              <h3><a href="https://2ndlifemediaalamogordo.town.news/g/alamogordo-nm/n/350414/alamogordo-murder-case-swift-arrest-matthew-weems-and-expanding-crime">Alamogordo murder case: swift arrest of Matthew Weems and expanding crime</a></h3>
+              <h3><a data-ext="localMurderCase" href="#">Alamogordo murder case: swift arrest of Matthew Weems and expanding crime</a></h3>
               <p class="source">2ndlifemediaalamogordo.town.news</p>
               <p>
-                Local coverage of an arrest where ALPR data was cited. Included for context on how
-                the system is being framed and used in our area &mdash; not as an endorsement of mass
-                surveillance. Note the article's mention of HOA- and business-purchased Flock
-                cameras feeding the regional network: that's the deployment model worth understanding.
+                Local coverage of an arrest where ALPR data was cited.
+                Included for context on how the system is being framed and
+                used in our area &mdash; not as an endorsement of mass
+                surveillance. Note the article&rsquo;s mention of HOA- and
+                business-purchased Flock cameras feeding the regional
+                network: that&rsquo;s the deployment model worth
+                understanding.
               </p>
             </article>
 
             <h3 style="margin-top:1.2rem; border:none; padding:0; font-size:1rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--fg-muted)">Statewide</h3>
             <article class="card">
               <p class="meta">Progress Now New Mexico</p>
-              <h3><a href="https://progressnownm.org/privacy-first-heres-how-nm-can-set-guardrails-on-flock-cameras-and-surveillance-tech/">Privacy first: here's how NM can set guardrails on Flock cameras and surveillance tech</a></h3>
+              <h3><a data-ext="nmGuardrails" href="#">Privacy first: how NM can set guardrails on Flock cameras and surveillance tech</a></h3>
               <p class="source">progressnownm.org</p>
               <p>
-                Statewide policy framing: what guardrails New Mexico could put in place, what the
-                current legislative landscape looks like, and where Flock is already deployed
-                across the state (Alamogordo, Otero County, Bernalillo County, Taos, Las Cruces).
-                Best single piece for understanding the bigger picture in NM.
+                Statewide policy framing: what guardrails New Mexico could
+                put in place, what the current legislative landscape looks
+                like, and where Flock is already deployed across the state
+                (Alamogordo, Otero County, Bernalillo County, Taos, Las
+                Cruces). Best single piece for understanding the bigger
+                picture in NM.
               </p>
             </article>
 
-            <h3 style="margin-top:1.2rem; border:none; padding:0; font-size:1rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--fg-muted)">National</h3>
+            <h3 style="margin-top:1.2rem; border:none; padding:0; font-size:1rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--fg-muted)">Comparable cities</h3>
             <article class="card">
               <p class="meta">9NEWS (Denver)</p>
-              <h3><a href="https://www.9news.com/article/news/local/denver-city-councilmembers-police-department-audit-license-plate-camera-data-usage/73-3777d34d-7723-4397-af37-716a6db6ebd9">Denver City Council members audit police department license plate camera data usage</a></h3>
+              <h3><a data-ext="denverAudit" href="#">Denver City Council members audit police department license plate camera data usage</a></h3>
               <p class="source">9news.com</p>
               <p>
-                Example of a city council auditing ALPR use after the fact &mdash; a model Alamogordo
-                residents can ask our own council to follow. Useful for anyone drafting a public
+                Example of a city council auditing ALPR use after the fact
+                &mdash; a model Alamogordo residents can ask our own
+                council to follow. Useful for anyone drafting a public
                 comment or a Commissioner email.
               </p>
             </article>
           </section>
 
-          <section aria-labelledby="national-h">
-            <h2 id="national-h">National coverage &amp; explainers</h2>
-
-            <article class="card">
-              <p class="meta">NPR &middot; 17 Feb 2026</p>
-              <h3><a data-ext="nprOverview" href="#">Why some cities are canceling Flock license plate reader contracts</a></h3>
-              <p class="source">npr.org</p>
-              <p>
-                Good overview of why municipal leaders — including Hillsborough, NC and Flagstaff, AZ —
-                have ended their Flock contracts, with focus on data-sharing language and "good faith
-                belief" disclosure clauses.
-              </p>
-            </article>
-
-            <article class="card">
-              <p class="meta">EFF &middot; 2 Jan 2026</p>
-              <h3><a data-ext="effOverview" href="#">EFF's Investigations Expose Flock Safety's Surveillance Abuses: 2025 in Review</a></h3>
-              <p class="source">eff.org</p>
-              <p>
-                EFF's annual review of their Flock investigations. Covers why the company's "privacy
-                enhancements" (geofencing, retention limits) don't make ALPRs safe.
-              </p>
-            </article>
-
-            <article class="card">
-              <p class="meta">ACLU &middot; 17 Oct 2025</p>
-              <h3><a data-ext="acluOverview" href="#">Flock's Aggressive Expansions Go Far Beyond Simple Driver Surveillance</a></h3>
-              <p class="source">aclu.org</p>
-              <p>
-                ACLU's "Flock roundup" — collection of cases and commentary, including the
-                <em>Nguyen v. State</em> case examining whether ALPRs violate Fourth Amendment
-                expectations of privacy.
-              </p>
-            </article>
-
-            <article class="card">
-              <p class="meta">Berkeleyside &middot; 24 Nov 2025</p>
-              <h3><a href="https://www.berkeleyside.org/2025/11/24/flock-safety-cameras-berkeley-license-plate-readers">What are Flock cameras, and why are they controversial in Berkeley?</a></h3>
-              <p class="source">berkeleyside.org</p>
-              <p>
-                Accessible explainer for a general audience, with quotes from ACLU and EFF and a clear
-                breakdown of the constitutional concerns.
-              </p>
-            </article>
-
-            <article class="card">
-              <p class="meta">Fortune &middot; 3 Jun 2026</p>
-              <h3><a href="https://fortune.com/2026/06/03/why-are-ohio-city-workers-covering-flock-cameras-immigration-enforcement-data-sharing-policy-violations/">Dayton is covering Flock cameras with trash bags after officials found data use violated policy</a></h3>
-              <p class="source">fortune.com</p>
-              <p>
-                Concrete example of a city discovering after the fact that data was being shared in
-                ways the contract didn't allow — and the "contractual trap" problem with cancellation.
-              </p>
-            </article>
-
-            <article class="card">
-              <p class="meta">EFF &middot; 12 Nov 2025</p>
-              <h3><a href="https://www.eff.org/deeplinks/2025/11/washington-court-rules-data-captured-flock-safety-cameras-are-public-records">Washington Court Rules That Data Captured on Flock Safety Cameras Are Public Records</a></h3>
-              <p class="source">eff.org</p>
-              <p>
-                Important precedent: a Washington court ruled that Flock-captured data are public
-                records, reinforcing transparency obligations. Useful for FOIA arguments locally.
-              </p>
-            </article>
-
-            <article class="card">
-              <p class="meta">Wikipedia</p>
-              <h3><a href="https://en.wikipedia.org/wiki/Flock_Safety">Flock Safety</a></h3>
-              <p class="source">en.wikipedia.org</p>
-              <p>
-                Background on the company, its products, and the public debate. Good for a quick
-                factual overview; the privacy-criticism section links to ACLU, EFF, and major coverage.
-              </p>
-            </article>
-          </section>
-
           <section aria-labelledby="orgs-h">
-            <h2 id="orgs-h">Organizations &amp; resources tracking ALPRs</h2>
+            <h2 id="orgs-h">Organizations tracking ALPRs</h2>
+            <p>
+              Civil-liberties organizations and community projects doing
+              ongoing work on ALPRs. The full list of every org, tool, and
+              template we cite is on the
+              <a href="resources.html#tools">Resources</a> page.
+            </p>
             <ul>
               <li>
-                <a href="https://www.eff.org/issues/surveillance-technologies">EFF — Surveillance</a> —
+                <a href="https://www.eff.org/issues/surveillance-technologies">EFF &mdash; Surveillance</a> &mdash;
                 investigative reporting and policy work on ALPRs.
               </li>
               <li>
-                <a href="https://www.aclu.org/news/privacy-technology">ACLU — Privacy &amp; Technology</a> —
+                <a href="https://www.aclu.org/news/privacy-technology">ACLU &mdash; Privacy &amp; Technology</a> &mdash;
                 litigation, including <em>Nguyen v. State</em>.
               </li>
               <li>
-                <a href="https://www.atlasofsurveillance.org/">Atlas of Surveillance</a> (EFF) — a
-                searchable database of surveillance technologies deployed by local governments,
-                including ALPRs. Useful for checking what your city is actually running.
+                <a href="https://www.atlasofsurveillance.org/">Atlas of Surveillance</a> (EFF) &mdash; a
+                searchable database of surveillance technologies deployed by local
+                governments, including ALPRs. Useful for checking what your city is
+                actually running.
               </li>
               <li>
-                <a href="https://deflock.org/foia">DeFlock</a> — open-source community project that
-                maps license plate readers across the US. Also publishes FOIA request templates
-                and a guide to filing records requests in your state.
+                <a href="https://deflock.org/foia">DeFlock</a> &mdash; open-source community project
+                that maps license plate readers across the US. Also publishes FOIA request
+                templates and a guide to filing records requests in your state.
               </li>
               <li>
-                <a href="https://businessreform.org/">Business Reform</a> — investigative YouTube
-                channel and site covering Flock and other private surveillance companies. Their
+                <a href="https://businessreform.org/">Business Reform</a> &mdash; investigative
+                YouTube channel and site covering Flock and other private surveillance
+                companies. Their
                 <a href="https://businessreform.org/open-records-template">Open Records Template</a>
                 for ALPR documents was the starting point for our own
                 <a href="take-action.html#foia">NM IPRA template</a>. Watch on
                 <a href="https://www.youtube.com/@BusinessReform" rel="noopener">YouTube</a>.
               </li>
               <li>
-                <a href="https://flockvwatch.org/">Flock Watch</a> (if relevant) — community-run map
-                of known Flock cameras.
+                <a href="https://flockvwatch.org/">Flock Watch</a> &mdash; community-run map of
+                known Flock cameras.
               </li>
             </ul>
           </section>
 
+          <section aria-labelledby="more-h">
+            <h2 id="more-h">More reading</h2>
+            <p>
+              For the complete index of journalism, civil-liberties
+              research, government documents, company materials, and tools
+              cited on this site &mdash; including national coverage from
+              NPR, Fortune, Berkeleyside, the ACLU, the EFF, the AJC,
+              IPVM, and many more &mdash; see the
+              <a href="resources.html">Resources</a> page.
+            </p>
+
+            <div class="read-more">
+              <p><strong>Looking for something specific?</strong></p>
+              <p>
+                The Resources page is grouped by <em>kind of source</em>
+                rather than by viewpoint. If you want to read all the
+                national coverage, or all the company-side material, or
+                every tool and template we recommend, jump straight to the
+                section you need.
+              </p>
+              <p>
+                <a href="resources.html#national">National journalism &rarr;</a>
+                &middot;
+                <a href="resources.html#civlib">Civil-liberties &amp; legal &rarr;</a>
+                &middot;
+                <a href="resources.html#company">Company &amp; investor materials &rarr;</a>
+                &middot;
+                <a href="resources.html#government">Government documents &rarr;</a>
+                &middot;
+                <a href="resources.html#tools">Tools, maps &amp; templates &rarr;</a>
+              </p>
+            </div>
+          </section>
 
         </div>
       </div>
@@ -456,16 +472,23 @@
       window.addEventListener("hashchange", update);
     })();
 
-    // Existing data-cfg / data-ext wiring
+    // data-cfg / data-ext wiring — keys resolve against `resources` first,
+    // then fall back to legacy `articles` and `links` objects in SITE_CONFIG.
     document.addEventListener("DOMContentLoaded", function () {
       var C = window.SITE_CONFIG || {};
       document.querySelectorAll("[data-cfg]").forEach(function (el) {
         var key = el.getAttribute("data-cfg");
         if (C[key] != null) el.textContent = C[key];
       });
+      function resolveUrl(key) {
+        if (C.resources && C.resources[key] && C.resources[key].url) return C.resources[key].url;
+        if (C.articles  && C.articles[key]  && C.articles[key].url)  return C.articles[key].url;
+        if (C.links     && C.links[key])                              return C.links[key];
+        return null;
+      }
       document.querySelectorAll("[data-ext]").forEach(function (el) {
-        var key = el.getAttribute("data-ext");
-        if (C.links && C.links[key]) el.setAttribute("href", C.links[key]);
+        var url = resolveUrl(el.getAttribute("data-ext"));
+        if (url) el.setAttribute("href", url);
       });
     });
   </script>
