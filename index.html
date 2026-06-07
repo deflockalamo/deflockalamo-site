@@ -112,6 +112,15 @@
       border: 0;
     }
 
+    /* "Learn more" link row after the hero text */
+    .next-links {
+      font-size: 0.95rem;
+      color: var(--fg-muted);
+      margin: 0.4rem 0 0;
+    }
+    .next-links a { color: var(--fg-muted); text-decoration: underline; }
+    .next-links a:hover { color: var(--accent); }
+
     /* "If you want to go further" 4-link strip */
     .next-steps {
       display: grid;
@@ -170,13 +179,27 @@
         <h1 id="hero-h">More than 30 Flock Safety cameras are operating in and around Alamogordo.</h1>
         <p class="lede">
           Flock Safety markets these as license plate readers for stolen cars and AMBER alerts.
-          But to Flock these very cameras are nodes in a nationwide surveillance network (their words from their own
-          patent filings) <strong>We the citizens paid for the cameras while Flock sells the surveillance network that
-          we helped to build... and link-by-link the people forge the chains of their own bondage.</strong>
-          This is not a rejection of technology, but a call for transparency, accountability, and public oversight. 
-          We will highlight the abuses by Flock and it's employees, the lies told to the public and city officials, 
-          and the tradeoffs that come with this kind of surveillance. <a href="lflock.html">Learn more about what
-            Flock is building &rarr;</a>
+          But to Flock these very cameras are nodes in a nationwide surveillance network
+          &mdash; their words, from their own patent filings.
+        </p>
+
+        <blockquote class="tradeoff">
+          <p>
+            We the citizens paid for the cameras while Flock sells the surveillance network
+            that we helped to build. And link-by-link, the people forge the chains of their own bondage.
+          </p>
+        </blockquote>
+
+        <p class="lede">
+          This is not a rejection of technology, but a call for transparency, accountability,
+          and public oversight. We will highlight the abuses by Flock and its employees,
+          the lies told to the public and city officials, and the tradeoffs that come with
+          this kind of surveillance.
+        </p>
+
+        <p class="next-links">
+          <a href="flock.html">Learn more about what Flock is building &rarr;</a>
+          &middot;
           <a href="tradeoff.html">Learn more about the tradeoffs &rarr;</a>
         </p>
         <p class="src-note">
