@@ -138,6 +138,33 @@ blockquote {
   background: var(--accent-bg);
   font-style: italic;
 }
+.pull-quote {
+  margin: 1.75rem 0 1.75rem;
+  padding: 1.1rem 1.4rem 1rem;
+  background: var(--accent-bg);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.pull-quote blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-style: normal;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  line-height: 1.45;
+  color: var(--fg);
+}
+.pull-quote blockquote p { margin: 0; }
+.pull-quote blockquote a { font-weight: 600; }
+.pull-quote figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  font-style: normal;
+  color: var(--fg-muted);
+}
+.pull-quote figcaption a { font-weight: 600; }
 code { font-family: var(--font-mono); font-size: 0.9em; background: var(--bg-elev); padding: 0.1em 0.3em; border-radius: 3px; }
 
 /* Components -------------------------------------------------------------- */
