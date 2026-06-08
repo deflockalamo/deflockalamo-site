@@ -10,6 +10,10 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23b3261e'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='system-ui' font-size='38' font-weight='700' fill='white'%3ED%3C/text%3E%3C/svg%3E">
   <style>
     /* --- Page layout: sticky in-page TOC on the left ------------------- */
+    /* On wide screens, the TOC is pinned to the viewport's left edge
+       (well outside the .site max-width column) so it doesn't shrink
+       the prose column. On narrow screens it collapses into a <details>
+       at the top of the article. */
     .learning-wrap {
       display: grid;
       grid-template-columns: 1fr;
@@ -17,7 +21,7 @@
     }
     @media (min-width: 60rem) {
       .learning-wrap {
-        grid-template-columns: 12rem minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
         align-items: start;
       }
     }
@@ -29,8 +33,10 @@
     }
     @media (min-width: 60rem) {
       .toc {
-        position: sticky;
+        position: fixed;
         top: 1rem;
+        left: max(1.25rem, calc(50vw - 22rem - 12rem - 1.5rem));
+        width: 12rem;
         max-height: calc(100vh - 2rem);
         overflow-y: auto;
       }
