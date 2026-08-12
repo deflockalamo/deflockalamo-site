@@ -5,4 +5,4 @@
 // missing 404 was silently swallowed — that worked but produced a
 // confusing "Failed to load resource" line in the browser console.
 window.SITE_CONFIG = window.SITE_CONFIG || {};
-// window.SITE_CONFIG.contactEmail = "your-real-address@example.com";
+window.SITE_CONFIG.contactEmail = "deflockalamo@proton.me";

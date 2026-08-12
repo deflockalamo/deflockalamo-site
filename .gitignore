@@ -17,3 +17,6 @@ D1-NOTES.txt
 
 # Cloudflare wrangler build cache (created by `wrangler` commands)
 .wrangler/
+
+# npm dependencies (created by `npm install` for wrangler local dev)
+node_modules/
