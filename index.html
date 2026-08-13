@@ -213,9 +213,9 @@
             <p class="src">Source: 404 Media, AJC, company filings</p>
           </div>
           <div class="fact">
-            <p class="num">70+</p>
+            <p class="num" id="wins-count">70+</p>
             <p class="label">U.S. cities have canceled their Flock contracts since 2021, according to the community map <a href="https://deflock.org/" rel="noopener">DeFlock</a> and the <a href="https://www.mercurynews.com/2026/04/22/alameda-county-supervisors-ok-contract-with-flock/" rel="noopener">Mercury News</a>. The number is growing.</p>
-            <p class="src">Source: DeFlock, Mercury News, Apr 2026</p>
+            <p class="src">Source: <a href="https://deflock.org/" rel="noopener">DeFlock</a> (live count, updated regularly)</p>
           </div>
         </div>
       </section>
@@ -363,6 +363,24 @@
             console.log("[home tally loaded]", c);
           })
           .catch(function (e) { console.warn("[home tally load failed]", e); tally.textContent = "Results unavailable."; });
+      }
+
+      // Live count of cities that have rejected Flock (deflock.org).
+      // Fetched from our own Worker at /api/flock-stats (which itself proxies
+      // cdn.deflock.me/alpr-counts.json with a 5-min CF edge cache). Direct
+      // fetch from cdn.deflock.me is CORS-restricted to deflock.org only —
+      // the proxy is same-origin so no CORS issue. Falls back to the static
+      // "70+" in the HTML if the upstream is unreachable.
+      var winsEl = document.getElementById("wins-count");
+      if (winsEl) {
+        fetch("/api/flock-stats", { cache: "default" })
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (d) {
+            if (d && typeof d.wins === "number" && d.wins > 0) {
+              winsEl.textContent = d.wins + "+";
+            }
+          })
+          .catch(function (e) { console.warn("[wins count fetch failed]", e); });
       }
     });
   </script>

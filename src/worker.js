@@ -14,6 +14,7 @@ import { onRequestPost as surveyPost, onRequestOptions as surveyOptions } from "
 import { onRequestPost as standingPost, onRequestGet as standingGet } from "../api-handlers/standing.js";
 import { onRequestPost as subscribePost } from "../api-handlers/subscribe.js";
 import { onRequestGet as countsGet } from "../api-handlers/counts.js";
+import { onRequestGet as flockStatsGet } from "../api-handlers/flock-stats.js";
 
 export default {
   async fetch(request, env, ctx) {
@@ -47,6 +48,9 @@ export default {
     }
     if (path === "/api/community/counts" && request.method === "GET") {
       return countsGet({ request, env });
+    }
+    if (path === "/api/flock-stats" && request.method === "GET") {
+      return flockStatsGet({ request, env });
     }
 
     // Everything else — defer to static assets binding
