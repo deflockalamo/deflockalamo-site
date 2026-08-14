@@ -119,6 +119,11 @@
       .toc-mobile summary { display: none; }
       .toc-mobile[open] .toc-list { display: block !important; }
     }
+    /* On narrow screens the nav is hidden unless the <details> is open */
+    @media (max-width: 59.999rem) {
+      .toc-list { display: none; }
+      .toc-mobile[open] .toc-list { display: block; }
+    }
   </style>
 </head>
 <body>
@@ -142,9 +147,9 @@
       <div class="flock-wrap">
 
         <!-- In-page table of contents (sticky on wide screens, collapsible on mobile) -->
-        <aside class="toc toc-mobile" aria-label="On this page">
+        <details class="toc toc-mobile" aria-label="On this page">
           <summary>On this page</summary>
-          <nav class="toc-list" style="display:none">
+          <nav class="toc-list">
             <h2>On this page</h2>
             <ol>
               <li><a href="#company-h">The company</a></li>
@@ -160,7 +165,7 @@
               <li><a href="#sources-h">Sources</a></li>
             </ol>
           </nav>
-        </aside>
+        </details>
 
         <div>
 
