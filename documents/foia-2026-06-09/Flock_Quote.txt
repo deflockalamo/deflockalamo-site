@@ -1,0 +1,379 @@
+                                                              INSIGHT PUBLIC SECTOR, INC.                         Page 1    of 5
+                                                              2701 E INSIGHT WAY
+ HTTP://WWW.INSIGHT.COM                                       CHANDLER AZ 85286-1930
+                                                              Tel: 800-467-4448
+
+
+Account name: 10334216
+                                                                                           Quotation
+CITY OF ALAMOGORDO
+ACCOUNTS PAYABLE
+                                                               Quotation Number : 0228029725
+1376 9TH ST
+                                                               Document Date    : 16-DEC-2024
+ALAMOGORDO NM 88310-5855
+                                                               PO Number        :
+                                                               PO Release       :
+SHIP-TO                                                        Sales Rep        : Sergio Torrez
+                                                               Email            : SERGIO.TORREZ@INSIGHT.COM
+CITY OF ALAMOGORDO
+                                                               Phone            : +15053183071
+ACCOUNTS PAYABLE
+1376 9TH ST
+ALAMOGORDO NM 88310-5855
+
+
+We deliver according to the following terms:
+Payment Terms             : Net 30 days
+Ship Via                  : Insight Assigned Carrier/Ground
+Terms of Delivery         : FOB DESTINATION
+Currency                  : USD
+
+A signature below is required at time of Purchase Order if it is not fully funded. Insight will not be able to process the Purchase
+Order without this quote being signed. If placing POs annually, Insight will require POs for the out years to be placed at least 15
+days prior to the renewal date. By executing this quote, Customer agrees to the below terms and annual payment schedule.
+
+Customer understands, accepts and agrees that this purchase is subject to Flock Safety's End User License Agreement, available
+at: https://www.flocksafety.com/terms-and-conditions-eula
+
+
+TERM LENGTH: 24 Months
+TERM START: Unless otherwise noted, the Term shall commence upon first installation and validation of Flock Hardware
+
+**MUST BE INCLUDED ON CLIENT PO**
+THIS IS A 2 YEAR ANNUAL PAYMENT COMMITMENT
+Year 1 - Line 20-160 - $246,150.00 plus applicable tax - Invoiced 100% upon last camera
+Year 2 - Line 170-250- $215,850.00 plus applicable tax - Invoiced at first anniversary
+Total Contract Commit - $462,000.00 plus applicable tax
+
+Material               Material Description                                   Quantity              Unit Price        Extended Price
+PARTNER-MDS-PO            MANUAL PO - SALES NOTES TO PURCHASING                       1             462,000.00             462,000.00
+                          OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                          SERVICES(# 23-6692-03)
+  Solution includes the following:
+  PS-IMP-EXST                FLOCK GROUP PROFESSIONAL SERVICES                            24             150.00              3,600.00
+                             EXISTING
+                             INFRASTRUCTURE MOUNTING SERVICE
+                          OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                          SERVICES(# 23-6692-03)
+                          List Price: 195.99
+                          Discount: 23.465%
+  PS-IMP-CONDOR-STD FLOCK CONDOR PROFESSIONAL SERVICES -                                  11             750.00              8,250.00
+                             STANDARD
+                             IMPLEMENTATION FEE
+                          OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                          SERVICES(# 23-6692-03)
+                          List Price: 978.99
+                          Discount: 23.390%
+                                                                                Quotation Number 228029725
+ HTTP://WWW.INSIGHT.COM                                                          Document Date 16-DEC-2024
+                                                                                             Page 2     of 5
+
+
+
+Material          Material Description                               Quantity                Unit Price Extended Price
+  PS-IMP-BUNDLE      Flock Professional Services - One-time fee        7           900.00                  6,300.00
+                  OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                  SERVICES(# 23-6692-03)
+                  List Price: 1174.99
+                  Discount: 23.404%
+ PS-IMP-COMM-50-400 FLOCK PROFESSIONAL SERVICES -                       1         5,000.00                5,000.00
+                     COMMUNITY
+                     PROGRAM IMPLEMENTATION FEE - 50 / 400
+                  OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                  SERVICES(# 23-6692-03)
+                  List Price: 26105.99
+                  Discount: 80.847%
+ PS-IMP-STD          FLOCK GROUP STANDARD IMPLEMENTATION                5          650.00                 3,250.00
+                     FEE -
+                     PROFESSIONAL SERVICES
+                  OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                  SERVICES(# 23-6692-03)
+                  List Price: 848.99
+                  Discount: 23.438%
+ PS-IMP-ADV-NCOAS Flock Professional Services - Implementation          6          650.00                 3,900.00
+                     fee - Mash Tested Pole - non-coastal region
+                  OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                  SERVICES(# 23-6692-03)
+                  List Price: 1631.99
+                  Discount: 60.171%
+ FOS-ADVANCED-T4     Flock Safety FlockOS Advanced - Subscription       1        10,000.00               10,000.00
+                     license - 1 license
+                  Coverage Dates:        27-DEC-2024 - 26-DEC-2025
+                  OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                  SERVICES(# 23-6692-03)
+                  List Price: 12295.99
+                  Discount: 18.673%
+ FOS-ENHANLPR-T4     FlockOS Enhanced LPR Package - license - 1         1         7,500.00                7,500.00
+                     license
+                  Coverage Dates:        27-DEC-2024 - 26-DEC-2025
+                  OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                  SERVICES(# 23-6692-03)
+                  List Price: 11065.99
+                  Discount: 32.225%
+ FLCK-FALCON-2-LE    FLOCK GROUP FALCON INFRASTRUCTURE-                22         3,000.00               66,000.00
+                     FREE (SOLAR
+                     POWER + LTE), LICENSE PLATE RECOGNITION
+                     CAMERA WITH VEHICLE FINGERPRINT ™
+                     TECHNOLOGY
+                     + MACHINE LEARNING SOFTWARE AND REAL-
+                     TIME
+                     ALERTS FOR UNLIMITED USERS
+                  Coverage Dates:        27-DEC-2024 - 26-DEC-2025
+                  OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                  SERVICES(# 23-6692-03)
+                  List Price: 3319.99
+                  Discount: 9.638%
+ FLCK-SLRFALCON-LR Flock Safety Recognition Camera w/ Vehicle           4         5,000.00               20,000.00
+                     Fingerprint - Subscription license -
+                     Unlimited users
+                  Coverage Dates:        27-DEC-2024 - 26-DEC-2025
+                  OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                  SERVICES(# 23-6692-03)
+                  List Price: 5532.99
+                  Discount: 9.633%
+                                                                         Quotation Number 228029725
+HTTP://WWW.INSIGHT.COM                                                    Document Date 16-DEC-2024
+                                                                                      Page 3   of 5
+
+
+
+FLCK-DUALSLRFALBU FLOCK TWO SOLAR-POWERED FIXED                      2     4,800.00             9,600.00
+                    STANDARD-RANGE
+                    LPR CAMERAS ON THE SAME POLE
+                 Coverage Dates:        27-DEC-2024 - 26-DEC-2025
+                 OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                 SERVICES(# 23-6692-03)
+                 List Price: 5311.99
+                 Discount: 9.638%
+FLCK-LPRVIDEO-FIX Flock Safety Law Enforcement Grade Bundled         5     5,000.00            25,000.00
+                    Standard - License - 1 license
+                 Coverage Dates:        27-DEC-2024 - 26-DEC-2025
+                 OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                 SERVICES(# 23-6692-03)
+                 List Price: 5532.99
+                 Discount: 9.633%
+FLCK-CONDOR-PTZ     Flock's Software Service & Support - Live        9     3,000.00            27,000.00
+                    Streaming & Video Recording
+                 Coverage Dates:        27-DEC-2024 - 26-DEC-2025
+                 OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                 SERVICES(# 23-6692-03)
+                 List Price: 3319.99
+                 Discount: 9.638%
+FLCK-SLRCONDOR-FIX FLOCK LAW ENFORCEMENT GRADE LIVE                 11     3,250.00            35,750.00
+                    STREAMED
+                    SOLAR POWERD FIXED CAMERA WITH 30 DAYS
+                    OF
+                    EDGE STORAGE. VMS INCLUDED AND SERVER
+                    FREE.
+                    INSTALLED AND MAINTAINED BY FLOCK
+                    SAFETY,
+                    TURN KEY-NO ADDITIONAL SOFTWARE OR
+                    INTEGRATIONS REQUIRED.
+                 Coverage Dates:        27-DEC-2024 - 26-DEC-2025
+                 OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                 SERVICES(# 23-6692-03)
+                 List Price: 3596.99
+                 Discount: 9.647%
+FOSCOMMUNITY50400 FLOCK OS COMMUNITY 50/400                          1    15,000.00            15,000.00
+                 Coverage Dates:        27-DEC-2024 - 26-DEC-2025
+                 OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                 SERVICES(# 23-6692-03)
+                 List Price: 16598.99
+                 Discount: 9.633%
+FOS-ADVANCED-T4     Flock Safety FlockOS Advanced - Subscription     1    10,000.00            10,000.00
+                    license - 1 license
+                 Coverage Dates:        27-DEC-2025 - 26-DEC-2026
+                 OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                 SERVICES(# 23-6692-03)
+                 List Price: 12295.99
+                 Discount: 18.673%
+FOS-ENHANLPR-T4     FlockOS Enhanced LPR Package - license - 1       1     7,500.00             7,500.00
+                    license
+                 Coverage Dates:        27-DEC-2025 - 26-DEC-2026
+                 OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                 SERVICES(# 23-6692-03)
+                 List Price: 11065.99
+                 Discount: 32.225%
+                                                                        Quotation Number 228029725
+HTTP://WWW.INSIGHT.COM                                                   Document Date 16-DEC-2024
+                                                                                     Page 4   of 5
+
+
+
+FLCK-FALCON-2-LE    FLOCK GROUP FALCON INFRASTRUCTURE-             22     3,000.00            66,000.00
+                    FREE (SOLAR
+                    POWER + LTE), LICENSE PLATE RECOGNITION
+                    CAMERA WITH VEHICLE FINGERPRINT ™
+                    TECHNOLOGY
+                    + MACHINE LEARNING SOFTWARE AND REAL-
+                    TIME
+                    ALERTS FOR UNLIMITED USERS
+                 Coverage Dates:       27-DEC-2025 - 26-DEC-2026
+                 OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                 SERVICES(# 23-6692-03)
+                 List Price: 3319.99
+                 Discount: 9.638%
+FLCK-SLRFALCON-LR Flock Safety Recognition Camera w/ Vehicle        4     5,000.00            20,000.00
+                    Fingerprint - Subscription license -
+                    Unlimited users
+                 Coverage Dates:       27-DEC-2025 - 26-DEC-2026
+                 OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                 SERVICES(# 23-6692-03)
+                 List Price: 5532.99
+                 Discount: 9.633%
+FLCK-DUALSLRFALBU FLOCK TWO SOLAR-POWERED FIXED                     2     4,800.00             9,600.00
+                    STANDARD-RANGE
+                    LPR CAMERAS ON THE SAME POLE
+                 Coverage Dates:       27-DEC-2025 - 26-DEC-2026
+                 OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                 SERVICES(# 23-6692-03)
+                 List Price: 5311.99
+                 Discount: 9.638%
+FLCK-LPRVIDEO-FIX Flock Safety Law Enforcement Grade Bundled        5     5,000.00            25,000.00
+                    Standard - License - 1 license
+                 Coverage Dates:       27-DEC-2025 - 26-DEC-2026
+                 OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                 SERVICES(# 23-6692-03)
+                 List Price: 5532.99
+                 Discount: 9.633%
+FLCK-CONDOR-PTZ     Flock's Software Service & Support - Live       9     3,000.00            27,000.00
+                    Streaming & Video Recording
+                 Coverage Dates:       27-DEC-2025 - 26-DEC-2026
+                 OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                 SERVICES(# 23-6692-03)
+                 List Price: 3319.99
+                 Discount: 9.638%
+FLCK-SLRCONDOR-FIX FLOCK LAW ENFORCEMENT GRADE LIVE                11     3,250.00            35,750.00
+                    STREAMED
+                    SOLAR POWERD FIXED CAMERA WITH 30 DAYS
+                    OF
+                    EDGE STORAGE. VMS INCLUDED AND SERVER
+                    FREE.
+                    INSTALLED AND MAINTAINED BY FLOCK
+                    SAFETY,
+                    TURN KEY-NO ADDITIONAL SOFTWARE OR
+                    INTEGRATIONS REQUIRED.
+                 Coverage Dates:       27-DEC-2025 - 26-DEC-2026
+                 OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                 SERVICES(# 23-6692-03)
+                 List Price: 3596.99
+                 Discount: 9.647%
+FOSCOMMUNITY50400 FLOCK OS COMMUNITY 50/400                         1    15,000.00            15,000.00
+                 Coverage Dates:       27-DEC-2025 - 26-DEC-2026
+                 OMNIA PARTNERS (COBB COUNTY) IT PRODUCTS AND
+                 SERVICES(# 23-6692-03)
+                 List Price: 16598.99
+                 Discount: 9.633%
+                                                                                                  Quotation Number 228029725
+ HTTP://WWW.INSIGHT.COM                                                                            Document Date 16-DEC-2024
+                                                                                                               Page 5    of 5
+
+
+
+                                                                                          Product Subtotal               431,700.00
+                                                                                          Services Subtotal               30,300.00
+                                                                                          TAX                             37,826.25
+                                                                                          Total                          499,826.25
+
+
+Thank you for choosing Insight. Please contact us with any questions or for additional information about Insight's complete IT
+solution offering.
+
+Sincerely,
+
+Sergio Torrez
++15053183071
+SERGIO.TORREZ@INSIGHT.COM
+To purchase under this contract, your agency must be registered with OMNIA Partners Public Sector.
+
+Insight Global Finance has a wide variety of flexible financing options and technology refresh solutions. Contact your Insight
+representative for an innovative approach to maximizing your technology and developing a strategy to manage your financial
+options.
+
+
+
+This purchase is subject to Insight’s online Terms of Sale unless you have a separate purchase agreement signed by you and
+Insight, in which case, that separate agreement will govern. Insight’s online Terms of Sale can be found at the “terms-and-policies”
+link below.
+
+SOFTWARE AND CLOUD SERVICES PURCHASES: If your purchase contains any software or cloud computing offerings
+(“Software and Cloud Offerings”), each offering will be subject to the applicable supplier's end user license and use terms
+("Supplier Terms") made available by the supplier or which can be found at the “terms-and-policies” link below. By ordering,
+paying for, receiving or using Software and Cloud Offerings, you agree to be bound by and accept the Supplier Terms unless you
+and the applicable supplier have a separate agreement which governs.
+https://www.insight.com/terms-and-policies
+
+
+
+Insight Public Sector, Inc.                                                 City of Alamogordo
+
+
+Signature:                                                                  Signature:
+
+
+Name:        Lisanne Steinheiser                                            Name:        Stephanie Hernandez, Phd.
+
+
+Title:       Global Compliance Officer                                      Title:       Acting City Manager
+
+
+Date:        27/12/2024                                                     Date:        27/12/2024
+Quotation #0228029725 - CITY OF
+ALAMOGORDO
+Final Audit Report                                                             2024-12-27
+
+  Created:                2024-12-27
+
+  By:                     Teresa Gutierrez (tgutierrez@ci.alamogordo.nm.us)
+
+  Status:                 Signed
+
+  Transaction ID:         CBJCHBCAABAAYnbT8z6-X9BzM-w7weQIMT9utknmJqR6
+
+
+
+
+"Quotation #0228029725 - CITY OF ALAMOGORDO" History
+    Document created by Teresa Gutierrez (tgutierrez@ci.alamogordo.nm.us)
+    2024-12-27 - 8:48:42 PM GMT
+
+
+    Document emailed to Stephanie Hernandez (shernandez@ci.alamogordo.nm.us) for signature
+    2024-12-27 - 8:48:46 PM GMT
+
+
+    Email viewed by Stephanie Hernandez (shernandez@ci.alamogordo.nm.us)
+    2024-12-27 - 10:15:43 PM GMT
+
+
+    Document e-signed by Stephanie Hernandez (shernandez@ci.alamogordo.nm.us)
+    Signature Date: 2024-12-27 - 10:16:51 PM GMT - Time Source: server
+
+
+    Document emailed to Lisanne Steinheiser (sledspotbidsupport@insight.com) for signature
+    2024-12-27 - 10:16:52 PM GMT
+
+
+    Email viewed by Lisanne Steinheiser (sledspotbidsupport@insight.com)
+    2024-12-27 - 10:17:08 PM GMT
+
+
+    Document signing delegated to Lisanne Steinheiser (lisanne.steinheiser@insight.com) by Lisanne Steinheiser
+    (sledspotbidsupport@insight.com)
+    2024-12-27 - 10:17:54 PM GMT
+
+
+    Document emailed to Lisanne Steinheiser (lisanne.steinheiser@insight.com) for signature
+    2024-12-27 - 10:17:55 PM GMT
+
+
+    Email viewed by Lisanne Steinheiser (lisanne.steinheiser@insight.com)
+    2024-12-27 - 10:19:12 PM GMT
+
+
+    Document e-signed by Lisanne Steinheiser (lisanne.steinheiser@insight.com)
+    Signature Date: 2024-12-27 - 10:19:38 PM GMT - Time Source: server
+Agreement completed.
+2024-12-27 - 10:19:38 PM GMT
+

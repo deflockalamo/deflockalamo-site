@@ -1,0 +1,19 @@
+ PPII 1(a)
+Taxpayer ID
+Redaction Log
+
+              Reason            Page (# of occurrences)                 Description
+
+
+no reason               3 (1)                             ---
+
+
+
+                                                          NMSA 1978 § 14-2-1.1. Personal
+                                                          identifier information, 14-2-6.
+                                                          Definitions F. "protected personal
+PPII 1(a) Taxpayer ID   3 (1)
+                                                          identifier information" means: (1) all
+                                                          but the last four digits of a: (a)
+                                                          taxpayer identification number.
+
